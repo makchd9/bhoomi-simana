@@ -1,0 +1,11 @@
+{
+  "method": "Built-in image_gen, transparent background",
+  "reference": "public/images/simana/journey-hd/tower-000-poster.webp",
+  "asset": "public/images/simana/context/companion-towers.png",
+  "dimensions": [
+    1672,
+    941
+  ],
+  "prompt": "Use case: compositing. Asset type: transparent background tower layer for a premium architectural website. The supplied image is a STYLE AND PERSPECTIVE REFERENCE, not an image to reproduce. Generate ONLY TWO isolated background residential skyscrapers on an actually transparent canvas, no sky, no city, no ground, no foreground tower, no text. Match the reference tower's rectangular stepped crown, champagne stone vertical ribs, recessed balcony stacks, dark glass, facade rhythm and dusk lighting. The LEFT tower has 43 storeys and is shorter, the RIGHT tower has 53 storeys and is taller; show credible many fine floor bands. They are distant supporting towers, slightly lighter, softer contrast, subtle atmospheric haze, still finely detailed. Output landscape 16:9, ideally 3840x2160. Carefully compose in normalized canvas coordinates: left tower fits x=35%..47%, roof at y=42%, base at y=89%; right tower fits x=55%..67%, roof at y=33%, base at y=89%. Leave a large TRANSPARENT gap through the center, x=47%..55%, to accommodate the existing foreground tower separately. All area outside these two towers is transparent, including the sky and ground. Matching camera angle: verticals almost straight, visible broad front and narrower right side. Keep all details within the specified tower bounds. These are concept companion towers for compositing behind the unchanged original hero.",
+  "usage": "Concept companion layer; user-specified height relationship, not verified floor geometry. Foreground film unchanged."
+}

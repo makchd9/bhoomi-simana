@@ -1,0 +1,779 @@
+/* Reference-led refinement: readable editorial surfaces and unfiltered architecture. */
+:root {
+  --gutter: clamp(24px, 4vw, 72px);
+}
+body {
+  background: var(--color-ivory);
+}
+.site-header {
+  min-height: 84px;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  border-bottom: 1px solid var(--color-light-rule);
+}
+.site-header[data-theme="dark"] {
+  background: var(--color-ivory);
+  border-bottom-color: var(--color-rule);
+}
+.site-header .wordmark {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  letter-spacing: 0;
+  line-height: 1;
+  max-width: none;
+  flex-shrink: 0;
+}
+.site-header .wordmark > span {
+  font-size: 34px;
+  letter-spacing: -0.045em;
+}
+.site-header .wordmark > small {
+  font-family: var(--font-sans);
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+}
+.desktop-navigation a,
+.desktop-navigation button {
+  font-size: 11px;
+  letter-spacing: 0.1em;
+}
+.desktop-navigation a:last-child {
+  border: 1px solid currentColor;
+  min-height: 40px;
+  padding: 0 18px;
+}
+.desktop-navigation a:last-child::after {
+  display: none;
+}
+.eyebrow,
+.intro-topline .eyebrow,
+.section-line .eyebrow,
+.clubhouse-gallery-label .eyebrow {
+  font-size: 11px;
+  line-height: 1.65;
+  letter-spacing: 0.12em;
+}
+.section-line,
+.intro-topline {
+  border-bottom-color: var(--color-rule);
+  padding-bottom: 20px;
+}
+.interiors-section .section-line,
+.amenities-section .section-line,
+.enquiry-section .section-line {
+  border-bottom-color: var(--color-light-rule);
+}
+.section-heading {
+  margin: 48px 0;
+  gap: 5vw;
+  grid-template-columns: 1.2fr 1fr;
+}
+.section-heading h2,
+.lifestyle-heading h2,
+.enquiry-grid h2 {
+  font-size: clamp(40px, 4.5vw, 66px);
+  line-height: 1.08;
+  letter-spacing: -0.035em;
+}
+.section-heading p,
+.lifestyle-pair p,
+.clubhouse-intro p,
+.location-map p,
+.enquiry-grid p,
+.intro-description > p {
+  font-size: 16px;
+  line-height: 1.8;
+}
+.story-section {
+  padding-top: 80px;
+}
+.project-intro {
+  padding-top: 84px;
+}
+.intro-grid {
+  padding-block: 48px;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 5vw;
+}
+.intro-heading h2 {
+  font-size: clamp(40px, 4.5vw, 66px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+.intro-description .pending-copy {
+  font-size: 14px;
+  line-height: 1.8;
+  max-width: 26rem;
+  color: var(--color-muted);
+}
+.intro-lower {
+  grid-template-columns: 1.4fr 1fr;
+  gap: 7vw;
+  padding-bottom: 48px;
+}
+.intro-image-wrap .editorial-image-inner {
+  transform: none;
+}
+.project-facts dt {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.project-facts dd {
+  font-size: 23px;
+  line-height: 1.3;
+}
+.project-facts > div {
+  padding-block: 20px;
+}
+.facts-note,
+.fine-print,
+.image-note {
+  font-size: 12px;
+  line-height: 1.7;
+  opacity: 1;
+}
+.fine-print {
+  color: inherit;
+}
+.chapter-end a {
+  font-size: 12px;
+}
+.hallmarks {
+  padding-bottom: 48px;
+}
+.hallmark-numbers strong {
+  font-size: clamp(38px, 4.2vw, 64px);
+}
+.hallmark-numbers span,
+.developer-stats span {
+  font-size: 12px;
+  line-height: 1.6;
+  letter-spacing: 0.04em;
+}
+.hallmark-details ul {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.action-link,
+.text-button {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  line-height: 1.6;
+}
+.concept-label {
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+  text-transform: none;
+  padding: 10px 14px;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+}
+.collection {
+  padding-bottom: 64px;
+}
+.residence-tabs {
+  gap: 0;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+}
+.residence-tabs button {
+  padding: 20px 16px;
+  align-items: center;
+  border: 1px solid var(--color-rule);
+  border-right: 0;
+  transition:
+    background 0.2s,
+    color 0.2s;
+}
+.residence-tabs button:last-child {
+  border-right: 1px solid var(--color-rule);
+}
+.residence-tabs button[aria-pressed="true"] {
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  border-color: var(--color-charcoal);
+}
+.residence-tabs button span:first-child {
+  font-size: 12px;
+  letter-spacing: 0.06em;
+}
+.residence-tabs button span:last-child {
+  font-size: 24px;
+}
+.residence-detail h3 {
+  font-size: 46px;
+}
+.residence-detail > p {
+  font-size: 15px;
+  line-height: 1.7;
+}
+.residence-detail dt {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+.residence-detail dd {
+  font-size: 30px;
+}
+.residence-detail dd small,
+.residence-detail .fine-print {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.residence-detail .action-link,
+.plan-enlarge {
+  font-size: 12px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.plan-preview {
+  padding: 12px 12px 60px;
+}
+.plan-preview img {
+  filter: none !important;
+}
+.image-story {
+  display: grid;
+  grid-template-columns: 1fr 1.4fr;
+  background: var(--color-charcoal);
+  color: var(--color-ivory);
+  min-height: 600px;
+  padding-bottom: 0;
+}
+.image-story .story-canvas {
+  grid-column: 2;
+  grid-row: 1 / 3;
+  height: 75svh;
+  min-height: 600px;
+  max-height: 900px;
+}
+.image-story-copy {
+  grid-column: 1;
+  grid-row: 1;
+  position: static;
+  align-self: center;
+  padding: 60px var(--gutter) 30px;
+  pointer-events: auto;
+}
+.image-story-copy h3 {
+  font-size: clamp(32px, 3.4vw, 50px);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+  margin: 20px 0;
+  max-width: 11em;
+}
+.image-story-copy p {
+  font-size: 15px;
+  line-height: 1.8;
+  max-width: 26rem;
+}
+.image-story-controls {
+  grid-column: 1;
+  grid-row: 2;
+  position: static;
+  align-self: end;
+  justify-content: start;
+  padding: 0 var(--gutter) 48px;
+}
+.image-story-controls .eyebrow {
+  margin-right: auto;
+}
+.image-story-controls button {
+  background: var(--color-charcoal);
+  border-color: var(--color-light-rule);
+}
+.image-story .concept-label {
+  left: 0;
+  right: 0;
+  bottom: 0;
+  padding: 10px 14px;
+  background: var(--color-charcoal);
+  font-size: 11px;
+  line-height: 1.5;
+  letter-spacing: 0.025em;
+}
+.lifestyle-heading {
+  padding: 64px 0;
+}
+.lifestyle-heading h2 {
+  margin-top: 24px;
+}
+.lifestyle-pair {
+  gap: 7vw;
+  grid-template-columns: 1.1fr 1fr;
+}
+.lifestyle-pair > div {
+  padding-top: 64px;
+}
+.clubhouse-intro {
+  padding: 64px 0;
+  gap: 4vw;
+}
+.clubhouse-intro h3,
+.location-map h3 {
+  font-size: clamp(36px, 3.5vw, 52px);
+  line-height: 1.1;
+}
+.clubhouse-gallery-label {
+  padding-block: 24px;
+}
+.story-tabs {
+  gap: 40px;
+  margin-bottom: 32px;
+  border-color: var(--color-light-rule);
+}
+.story-tabs button {
+  font-size: 23px;
+  color: var(--color-ivory);
+}
+.amenity-stage {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr;
+  background: var(--color-charcoal);
+}
+.amenity-stage .editorial-image {
+  height: 70svh;
+  min-height: 500px;
+  max-height: 820px;
+}
+.amenity-caption {
+  position: static;
+  justify-content: center;
+  background: none;
+  padding: 48px var(--gutter);
+}
+.amenity-caption h3 {
+  font-size: clamp(32px, 3.4vw, 50px);
+  line-height: 1.12;
+  letter-spacing: -0.035em;
+}
+.amenity-caption p {
+  font-size: 15px;
+  line-height: 1.8;
+}
+.amenity-stage .concept-label {
+  padding: 10px 14px;
+  background: var(--color-charcoal);
+  font-size: 11px;
+}
+.amenity-directory {
+  padding-block: 48px 64px;
+  gap: 5vw;
+}
+.amenity-directory summary {
+  font-size: 26px;
+}
+.amenity-directory ul {
+  font-size: 15px;
+  line-height: 2.2;
+}
+.location-map {
+  padding-block: 64px;
+}
+.map-load small {
+  font-size: 12px;
+}
+.developer-section {
+  padding-bottom: 64px;
+}
+.developer-stats strong {
+  font-size: clamp(36px, 4vw, 56px);
+}
+.associates {
+  margin: 64px 0;
+}
+.associates figcaption {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.voices > div {
+  gap: 48px 6vw;
+}
+.voices blockquote p {
+  font-size: 23px;
+  line-height: 1.5;
+}
+.voices cite,
+.voices summary,
+.video-links {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.press-link > span:nth-child(2) {
+  font-size: 32px;
+}
+.enquiry-grid {
+  padding-top: 48px;
+  gap: 6vw;
+}
+.contact-direct {
+  font-size: 16px;
+  gap: 8px;
+}
+.contact-direct a {
+  min-height: 44px;
+  display: flex;
+  align-items: center;
+}
+.form-fields label {
+  font-size: 12px;
+  line-height: 1.5;
+  letter-spacing: 0.05em;
+}
+.enquiry-grid p.fine-print {
+  font-size: 13px;
+  line-height: 1.7;
+}
+.footer-main > div {
+  font-size: 14px;
+  line-height: 1.7;
+  gap: 8px;
+}
+.footer-main a:not(.footer-wordmark) {
+  min-height: 36px;
+  display: flex;
+  align-items: center;
+}
+.registrations span {
+  font-size: 12px;
+  line-height: 1.6;
+}
+.legal,
+.footer-bottom {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.legal p {
+  opacity: 1;
+}
+.media-dialog-top .eyebrow,
+.media-dialog-top button {
+  font-size: 12px;
+}
+.menu-number,
+.dialog-bottom {
+  font-size: 12px;
+}
+@media (max-width: 1100px) {
+  .desktop-navigation {
+    display: none;
+  }
+  .menu-trigger {
+    display: flex;
+    font-size: 12px;
+  }
+}
+@media (max-width: 767px) {
+  .site-header,
+  .dialog-top {
+    min-height: 80px;
+  }
+  .site-header .wordmark > span {
+    font-size: 30px;
+  }
+  .site-header .wordmark > small {
+    font-size: 9px;
+  }
+  .eyebrow,
+  .intro-topline .eyebrow,
+  .section-line .eyebrow,
+  .clubhouse-gallery-label .eyebrow {
+    font-size: 10px;
+    letter-spacing: 0.08em;
+  }
+  .section-line {
+    gap: 20px;
+    align-items: start;
+  }
+  .section-line > span:last-child {
+    text-align: right;
+  }
+  .story-section {
+    padding-top: 56px;
+  }
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    margin: 32px 0;
+  }
+  .section-heading h2,
+  .lifestyle-heading h2,
+  .enquiry-grid h2,
+  .intro-heading h2 {
+    font-size: 38px;
+    line-height: 1.12;
+    letter-spacing: -0.025em;
+  }
+  .section-heading p,
+  .lifestyle-pair p,
+  .clubhouse-intro p,
+  .location-map p,
+  .enquiry-grid p,
+  .intro-description > p {
+    font-size: 15px;
+    line-height: 1.75;
+  }
+  .project-intro {
+    padding-top: 56px;
+  }
+  .intro-grid {
+    grid-template-columns: 1fr;
+    padding-block: 32px;
+    gap: 24px;
+  }
+  .intro-description {
+    margin: 0;
+    max-width: none;
+  }
+  .intro-description .pending-copy {
+    max-width: none;
+    font-size: 14px;
+  }
+  .intro-rule {
+    display: none;
+  }
+  .intro-lower {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 32px;
+  }
+  .intro-image-wrap .editorial-image {
+    aspect-ratio: 5/4 !important;
+  }
+  .project-facts > div {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .project-facts dd {
+    font-size: 24px;
+  }
+  .hallmark-numbers {
+    grid-template-columns: 1fr;
+  }
+  .hallmark-numbers > div {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+    gap: 24px;
+    border-bottom: 1px solid var(--color-rule);
+  }
+  .hallmark-numbers > div:last-child {
+    border: 0;
+  }
+  .hallmark-numbers strong {
+    font-size: 40px;
+    white-space: nowrap;
+  }
+  .hallmark-numbers span {
+    font-size: 12px;
+    max-width: 11rem;
+    text-align: right;
+  }
+  .hallmark-details {
+    grid-template-columns: 1fr;
+    gap: 24px;
+    padding-top: 24px;
+  }
+  .hallmark-details ul {
+    font-size: 14px;
+    gap: 16px;
+  }
+  .hallmarks {
+    padding-bottom: 32px;
+  }
+  .residence-tabs {
+    display: flex;
+    gap: 0;
+    overflow: auto;
+  }
+  .residence-tabs button {
+    min-width: 122px;
+    flex: 0 0 122px;
+    align-items: start;
+    padding: 16px;
+  }
+  .residence-tabs button span:last-child {
+    font-size: 24px;
+  }
+  .residence-tabs button span:first-child {
+    font-size: 12px;
+  }
+  .residence-layout {
+    gap: 24px;
+  }
+  .residence-detail h3 {
+    font-size: 38px;
+  }
+  .residence-detail .action-link {
+    font-size: 11px;
+  }
+  .residence-detail dt {
+    font-size: 11px;
+  }
+  .plan-enlarge {
+    font-size: 11px;
+  }
+  .image-story {
+    display: flex;
+    flex-direction: column;
+    min-height: 0;
+  }
+  .image-story .story-canvas {
+    height: 55svh;
+    min-height: 330px;
+    max-height: 550px;
+    order: 0;
+  }
+  .image-story-copy {
+    order: 1;
+    align-self: auto;
+    padding: 32px var(--gutter) 24px;
+  }
+  .image-story-copy h3 {
+    font-size: 34px;
+    max-width: 12em;
+    margin: 12px 0;
+  }
+  .image-story-copy p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+  .image-story-controls {
+    order: 2;
+    align-self: stretch;
+    padding: 0 var(--gutter) 28px;
+    justify-content: flex-end;
+  }
+  .image-story .concept-label {
+    font-size: 11px;
+    padding: 8px 12px;
+    right: 0;
+    left: 0;
+    bottom: 0;
+  }
+  .image-story-controls .eyebrow {
+    font-size: 12px;
+  }
+  .lifestyle-heading {
+    padding: 40px 0;
+  }
+  .lifestyle-pair {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .lifestyle-pair > div {
+    padding: 0;
+    margin: 0;
+  }
+  .clubhouse-intro {
+    grid-template-columns: 1fr;
+    padding: 40px 0;
+    gap: 20px;
+  }
+  .clubhouse-intro h3,
+  .location-map h3 {
+    font-size: 36px;
+  }
+  .clubhouse-hero {
+    aspect-ratio: 5/4 !important;
+  }
+  .clubhouse-gallery-label {
+    gap: 24px;
+  }
+  .story-tabs {
+    gap: 24px;
+    scrollbar-width: thin;
+  }
+  .story-tabs button {
+    font-size: 22px;
+  }
+  .amenity-stage {
+    grid-template-columns: 1fr;
+  }
+  .amenity-stage .editorial-image {
+    height: 52svh;
+    min-height: 300px;
+  }
+  .amenity-caption {
+    padding: 28px var(--gutter) 32px;
+  }
+  .amenity-caption h3 {
+    font-size: 34px;
+    max-width: 12em;
+  }
+  .amenity-caption p {
+    font-size: 15px;
+  }
+  .amenity-directory {
+    padding-block: 24px 48px;
+  }
+  .amenity-directory ul {
+    font-size: 14px;
+    line-height: 2.2;
+    columns: 1;
+  }
+  .amenity-directory summary {
+    font-size: 26px;
+  }
+  .location-map {
+    padding-block: 40px;
+  }
+  .developer-stats span {
+    font-size: 12px;
+    letter-spacing: 0.025em;
+  }
+  .developer-stats strong {
+    font-size: 34px;
+  }
+  .developer-stats > div {
+    padding: 24px 8px 24px 0;
+  }
+  .associates {
+    margin-block: 40px;
+  }
+  .voices > div {
+    gap: 32px;
+  }
+  .voices blockquote p {
+    font-size: 22px;
+  }
+  .press-link > span:nth-child(2) {
+    font-size: 28px;
+  }
+  .enquiry-grid {
+    padding-top: 32px;
+    gap: 40px;
+  }
+  .form-fields {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+  .form-fields label {
+    font-size: 12px;
+  }
+  .enquiry-grid p.fine-print {
+    font-size: 13px;
+  }
+  .footer-main {
+    gap: 32px;
+  }
+  .footer-main > div {
+    font-size: 14px;
+  }
+  .registrations span {
+    font-size: 12px;
+  }
+  .footer-bottom {
+    flex-direction: column;
+    gap: 16px;
+  }
+  .footer-bottom a {
+    min-height: 36px;
+    display: flex;
+    align-items: center;
+  }
+}

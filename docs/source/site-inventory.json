@@ -1,0 +1,2404 @@
+{
+  "about.html": {
+    "url": "https://simanabhoomi.com/about.html",
+    "assets": [
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "style": "width: 76px",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "class": "visible-xs mob1",
+        "style": "width: 30px;",
+        "src": "img/logo1.png"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo1.png",
+        "alt": "Bhoomi Group Mumbai real estate developer logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "class": "intro-logo mb-3",
+        "alt": "Sim\u0101na Logo",
+        "style": "margin-bottom: 10px",
+        "data-aos": "fade-down",
+        "data-aos-delay": "100"
+      },
+      {
+        "tag": "img",
+        "src": "img/about3.jpg",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Luxury residential tower architecture at Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/abtsectwobuil.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Premium residential tower elevation at Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/about2.jpg",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Premium residential tower elevation at Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/neabt3.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Luxury architecture and skyline-facing residences at Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/about4.jpg",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Aikyam clubhouse lifestyle amenities at Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/aboutlogo1.png",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/aboutlogo3.png",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/aboutlogo4.png",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/aboutlogo5.png",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/aboutlogo6.png",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/logo-5.png",
+        "class": "intro-logo mb-3",
+        "alt": "Sim\u0101na  by Bhoomi luxury residential project South Mumbai logo",
+        "style": "margin-bottom: 14px; width: 80px",
+        "data-aos": "fade-down",
+        "data-aos-delay": "100"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "alt": "Sim\u0101na by Bhoomi premium residential project South Mumbai",
+        "class": "footer-logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing1.jpg",
+        "alt": "Simana by Bhoomi A Wing MahaRERA registration QR code"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing2.jpg",
+        "alt": "Simana by Bhoomi B Wing MahaRERA registration QR code"
+      },
+      {
+        "tag": "img",
+        "src": "img/wingc.png",
+        "alt": "Simana by Bhoomi C Wing MahaRERA registration QR code"
+      },
+      {
+        "tag": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        "alt": "WhatsApp enquiry Simana by Bhoomi luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "about.html"
+      },
+      {
+        "href": "residences.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "class": "m-link header__menu-link",
+        "target": "_blank"
+      },
+      {
+        "class": "navbar-brand logo3",
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "javascript:void(0)",
+        "class": "closebtn close-menu"
+      },
+      {
+        "href": "index.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "residences.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html"
+      },
+      {
+        "href": "blog.html"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "residences.html"
+      },
+      {
+        "href": "amenities.html"
+      },
+      {
+        "href": "index.html#location"
+      },
+      {
+        "href": "tel:+912268998800"
+      },
+      {
+        "href": "mailto:sales@simana-bhoomi.com"
+      },
+      {
+        "href": "https://www.instagram.com/simana_bhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.facebook.com/SimanaBhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://in.linkedin.com/company/sim%C4%81na-by-bhoomi-properties",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.youtube.com/@SIMANA-TheUrbanOasis",
+        "target": "_blank"
+      },
+      {
+        "href": "https://maharera.mahaonline.gov.in/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://wa.me/919930092222?text=Hi%2C%20I%20am%20interested%20in%20Sim%C4%81na%20by%20Bhoomi.%20Please%20share%20details.",
+        "class": "whatsapp-float-left",
+        "target": "_blank",
+        "aria-label": "Chat on WhatsApp"
+      },
+      {
+        "href": "tel:+919930092222",
+        "class": "sticky-btn call-btn"
+      },
+      {
+        "id": "scrollUp",
+        "href": "javascript:void(0);"
+      }
+    ],
+    "text": [
+      "About Us - Sim\u0101na by Bhoomi",
+      "Toggle navigation",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "\u00d7",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "About Us",
+      "A legacy of thoughtful design, refined living, and enduring values",
+      "Sim\u0101na was conceived on the simple belief that true luxury lies not in excess but in balance. In a city that never slows down, Sim\u0101na offers a way of living that feels composed, spacious, and intentional. Every aspect of Sim\u0101na, from its master planning to its architectural expression, has been thoughtfully crafted to create homes that endure gracefully and remain relevant for generations.",
+      "*Actual Lobby",
+      "Limitless Splendor",
+      "Perfectly positioned in prime Parel, Sim\u0101na combines exceptional connectivity with elevated views that offer a welcome retreat from the pace of the city.",
+      "Whether overlooking Mumbai's iconic skyline or stretches of lush greenery, every view is a reminder that true luxury lies in space, serenity, and perspective.",
+      "Limitless Perfection",
+      "Every residence at Sim\u0101na is thoughtfully designed to maximise space, comfort, and functionality. Refined layouts, premium finishes, and meticulous detailing come together to create homes that are as elegant as they are practical.",
+      "Expansive windows frame captivating city and sea views, transform everyday living into an experience defined by quiet luxury, openness, and effortless sophistication.",
+      "*Rendered Image of Actual Elevation",
+      "*Actual Image",
+      "Limitless Stature",
+      "Rising gracefully above the city skyline, Sim\u0101na\u2019s premium residential towers are designed to leave a lasting architectural impression. With an impressive 11.8 ft floor-to-floor height, every residence is enhanced by abundant natural light, improved ventilation, and a remarkable sense of openness.",
+      "Defined by elegant proportions and exceptional craftsmanship, the towers seamlessly balance architectural grandeur with structural excellence, creating homes that feel expansive, refined, and enduringly timeless.",
+      "Limitless Serenity",
+      "Sim\u0101na offers over 54 thoughtfully curated lifestyle amenities spread across its podium level. From wellness and fitness zones to leisure, recreation, and social spaces, every amenity has been designed to enrich everyday living and foster a balanced lifestyle.",
+      "*Actual Image of Clubhouse",
+      "*Actual Image",
+      "Limitless Potential",
+      "At Sim\u0101na, every residence is envisioned as a space where life unfolds effortlessly. Elegant interiors, thoughtfully planned layouts, and refined finishes come together to create homes that are both beautiful and deeply functional.",
+      "Crafted for contemporary living and designed to stand the test of time, these residences offer an exceptional canvas for life's most meaningful moments.",
+      "Key Associates",
+      "Architect",
+      "Construction Partner",
+      "Structural Consultant",
+      "Green Building Certification",
+      "Liaison Partner",
+      "Since 1993, Bhoomi Group has been shaping the aspirations of homebuyers through a legacy defined by trust, quality, and excellence. With 61+ landmark projects completed, over 12.5 million sq. ft. delivered, and 17,000+ families housed across Mumbai, Thane, and Pune, the Group has played a pivotal role in redefining urban living. \r\n\r\nEvery project reflects a commitment to raising the benchmark \u2014 not only through state-of-the-art engineering, sustainable practices, and thoughtful design, but also through a deeper understanding of what transforms a house into a home. \r\n\r\nGuided by a vision that extends beyond buildings and city skylines, Bhoomi Group continues to create lifestyle destinations that enrich everyday living. With an unwavering pursuit of excellence and a passion for perfection, the Group remains committed to building spaces that inspire generations to come.",
+      "About Sim\u0101na",
+      "About Sim\u0101na",
+      "Blogs",
+      "Purnata",
+      "Bhoomi Group",
+      "Living at Sim\u0101na",
+      "The Residences",
+      "The Amenities",
+      "The Location",
+      "A Wing - P51900033361",
+      "B Wing - P51900033360",
+      "C Wing - PR1170002500564",
+      "+91 22 6899 8800",
+      "sales@simana-bhoomi.com",
+      "Connect With Us",
+      "The project has been registered via MahaRERA registration no.\r\n                        P51900033361, P51900033360,PR1170002500564 and is available on\r\n                        the website",
+      "https://maharera.mahaonline.gov.in/",
+      "under registered project.",
+      "Disclaimer \u2013 The plans, specifications, images, dimensions, and\r\n                        other details herein are only indicative and subject to approval\r\n                        from the concerned authorities. The Developer/Promoter reserves\r\n                        the right to amend, modify, or revise the same in the interest\r\n                        of the project without prior notice. This material on website\r\n                        does not constitute an offer, invitation to offer, or contract\r\n                        of any nature. All transactions shall be governed solely by the\r\n                        terms and conditions of the Agreement for Sale entered into\r\n                        between the parties. The project is registered with MahaRERA and\r\n                        all details, including sanctioned plans, specifications, and\r\n                        approvals, are available on the MahaRERA website.",
+      "\u00a9 Sim\u0101na by Bhoomi. All rights reserved. | RERA Registered Project",
+      "Call",
+      "Enquire",
+      "E-Brochure",
+      "\u00d7",
+      "ENQUIRE NOW",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "Call Now",
+      "Enquire Now"
+    ],
+    "pdfs": []
+  },
+  "residences.html": {
+    "url": "https://simanabhoomi.com/residences.html",
+    "assets": [
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "style": "width: 76px",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "class": "visible-xs mob1",
+        "style": "width: 30px;",
+        "src": "img/logo1.png"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo1.png",
+        "alt": "Bhoomi Group Mumbai real estate developer logo"
+      },
+      {
+        "tag": "video",
+        "class": "hero-video-file",
+        "autoplay": null,
+        "muted": null,
+        "loop": null,
+        "playsinline": null,
+        "preload": "metadata",
+        "poster": "img/fallback.jpg"
+      },
+      {
+        "tag": "source",
+        "src": "img/residence.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "video",
+        "class": "hero-video-file",
+        "autoplay": null,
+        "muted": null,
+        "loop": null,
+        "playsinline": null,
+        "preload": "metadata",
+        "poster": "img/fallback.jpg"
+      },
+      {
+        "tag": "source",
+        "src": "img/residencemobile.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "img",
+        "src": "img/residence-paralax.jpg",
+        "class": "hidden-xs",
+        "width": "1836",
+        "height": "754",
+        "alt": "Panoramic skyline view from Simana by Bhoomi residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/res1.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Luxury residences at Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/res2.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Luxury residences interior design Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": "Simana by Bhoomi residences section divider South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/Floor-plans1.jpg",
+        "class": "img-responsive",
+        "alt": "2 BHK floor plan Simana by Bhoomi Parel Mumbai"
+      },
+      {
+        "tag": "img",
+        "id": "bhk3img",
+        "src": "img/Floor-plans2.jpg",
+        "class": "img-responsive",
+        "alt": "3 BHK floor plan Simana by Bhoomi Lalbaug Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/Floor-plans4.jpg",
+        "class": "img-responsive",
+        "alt": "4 BHK luxury floor plan Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/Floor-plans5.jpg",
+        "class": "img-responsive",
+        "alt": "5 BHK premium floor plan Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": "Simana by Bhoomi residences gallery section divider South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/building4.webp",
+        "alt": "Luxury tower elevation Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/building5.webp",
+        "alt": "Premium residential tower Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/building2.webp",
+        "alt": "Luxury residential tower elevation Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/building3.webp",
+        "alt": "High-rise luxury residences Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/view8.webp",
+        "alt": "City skyline view from Simana by Bhoomi residences"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "alt": "Sim\u0101na by Bhoomi premium residences South Mumbai",
+        "class": "footer-logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing1.jpg",
+        "alt": "Simana by Bhoomi A Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing2.jpg",
+        "alt": "Simana by Bhoomi B Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/wingc.png",
+        "alt": "Simana by Bhoomi C Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        "alt": "WhatsApp enquiry Simana by Bhoomi luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "about.html"
+      },
+      {
+        "href": "residences.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "class": "m-link header__menu-link",
+        "target": "_blank"
+      },
+      {
+        "class": "navbar-brand logo3",
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "javascript:void(0)",
+        "class": "closebtn close-menu"
+      },
+      {
+        "href": "index.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "residences.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank",
+        "class": "close-menu m-link"
+      },
+      {
+        "data-toggle": "pill",
+        "href": "#bhk2"
+      },
+      {
+        "data-toggle": "pill",
+        "href": "#bhk3"
+      },
+      {
+        "data-toggle": "pill",
+        "href": "#bhk4"
+      },
+      {
+        "data-toggle": "pill",
+        "href": "#bhk5"
+      },
+      {
+        "class": "dbrochure",
+        "href": "javascript:void(0)"
+      },
+      {
+        "class": "dbrochure",
+        "href": "javascript:void(0)"
+      },
+      {
+        "class": "dbrochure",
+        "href": "javascript:void(0)"
+      },
+      {
+        "class": "dbrochure",
+        "href": "javascript:void(0)"
+      },
+      {
+        "href": "img/building4.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/building5.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/building2.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/building3.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/view8.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "about.html"
+      },
+      {
+        "href": "blog.html"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "residences.html"
+      },
+      {
+        "href": "amenities.html"
+      },
+      {
+        "href": "index.html#location"
+      },
+      {
+        "href": "tel:+912268998800"
+      },
+      {
+        "href": "mailto:sales@simana-bhoomi.com"
+      },
+      {
+        "href": "https://www.instagram.com/simana_bhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.facebook.com/SimanaBhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://in.linkedin.com/company/sim%C4%81na-by-bhoomi-properties",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.youtube.com/@SIMANA-TheUrbanOasis",
+        "target": "_blank"
+      },
+      {
+        "href": "https://maharera.mahaonline.gov.in/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://wa.me/919930092222?text=Hi%2C%20I%20am%20interested%20in%20Sim%C4%81na%20by%20Bhoomi.%20Please%20share%20details.",
+        "class": "whatsapp-float-left",
+        "target": "_blank",
+        "aria-label": "Chat on WhatsApp"
+      },
+      {
+        "href": "tel:+919930092222",
+        "class": "sticky-btn call-btn"
+      },
+      {
+        "id": "scrollUp",
+        "href": "javascript:void(0);"
+      }
+    ],
+    "text": [
+      "Residences - Sim\u0101na by Bhoomi",
+      "Toggle navigation",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "\u00d7",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "Residences at Sim\u0101na",
+      "A Home That Understands Space",
+      "At Sim\u0101na, every residence is shaped by a deeper understanding of how space influences everyday living. Beyond dimensions and layouts, each home is designed to create a sense of ease \u2014 where movement feels intuitive, natural light flows effortlessly, and every room offers a moment of calm.",
+      "The emphasis is on balance, proportion, and thoughtful planning. Living spaces are crafted to feel expansive yet intimate, functional yet refined. Distinct zoning between private and shared areas allows each home to adapt seamlessly to different moments of the day \u2014 from quiet mornings to meaningful gatherings and relaxed evenings.",
+      "At Sim\u0101na, space is not merely measured; it is experienced. An experience defined by comfort, composure, and enduring elegance.",
+      "*Actual Image",
+      "Luxury Begins with Volume",
+      "With an impressive 11.8 ft floor-to-floor height, Sim\u0101na offers a rare sense of openness in the heart of the city. Elevated ceiling heights enhance natural light, improve ventilation, and create interiors that feel expansive, airy, and effortlessly elegant.",
+      "This added volume transforms the experience of home \u2014 making every space feel brighter, calmer, and more comfortable. A subtle yet defining luxury that elevates everyday living.",
+      "Everyday Moments, Elevated",
+      "From quiet mornings to unhurried evenings, the residences at Sim\u0101na are designed to support life as it unfolds \u2014 effortlessly and beautifully. Thoughtful planning, refined interiors, and a sense of openness come together to elevate everyday experiences into moments of lasting comfort.",
+      "*Shot At Bhoomi Property",
+      "FLOOR PLANS",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "2 BHK PREMIUM",
+      "Download Plan",
+      "Type A",
+      "Type B",
+      "3 BHK \u2013 SMART",
+      "Download Plan",
+      "4 BHK SUPERIOR",
+      "Download Plan",
+      "5 BHK SUPREME",
+      "Download Plan",
+      "Gallery",
+      "*Actual Images of the Flat",
+      "*Actual Images of the Flat",
+      "*Rendered Image of the Actual Guest Room",
+      "*Actual Images",
+      "*Rendered Image of the Actual Elevation",
+      "About Sim\u0101na",
+      "About Sim\u0101na",
+      "Blogs",
+      "Purnata",
+      "Bhoomi Group",
+      "Living at Sim\u0101na",
+      "The Residences",
+      "The Amenities",
+      "The Location",
+      "A Wing - P51900033361",
+      "B Wing - P51900033360",
+      "C Wing - PR1170002500564",
+      "+91 22 6899 8800",
+      "sales@simana-bhoomi.com",
+      "Connect With Us",
+      "The project has been registered via MahaRERA registration no.\r\n                        P51900033361, P51900033360,PR1170002500564 and is available on\r\n                        the website",
+      "https://maharera.mahaonline.gov.in/",
+      "under registered project.",
+      "Disclaimer \u2013 The plans, specifications, images, dimensions, and\r\n                        other details herein are only indicative and subject to approval\r\n                        from the concerned authorities. The Developer/Promoter reserves\r\n                        the right to amend, modify, or revise the same in the interest\r\n                        of the project without prior notice. This material on website\r\n                        does not constitute an offer, invitation to offer, or contract\r\n                        of any nature. All transactions shall be governed solely by the\r\n                        terms and conditions of the Agreement for Sale entered into\r\n                        between the parties. The project is registered with MahaRERA and\r\n                        all details, including sanctioned plans, specifications, and\r\n                        approvals, are available on the MahaRERA website.",
+      "\u00a9 Sim\u0101na by Bhoomi. All rights reserved. | RERA Registered Project",
+      "Call",
+      "Enquire",
+      "E-Brochure",
+      "\u00d7",
+      "ENQUIRE NOW",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "Call Now",
+      "Enquire Now"
+    ],
+    "pdfs": []
+  },
+  "amenities.html": {
+    "url": "https://simanabhoomi.com/amenities.html",
+    "assets": [
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "style": "width: 76px",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "class": "visible-xs mob1",
+        "style": "width: 30px;",
+        "src": "img/logo1.png"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo1.png",
+        "alt": "Bhoomi Group Mumbai real estate developer logo"
+      },
+      {
+        "tag": "video",
+        "class": "hero-video-file",
+        "autoplay": null,
+        "muted": null,
+        "loop": null,
+        "playsinline": null,
+        "preload": "metadata",
+        "poster": "img/fallback.jpg"
+      },
+      {
+        "tag": "source",
+        "src": "img/clubhouse.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "video",
+        "class": "hero-video-file",
+        "autoplay": null,
+        "muted": null,
+        "loop": null,
+        "playsinline": null,
+        "preload": "metadata",
+        "poster": "img/fallback.jpg"
+      },
+      {
+        "tag": "source",
+        "src": "img/clubhousemobile.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "img",
+        "src": "img/amenities-pool.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Indoor swimming pool at Simana by Bhoomi luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": "Simana by Bhoomi amenities section divider South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon1.png",
+        "alt": "Swimming pool luxury apartment amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon2.png",
+        "alt": "Badminton court sports amenity luxury residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon3.png",
+        "alt": "Creche childcare facility gated community Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon4.png",
+        "alt": "Banquet hall community celebration space luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon5.png",
+        "alt": "Multipurpose landscaped lawns lifestyle apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon6.png",
+        "alt": "Mini golf court recreational amenity premium residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon7.png",
+        "alt": "Senior citizen relaxation spaces gated community Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon8.png",
+        "alt": "Luxury lobby entrance high-rise apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon9.png",
+        "alt": "Private mini theatre clubhouse amenity luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon10.png",
+        "alt": "Jogging track outdoor fitness amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon11.png",
+        "alt": "Indoor games lounge clubhouse amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon12.png",
+        "alt": "Kids play area family friendly apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon13.png",
+        "alt": "High-tech gym fitness centre luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon14.png",
+        "alt": "Meditation zones wellness spaces luxury residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon15.png",
+        "alt": "Landscaped gardens premium residential project Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon1.png",
+        "alt": "Swimming pool luxury apartment amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon2.png",
+        "alt": "Badminton court sports facility luxury residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon3.png",
+        "alt": "Creche childcare facility gated community apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon4.png",
+        "alt": "Banquet hall community event space luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon5.png",
+        "alt": "Multipurpose landscaped lawns lifestyle apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon16.png",
+        "alt": "Amphitheatre community event space luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon17.png",
+        "alt": "Steam room wellness amenity premium residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon18.png",
+        "alt": "Kids creative studio family friendly apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon20.png",
+        "alt": "Open air cinema rooftop lifestyle amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon21.png",
+        "alt": "Pickleball court sports facility luxury residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon22.png",
+        "alt": "Miyawaki forest eco friendly landscaped garden Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon23.png",
+        "alt": "Reflexology walking path wellness feature luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon24.png",
+        "alt": "Squash court indoor sports amenity Mumbai residences"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon25.png",
+        "alt": "Private dining area clubhouse luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon26.png",
+        "alt": "Children swimming pool family lifestyle apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon27.png",
+        "alt": "Garden cafeteria outdoor leisure space Mumbai residences"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon28.png",
+        "alt": "Sun lounger deck relaxation zone luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon29.png",
+        "alt": "Library reading lounge clubhouse amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon30.png",
+        "alt": "Skating rink recreational amenity gated community Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon16.png",
+        "alt": "Amphitheatre community event space luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon17.png",
+        "alt": "Steam room wellness amenity premium residences Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon18.png",
+        "alt": "Kids creative studio family friendly apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/icon20.png",
+        "alt": "Open air cinema rooftop lifestyle amenity Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/amenities-AIKYAM.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Aikyam clubhouse lifestyle amenities Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": "Simana by Bhoomi amenities section divider South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/am_new1.webp",
+        "alt": "Luxury indoor amenities lounge Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/am_new3.webp",
+        "alt": "Luxury indoor lifestyle amenities Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/am_new4.webp",
+        "alt": "Luxury indoor lifestyle amenities Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/club1.webp",
+        "alt": "Premium clubhouse interior Simana by Bhoomi South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/club2.webp",
+        "alt": "Private lounge clubhouse Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/club5.webp",
+        "alt": "Wellness area clubhouse Simana by Bhoomi residences"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "alt": "Sim\u0101na by Bhoomi premium residences South Mumbai",
+        "class": "footer-logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing1.jpg",
+        "alt": "Simana by Bhoomi A Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing2.jpg",
+        "alt": "Simana by Bhoomi B Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/wingc.png",
+        "alt": "Simana by Bhoomi C Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        "alt": "WhatsApp"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "about.html"
+      },
+      {
+        "href": "residences.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "class": "m-link header__menu-link",
+        "target": "_blank"
+      },
+      {
+        "class": "navbar-brand logo3",
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "javascript:void(0)",
+        "class": "closebtn close-menu"
+      },
+      {
+        "href": "index.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "residences.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "img/am_new1.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/am_new3.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/am_new4.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/club1.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/club2.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "img/club5.webp",
+        "data-fancybox": "gallery",
+        "data-caption": "",
+        "class": "phBox"
+      },
+      {
+        "href": "about.html"
+      },
+      {
+        "href": "blog.html"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "residences.html"
+      },
+      {
+        "href": "amenities.html"
+      },
+      {
+        "href": "index.html#location"
+      },
+      {
+        "href": "tel:+912268998800"
+      },
+      {
+        "href": "mailto:sales@simana-bhoomi.com"
+      },
+      {
+        "href": "https://www.instagram.com/simana_bhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.facebook.com/SimanaBhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://in.linkedin.com/company/sim%C4%81na-by-bhoomi-properties",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.youtube.com/@SIMANA-TheUrbanOasis",
+        "target": "_blank"
+      },
+      {
+        "href": "https://maharera.mahaonline.gov.in/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://wa.me/919930092222?text=Hi%2C%20I%20am%20interested%20in%20Sim%C4%81na%20by%20Bhoomi.%20Please%20share%20details.",
+        "class": "whatsapp-float-left",
+        "target": "_blank",
+        "aria-label": "Chat on WhatsApp"
+      },
+      {
+        "href": "tel:+919930092222",
+        "class": "sticky-btn call-btn"
+      },
+      {
+        "id": "scrollUp",
+        "href": "javascript:void(0);"
+      }
+    ],
+    "text": [
+      "Amenities- Sim\u0101na by Bhoomi",
+      "Toggle navigation",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "\u00d7",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "THE Amenities AT SIM\u0100NA",
+      "Where Wellness, Leisure & Community Meet",
+      "At Sim\u0101na, every amenity is thoughtfully curated to enhance the experience of everyday living. Nestled within lush landscapes and expansive open spaces, these environments are designed to inspire relaxation, encourage wellness, and foster meaningful connections.",
+      "From moments of quiet retreat to shared experiences with family and neighbours, the amenities at Sim\u0101na create a lifestyle where comfort, recreation, and community come together in perfect harmony.",
+      "*Rendered Image of Actual Indoor Pool",
+      "THE AMENITIES",
+      "To Celebrate Life. And Space.",
+      "At Sim\u0101na, amenities are designed as natural extensions of everyday living. Thoughtfully woven into lush landscapes and expansive open spaces, they create opportunities to unwind, connect, recharge, and thrive.",
+      "From moments of quiet reflection to vibrant social gatherings, every space is curated to support a balanced lifestyle. Together, they form an environment where wellness, recreation, and community coexist effortlessly, enriching every day with comfort, convenience, and a sense of belonging.",
+      "Additional Amenities",
+      "Swimming Pool",
+      "Badminton Court",
+      "Cr\u00e8che",
+      "Banquet Hall",
+      "Multipurpose Lawn",
+      "Mini Golf Court",
+      "Senior Citizen Space",
+      "Lobby Entrance",
+      "Private Mini Theatre",
+      "Jogging Track",
+      "Indoor Games Lounge",
+      "Kids\u2019 Play Area",
+      "High-Tech Gym",
+      "Meditation Zone",
+      "Landscaped Garden",
+      "Swimming Pool",
+      "Badminton Court",
+      "Cr\u00e8che",
+      "Banquet Hall",
+      "Multipurpose Lawn",
+      "Amphitheatre",
+      "Steam Room",
+      "Kids\u2019 Creative Studio",
+      "Open Air Cinema",
+      "Pickle Ball Court",
+      "Miyawaki Forest",
+      "Reflexology Walk",
+      "Squash Court",
+      "Private Dining Area",
+      "Children's Pool",
+      "Garden Cafeteria",
+      "Sun Lounger Deck",
+      "Library",
+      "Skating Rink",
+      "Amphitheatre",
+      "Steam Room",
+      "Kids\u2019 Creative Studio",
+      "Open Air Cinema",
+      "THE CLUBHOUSE AT SIM\u0100NA",
+      "A Refined Destination For Wellness, Leisure & Community Living",
+      "The clubhouse at Sim\u0101na is conceived as the social heart of the development \u2014 a place where residents come together to relax, celebrate, and reconnect. Thoughtfully designed with elegant interiors and purposeful spaces, it offers a seamless blend of leisure, wellness, and shared experiences.",
+      "Whether for quiet moments of relaxation or memorable gatherings with family and friends, the clubhouse elevates everyday living through comfort, connection, and thoughtful design.",
+      "*Actual Image of Clubhouse",
+      "AIKYAM",
+      "The Essence Of Togetherness And Refined Living",
+      "Derived from the idea of unity and harmony, Aikyam embodies the spirit of community at Sim\u0101na. Designed to bring people together while nurturing personal well-being, it offers a collection of thoughtfully curated spaces for recreation, relaxation, and meaningful interactions.",
+      "More than a clubhouse, Aikyam is a destination where everyday moments are shared, connections are strengthened, and a richer sense of belonging comes to life.",
+      "Gallery",
+      "*Actual Image of Gymnasium",
+      "*Actual Image of the Sit-Out Area",
+      "*Actual Image of the Banquet",
+      "*Actual Image of the Yoga Room",
+      "*Actual Image of Gymnasium",
+      "*Actual Image of the Powder Room",
+      "About Sim\u0101na",
+      "About Sim\u0101na",
+      "Blogs",
+      "Purnata",
+      "Bhoomi Group",
+      "Living at Sim\u0101na",
+      "The Residences",
+      "The Amenities",
+      "The Location",
+      "A Wing - P51900033361",
+      "B Wing - P51900033360",
+      "C Wing - PR1170002500564",
+      "+91 22 6899 8800",
+      "sales@simana-bhoomi.com",
+      "Connect With Us",
+      "The project has been registered via MahaRERA registration no.\r\n                P51900033361, P51900033360,PR1170002500564 and is available on\r\n                the website",
+      "https://maharera.mahaonline.gov.in/",
+      "under registered project.",
+      "Disclaimer \u2013 The plans, specifications, images, dimensions, and\r\n                other details herein are only indicative and subject to approval\r\n                from the concerned authorities. The Developer/Promoter reserves\r\n                the right to amend, modify, or revise the same in the interest\r\n                of the project without prior notice. This material on website\r\n                does not constitute an offer, invitation to offer, or contract\r\n                of any nature. All transactions shall be governed solely by the\r\n                terms and conditions of the Agreement for Sale entered into\r\n                between the parties. The project is registered with MahaRERA and\r\n                all details, including sanctioned plans, specifications, and\r\n                approvals, are available on the MahaRERA website.",
+      "\u00a9 Sim\u0101na by Bhoomi. All rights reserved. | RERA Registered Project",
+      "Call",
+      "Enquire",
+      "E-Brochure",
+      "\u00d7",
+      "ENQUIRE NOW",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "Call Now",
+      "Enquire Now"
+    ],
+    "pdfs": []
+  },
+  "contact.html": {
+    "url": "https://simanabhoomi.com/contact.html",
+    "assets": [
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "style": "width: 76px",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "class": "visible-xs mob1",
+        "style": "width: 30px;",
+        "src": "img/logo1.png"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo1.png",
+        "alt": "Bhoomi Group real estate developer Mumbai logo"
+      },
+      {
+        "tag": "iframe",
+        "src": "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3772.678476199397!2d72.8367180742495!3d18.989801954674792!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3be7cfdba2885c0d%3A0xd56d5d9b844e7dbd!2sSIM%C4%80NA-%20The%20Urban%20Oasis%20by%20Bhoomi!5e0!3m2!1sen!2sin!4v1766080463191!5m2!1sen!2sin",
+        "width": "1920",
+        "height": "350",
+        "style": "border: 0",
+        "allowfullscreen": "",
+        "loading": "lazy",
+        "referrerpolicy": "no-referrer-when-downgrade"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "alt": "Sim\u0101na by Bhoomi luxury apartments South Mumbai",
+        "class": "footer-logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing1.jpg",
+        "alt": "Simana by Bhoomi A Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing2.jpg",
+        "alt": "Simana by Bhoomi B Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/wingc.png",
+        "alt": "Simana by Bhoomi C Wing MahaRERA registration QR code Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        "alt": "WhatsApp"
+      }
+    ],
+    "links": [
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "about.html"
+      },
+      {
+        "href": "residences.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "class": "m-link header__menu-link",
+        "target": "_blank"
+      },
+      {
+        "class": "navbar-brand logo3",
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "javascript:void(0)",
+        "class": "closebtn close-menu"
+      },
+      {
+        "href": "index.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "residences.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank",
+        "class": "close-menu m-link"
+      },
+      {
+        "data-toggle": "tab",
+        "href": "#enquiry-form"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/visitor-form/",
+        "target": "_blank"
+      },
+      {
+        "href": "about.html"
+      },
+      {
+        "href": "blog.html"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "residences.html"
+      },
+      {
+        "href": "amenities.html"
+      },
+      {
+        "href": "index.html#location"
+      },
+      {
+        "href": "tel:+912268998800"
+      },
+      {
+        "href": "mailto:sales@simana-bhoomi.com"
+      },
+      {
+        "href": "https://www.instagram.com/simana_bhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.facebook.com/SimanaBhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://in.linkedin.com/company/sim%C4%81na-by-bhoomi-properties",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.youtube.com/@SIMANA-TheUrbanOasis",
+        "target": "_blank"
+      },
+      {
+        "href": "https://maharera.mahaonline.gov.in/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://wa.me/919930092222?text=Hi%2C%20I%20am%20interested%20in%20Sim%C4%81na%20by%20Bhoomi.%20Please%20share%20details.",
+        "class": "whatsapp-float-left",
+        "target": "_blank",
+        "aria-label": "Chat on WhatsApp"
+      }
+    ],
+    "text": [
+      "Contact - Sim\u0101na by Bhoomi",
+      "Toggle navigation",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "\u00d7",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "Contact Us",
+      "CONTACT US",
+      "We\u2019re Here To Assist You With Every Detail",
+      "At Sim\u0101na, we believe every conversation matters. Whether you are seeking more information, or exploring your future home, our team is here to guide you every step of the way.",
+      "Enquiry",
+      "Appointment",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "About Sim\u0101na",
+      "About Sim\u0101na",
+      "Blogs",
+      "Purnata",
+      "Bhoomi Group",
+      "Living at Sim\u0101na",
+      "The Residences",
+      "The Amenities",
+      "The Location",
+      "A Wing - P51900033361",
+      "B Wing - P51900033360",
+      "C Wing - PR1170002500564",
+      "+91 22 6899 8800",
+      "sales@simana-bhoomi.com",
+      "Connect With Us",
+      "The project has been registered via MahaRERA registration no.\r\n                        P51900033361, P51900033360,PR1170002500564 and is available on\r\n                        the website",
+      "https://maharera.mahaonline.gov.in/",
+      "under registered project.",
+      "Disclaimer \u2013 I authorise Sim\u0101na by Bhoomi and its authorised representatives to contact me with project updates, offers and notifications via Email, SMS, WhatsApp and Calls.",
+      "The plans, specifications, images, dimensions, and\r\n                        other details herein are only indicative and subject to approval\r\n                        from the concerned authorities. The Developer/Promoter reserves\r\n                        the right to amend, modify, or revise the same in the interest\r\n                        of the project without prior notice. This material on website\r\n                        does not constitute an offer, invitation to offer, or contract\r\n                        of any nature. All transactions shall be governed solely by the\r\n                        terms and conditions of the Agreement for Sale entered into\r\n                        between the parties. The project is registered with MahaRERA and\r\n                        all details, including sanctioned plans, specifications, and\r\n                        approvals, are available on the MahaRERA website.",
+      "\u00a9 Sim\u0101na by Bhoomi. All rights reserved. | RERA Registered Project",
+      "\u00d7",
+      "Enquire Now",
+      "Register here",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK"
+    ],
+    "pdfs": []
+  },
+  "blog.html": {
+    "url": "https://simanabhoomi.com/blog.html",
+    "assets": [
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "style": "width: 76px",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "class": "visible-xs mob1",
+        "style": "width: 30px;",
+        "src": "img/logo1.png"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo1.png",
+        "alt": "Bhoomi Group Mumbai real estate developer logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://goodhomes.wwmindia.com/content/2026/mar/bhoomiweb1774336200.jpg",
+        "alt": "A Breath Between Towers"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "alt": "Sim\u0101na",
+        "class": "footer-logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing1.jpg",
+        "alt": "A Wing QR"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing2.jpg",
+        "alt": "B Wing QR"
+      },
+      {
+        "tag": "img",
+        "src": "img/wingc.png",
+        "alt": "B Wing QR"
+      },
+      {
+        "tag": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        "alt": "WhatsApp"
+      }
+    ],
+    "links": [
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "about.html"
+      },
+      {
+        "href": "residences.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "class": "m-link header__menu-link",
+        "target": "_blank"
+      },
+      {
+        "class": "navbar-brand logo3",
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "javascript:void(0)",
+        "class": "closebtn close-menu"
+      },
+      {
+        "href": "index.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "residences.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "https://www.goodhomes.co.in/home-decor/home-tours/a-breath-between-towers-9662-3.html",
+        "target": "_blank",
+        "class": "text-decoration-none"
+      },
+      {
+        "href": "about.html"
+      },
+      {
+        "href": "blog.html"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "residences.html"
+      },
+      {
+        "href": "amenities.html"
+      },
+      {
+        "href": "index.html#location"
+      },
+      {
+        "href": "tel:+912268998800"
+      },
+      {
+        "href": "mailto:sales@simana-bhoomi.com"
+      },
+      {
+        "href": "https://www.instagram.com/simana_bhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.facebook.com/SimanaBhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://in.linkedin.com/company/sim%C4%81na-by-bhoomi-properties",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.youtube.com/@SIMANA-TheUrbanOasis",
+        "target": "_blank"
+      },
+      {
+        "href": "https://maharera.mahaonline.gov.in/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://wa.me/919930092222?text=Hi%2C%20I%20am%20interested%20in%20Sim%C4%81na%20by%20Bhoomi.%20Please%20share%20details.",
+        "class": "whatsapp-float-left",
+        "target": "_blank",
+        "aria-label": "Chat on WhatsApp"
+      }
+    ],
+    "text": [
+      "Blogs - Sim\u0101na by Bhoomi",
+      "Toggle navigation",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "\u00d7",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "Blogs",
+      "Media Spotlight",
+      "FEATURED ARTICLE",
+      "A BREATH BETWEEN TOWERS",
+      "Sim\u0101na reimagines luxury living in South Mumbai with greenery,\r\n                    privacy and thoughtfully designed urban spaces.",
+      "Read Full Article \u2192",
+      "About Sim\u0101na",
+      "About Sim\u0101na",
+      "Blogs",
+      "Purnata",
+      "Bhoomi Group",
+      "Living at Sim\u0101na",
+      "The Residences",
+      "The Amenities",
+      "The Location",
+      "A Wing - P51900033361",
+      "B Wing - P51900033360",
+      "C Wing - PR1170002500564",
+      "+91 22 6899 8800",
+      "sales@simana-bhoomi.com",
+      "Connect With Us",
+      "The project has been registered via MahaRERA registration no.\r\n                        P51900033361, P51900033360,PR1170002500564 and is available on the website",
+      "https://maharera.mahaonline.gov.in/",
+      "under registered project.",
+      "Disclaimer \u2013 The plans, specifications, images, dimensions, and other details herein are only indicative and subject to approval from the concerned authorities. The Developer/Promoter reserves the right to amend, modify, or revise the same in the interest of the project without prior notice.\r\nThis material on website does not constitute an offer, invitation to offer, or contract of any nature. All transactions shall be governed solely by the terms and conditions of the Agreement for Sale entered into between the parties.\r\nThe project is registered with MahaRERA and all details, including sanctioned plans, specifications, and approvals, are available on the MahaRERA website.",
+      "\u00a9 Sim\u0101na by Bhoomi. All rights reserved. | RERA Registered Project",
+      "\u00d7",
+      "Enquiry Now",
+      "Register here and Avail the",
+      "Best Offers!!",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK"
+    ],
+    "pdfs": []
+  },
+  "index.html": {
+    "url": "https://simanabhoomi.com/",
+    "assets": [
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "style": "width: 76px",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo.png",
+        "alt": "Simana by Bhoomi luxury apartments South Mumbai logo"
+      },
+      {
+        "tag": "img",
+        "class": "visible-xs mob1",
+        "style": "width: 29px;",
+        "src": "img/logo1.png"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo1.png",
+        "alt": "Bhoomi Group Mumbai real estate developer logo"
+      },
+      {
+        "tag": "video",
+        "id": "loaderVideo",
+        "autoplay": null,
+        "muted": null,
+        "playsinline": null
+      },
+      {
+        "tag": "source",
+        "src": "img/simhana_Logo.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "video",
+        "class": "hero-video-file",
+        "autoplay": null,
+        "muted": null,
+        "loop": null,
+        "playsinline": null,
+        "preload": "metadata",
+        "poster": "img/fallback.jpg"
+      },
+      {
+        "tag": "source",
+        "src": "img/website-home-banner.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "video",
+        "class": "hero-video-file",
+        "autoplay": null,
+        "muted": null,
+        "loop": null,
+        "playsinline": null,
+        "preload": "metadata",
+        "poster": "img/fallback.jpg"
+      },
+      {
+        "tag": "source",
+        "src": "img/homemobile.mp4",
+        "type": "video/mp4"
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "class": "intro-logo mb-3",
+        "alt": "Sim\u0101na by Bhoomi luxury residential project logo South Mumbai",
+        "style": "margin-bottom: 10px",
+        "data-aos": "fade-down",
+        "data-aos-delay": "100"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": "Simana by Bhoomi section divider South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/Project-Hallmark.webp",
+        "class": "img-fluid imgAnimation",
+        "data-aos": "fade-right",
+        "data-aos-delay": "300",
+        "alt": "Project hallmarks of Simana by Bhoomi luxury apartments South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/building.png",
+        "alt": "Premium residential towers Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/bicycle.png",
+        "alt": "Open green spaces and cycling-friendly lifestyle at Simana by Bhoomi in South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/location.png",
+        "alt": "Prime location of Simana by Bhoomi near Parel and Lalbaug in South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/ocean.png",
+        "alt": "Beautiful elevated city views from the residences at Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/clubhouse.png",
+        "alt": "Exclusive residents\u2019 clubhouse at Simana by Bhoomi with premium lifestyle amenities"
+      },
+      {
+        "tag": "img",
+        "src": "img/weights.png",
+        "alt": "Modern fitness and wellness facilities available at Simana by Bhoomi Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/brick.png",
+        "alt": "Advanced construction quality used in the residential towers at Simana by Bhoomi"
+      },
+      {
+        "tag": "img",
+        "src": "img/junction.png",
+        "alt": "Secure gated entry and exit access at Simana by Bhoomi residential community"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": "Simana by Bhoomi section divider South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/amenities1.webp",
+        "alt": "Luxury amenities swimming pool clubhouse gym Simana Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/clubhousepage2.webp",
+        "alt": "Aikyam clubhouse at Simana by Bhoomi luxury apartments South Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/residence.webp",
+        "alt": "Luxury apartments at Simana by Bhoomi Parel Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/theviewnew.jpg",
+        "alt": "City skyline view from Simana by Bhoomi South Mumbai apartments"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/3qYdBIM-zbE/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/8lUjkxAyn9M/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/tS9968eCOZg/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/AGm2of3XbSU/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/kSJfSj3tULs/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/Nfs6UIQO4f8/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/Obs5cH2rX6k/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "https://i.ytimg.com/vi/JMOMnJ8T9f4/hqdefault.jpg",
+        "alt": ""
+      },
+      {
+        "tag": "iframe",
+        "id": "videoFrame",
+        "width": "100%",
+        "height": "450",
+        "frameborder": "0",
+        "allow": "autoplay; encrypted-media",
+        "allowfullscreen": null
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      },
+      {
+        "tag": "img",
+        "src": "img/logo2.png",
+        "alt": "Simana by Bhoomi premium residential project South Mumbai",
+        "class": "footer-logo"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing1.jpg",
+        "alt": "Simana by Bhoomi A Wing MahaRERA registration QR code"
+      },
+      {
+        "tag": "img",
+        "src": "img/wing2.jpg",
+        "alt": "Simana by Bhoomi B Wing MahaRERA registration QR code"
+      },
+      {
+        "tag": "img",
+        "src": "img/wingc.png",
+        "alt": "Simana by Bhoomi C Wing MahaRERA registration QR code"
+      },
+      {
+        "tag": "img",
+        "src": "https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg",
+        "alt": "WhatsApp enquiry Simana by Bhoomi luxury apartments Mumbai"
+      },
+      {
+        "tag": "img",
+        "src": "img/title-bottom.png",
+        "class": "img-fluid",
+        "alt": ""
+      }
+    ],
+    "links": [
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "navbar-brand",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "index.html"
+      },
+      {
+        "class": "m-link header__menu-link",
+        "href": "about.html"
+      },
+      {
+        "href": "residences.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "m-link header__menu-link"
+      },
+      {
+        "class": "navbar-brand logo3",
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "javascript:void(0)",
+        "class": "closebtn close-menu"
+      },
+      {
+        "href": "index.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "residences.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "amenities.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "contact.html",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank",
+        "class": "close-menu m-link"
+      },
+      {
+        "href": "about.html"
+      },
+      {
+        "href": "blog.html"
+      },
+      {
+        "href": "https://purnataatbhoomisimana.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://bhoomi-group.com/",
+        "target": "_blank"
+      },
+      {
+        "href": "residences.html"
+      },
+      {
+        "href": "amenities.html"
+      },
+      {
+        "href": "index.html#location"
+      },
+      {
+        "href": "tel:+912268998800"
+      },
+      {
+        "href": "mailto:sales@simana-bhoomi.com"
+      },
+      {
+        "href": "https://www.instagram.com/simana_bhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.facebook.com/SimanaBhoomi/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://in.linkedin.com/company/sim%C4%81na-by-bhoomi-properties",
+        "target": "_blank"
+      },
+      {
+        "href": "https://www.youtube.com/@SIMANA-TheUrbanOasis",
+        "target": "_blank"
+      },
+      {
+        "href": "https://maharera.mahaonline.gov.in/",
+        "target": "_blank"
+      },
+      {
+        "href": "https://wa.me/919930092222?text=Hi%2C%20I%20am%20interested%20in%20Sim%C4%81na%20by%20Bhoomi.%20Please%20share%20details.",
+        "class": "whatsapp-float-left",
+        "target": "_blank",
+        "aria-label": "Chat on WhatsApp"
+      },
+      {
+        "href": "tel:+919930092222",
+        "class": "sticky-btn call-btn"
+      },
+      {
+        "id": "scrollUp",
+        "href": "javascript:void(0);"
+      }
+    ],
+    "text": [
+      "Sim\u0101na by Bhoomi \u2013 Luxury 2, 3 & 4 BHK Apartments in Parel & Lalbaug |\n         South Mumbai",
+      "Toggle navigation",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "\u00d7",
+      "Home",
+      "About Us",
+      "Residences",
+      "Amenities",
+      "Contact",
+      "Purnata",
+      "Sim\u0101na BY BHOOMI",
+      "Welcome To The New Era Of Elevated Community Living",
+      "Sim\u0101na is a thoughtfully crafted luxury residential development that redefines urban living in the heart of the city. Designed as a sanctuary of comfort, elegance, and innovative planning, Sim\u0101na brings together spacious homes, abundant greenery, and a lifestyle enriched by over 54 world-class amenities and signature clubhouse \u2014 Aikyam.\n                        Every element has been harmoniously curated to create a seamless daily experience, from serene landscapes and wellness spaces to vibrant social zones and exceptional modern architecture.",
+      "Sim\u0101na HALLMARKS",
+      "*Shot At Bhoomi Property",
+      "Three Premium Residential Towers",
+      "80% Open Space & Landscaped Greens",
+      "Strategic Bylane Location",
+      "Unobstructed Views of the City",
+      "Signature",
+      "Clubhouse",
+      "54+ Lifestyle Amenities",
+      "German Formliner Technology",
+      "5 Dedicated Entry & Exit Gates",
+      "Add to Photoshop Extension",
+      "Life at Sim\u0101na",
+      "THE AMENITIES",
+      "At the heart of Sim\u0101na lies a thoughtfully curated ecosystem of over 54 world-class amenities, designed to enrich everyday living. From wellness zones and landscaped greens to social spaces that foster togetherness, every amenity has been crafted to balance energy and calm.",
+      "Whether it is a quiet morning walk, an evening workout, or moments of celebration with loved ones, Sim\u0101na offers spaces that evolve with your lifestyle and elevate your daily experiences.",
+      "*Rendered Image of Actual Pool",
+      "AIKYAM \u2013 THE CLUBHOUSE",
+      "Aikyam is the social soul of Sim\u0101na \u2014 a space where leisure, wellness, and celebration converge. Designed as a vibrant community hub, it brings residents together through thoughtfully planned spaces, indoor games and fitness facilities.",
+      "It is a place where bonds are strengthened, milestones are celebrated, and everyday moments are transformed into lasting memories.",
+      "*Actual Image of Clubhouse",
+      "THE RESIDENCES",
+      "The residences at Sim\u0101na are thoughtfully crafted to bring together comfort, sophistication, and purposeful design. Generous floor-to-floor heights, efficient layouts, and abundant natural light create an atmosphere of openness, serenity, and understated luxury.",
+      "Every home is designed as a sanctuary within the city \u2014 a place where thoughtful details, timeless aesthetics, and a sense of belonging come together effortlessly.",
+      "*Actual Image",
+      "THE VIEW",
+      "At Sim\u0101na, the city unfolds before you in all its grandeur. Expansive views offer a constant connection to Mumbai's skyline, creating moments of calm amidst the rhythm of urban life.",
+      "As day turns to dusk, the view becomes a quiet reminder that you are living at a vantage point where the city looks back at you with equal awe.",
+      "*Actual View",
+      "TESTIMONIALS",
+      "The quality exceeded our expectations. We are delighted with our investment and overall experience. The entire process was smooth and professionally managed.",
+      "-Amit Mehta",
+      "From booking to possession, the team was extremely supportive and transparent. The project quality and attention to detail are truly impressive.",
+      "-Neha Patel",
+      "Excellent location, thoughtfully designed homes, and world-class amenities. We are very happy with our decision and highly recommend this project.",
+      "-Rahul Shah",
+      "A wonderful home-buying experience. The staff was professional, responsive, and committed to delivering exactly what was promised.",
+      "-Pooja Desai",
+      "\u00d7",
+      "CONTACT US",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "SUBMIT",
+      "About Sim\u0101na",
+      "About Sim\u0101na",
+      "Blogs",
+      "Purnata",
+      "Bhoomi Group",
+      "Living at Sim\u0101na",
+      "The Residences",
+      "The Amenities",
+      "The Location",
+      "A Wing - P51900033361",
+      "B Wing - P51900033360",
+      "C Wing - PR1170002500564",
+      "+91 22 6899 8800",
+      "sales@simana-bhoomi.com",
+      "Connect With Us",
+      "The project has been registered via MahaRERA registration no.\n                        P51900033361, P51900033360,PR1170002500564 and is available on\n                        the website",
+      "https://maharera.mahaonline.gov.in/",
+      "under registered project.",
+      "Disclaimer \u2013 I authorise Sim\u0101na by Bhoomi and its authorised representatives to contact me with project updates, offers and notifications via Email, SMS, WhatsApp and Calls.",
+      "The plans, specifications, images, dimensions, and\n                        other details herein are only indicative and subject to approval\n                        from the concerned authorities. The Developer/Promoter reserves\n                        the right to amend, modify, or revise the same in the interest\n                        of the project without prior notice. This material on website\n                        does not constitute an offer, invitation to offer, or contract\n                        of any nature. All transactions shall be governed solely by the\n                        terms and conditions of the Agreement for Sale entered into\n                        between the parties. The project is registered with MahaRERA and\n                        all details, including sanctioned plans, specifications, and\n                        approvals, are available on the MahaRERA website.",
+      "\u00a9 Sim\u0101na by Bhoomi. All rights reserved. | RERA Registered Project",
+      "Call",
+      "Enquire",
+      "E-Brochure",
+      "\u00d7",
+      "ENQUIRE NOW",
+      "Looking For ?",
+      "2 BHK",
+      "3 BHK",
+      "4 BHK",
+      "5 BHK",
+      "Call Now",
+      "Enquire Now",
+      "//",
+      "Simana by Bhoomi offers luxury apartments in Parel and Lalbaug Mumbai\n         including 2 BHK, 3 BHK and 4 BHK residences. Premium residential project\n         by Bhoomi Group located in South Mumbai with modern amenities and\n         high-rise living experience.",
+      "Simana by Bhoomi is a premium residential project offering luxury\n         apartments in Parel and Lalbaug Mumbai including spacious 2 BHK, 3 BHK and\n         4 BHK flats with clubhouse, swimming pool and modern amenities. Ideal\n         investment property in South Mumbai by Bhoomi Group."
+    ]
+  }
+}

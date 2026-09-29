@@ -1,0 +1,101 @@
+[
+  {
+    "id": "1KmbEqvbE-ZOidR1M7Sb7LGFsu2oYI1M1",
+    "name": "Banquet.png",
+    "slug": "banquet",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1KmbEqvbE-ZOidR1M7Sb7LGFsu2oYI1M1/view",
+    "asset": "/images/simana/spaces/banquet.webp"
+  },
+  {
+    "id": "1XZWl3ZElxTr3jt8wL0MX2UZEHaGvNYYP",
+    "name": "Cafe.png",
+    "slug": "cafe",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1XZWl3ZElxTr3jt8wL0MX2UZEHaGvNYYP/view",
+    "asset": "/images/simana/spaces/cafe.webp"
+  },
+  {
+    "id": "1QgFBkBIVtKo-zXNcBfOGWL30YYwoct6l",
+    "name": "Cards_room.png",
+    "slug": "cards-room",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1QgFBkBIVtKo-zXNcBfOGWL30YYwoct6l/view",
+    "asset": "/images/simana/spaces/cards-room.webp"
+  },
+  {
+    "id": "1T7ZKvg6zsP_R38bYBucEmyoyPUKRvAXn",
+    "name": "Creche.png",
+    "slug": "creche",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1T7ZKvg6zsP_R38bYBucEmyoyPUKRvAXn/view",
+    "asset": "/images/simana/spaces/creche.webp"
+  },
+  {
+    "id": "1Us6eohLlKxFcMWFvsCmnl0vWDSRH71xw",
+    "name": "Indoor_games.png",
+    "slug": "indoor-games",
+    "width": 7680,
+    "height": 4320,
+    "sourceUrl": "https://drive.google.com/file/d/1Us6eohLlKxFcMWFvsCmnl0vWDSRH71xw/view",
+    "asset": "/images/simana/spaces/indoor-games.webp"
+  },
+  {
+    "id": "1BBEGvOE2GuKoihGgx8BfgARvAwYXVSfY",
+    "name": "Library.png",
+    "slug": "library",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1BBEGvOE2GuKoihGgx8BfgARvAwYXVSfY/view",
+    "asset": "/images/simana/spaces/library.webp"
+  },
+  {
+    "id": "1BzweqB4Jdq8SO6EFEDlq7TasX5_IXHov",
+    "name": "Lift_lobby.png",
+    "slug": "lift-lobby",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1BzweqB4Jdq8SO6EFEDlq7TasX5_IXHov/view",
+    "asset": "/images/simana/spaces/lift-lobby.webp"
+  },
+  {
+    "id": "1vI_9eYghwOvvDVZ7yUjFSNHWdOq4nwBp",
+    "name": "Meeting_room_TV.png",
+    "slug": "meeting-room-tv",
+    "width": 3840,
+    "height": 2160,
+    "sourceUrl": "https://drive.google.com/file/d/1vI_9eYghwOvvDVZ7yUjFSNHWdOq4nwBp/view",
+    "asset": "/images/simana/spaces/meeting-room-tv.webp"
+  },
+  {
+    "id": "1Ols6QYfw6mI7OV-PdSRPFevduEQ08lQ8",
+    "name": "Meeting_room.png",
+    "slug": "meeting-room",
+    "width": 3840,
+    "height": 2160,
+    "sourceUrl": "https://drive.google.com/file/d/1Ols6QYfw6mI7OV-PdSRPFevduEQ08lQ8/view",
+    "asset": "/images/simana/spaces/meeting-room.webp"
+  },
+  {
+    "id": "1jwWNb0A5daeOJOG3zzz2mfw5DtAioU3i",
+    "name": "Pool.png",
+    "slug": "pool",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1jwWNb0A5daeOJOG3zzz2mfw5DtAioU3i/view",
+    "asset": "/images/simana/spaces/pool.webp"
+  },
+  {
+    "id": "1E_pSAJZ05N8YblCjcNL0nqvTs_BIX96O",
+    "name": "Spa.png",
+    "slug": "spa",
+    "width": 5760,
+    "height": 3240,
+    "sourceUrl": "https://drive.google.com/file/d/1E_pSAJZ05N8YblCjcNL0nqvTs_BIX96O/view",
+    "asset": "/images/simana/spaces/spa.webp"
+  }
+]

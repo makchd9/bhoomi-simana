@@ -1,0 +1,12 @@
+{
+  "tool": "built-in image_gen",
+  "prompt": "Use case: compositing. Create a source-guided architectural SIDE VIEW illustration for a luxury real estate website, wide 16:9 composition at high resolution. Input 1 is the official render of TWO existing towers on a podium; preserve both towers' actual facade design, crown design and proportions. Input 2 is the owner-supplied main tower; preserve this tower's exact pale vertical facade rhythm, inset balconies and framed roof crown. Input 3 shows the main tower podium materials. Input 4 is the actual Aikyam clubhouse exterior, preserve its two-level stone/glass facade. Combine these sources into ONE coherent side/three-quarter-side architectural view of EXACTLY THREE towers standing in ONE STRAIGHT LINE on an elongated podium, NEVER a triangle or cluster. Tower bases are collinear along the long axis, evenly distributed left-to-right. View the LONG SIDE of that row, slightly oblique enough to reveal depth while separating every silhouette. Relative heights from left to right: 43,53,58 storeys. The main 58-storey tower from input2 is on the right, closest to camera and crisply detailed. Both existing towers from input1 sit farther along the same straight row to the left, slightly lighter in atmospheric depth, without highlights. Show the ENTIRE podium and all tower crowns with generous margin, no cropped roofs or bases. The swimming pool and Aikyam clubhouse sit on the visible podium terrace along its long side, with understated landscaping from source1; make both legible. Use the source Mumbai urban landscape, realistic architectural render, daylight neutral stone palette, no new sea views, no mountains, no invented luxury structures. Image intended as illustrative composition, not certified site plan. Place ensemble mainly in middle/right 75 percent of frame, some calm space on left for HTML text. No text, no labels, no graphic overlays, no logos added. Do not redesign the referenced buildings. Do not invent a triangle arrangement.",
+  "sources": [
+    "https://simanabhoomi.com/img/view4.webp",
+    "Bhoomi Walkthrough.mp4 at 174.3s and 94.4s",
+    "https://simanabhoomi.com/img/amenities-AIKYAM.webp"
+  ],
+  "classification": "Illustrative composite, not a measured site plan or unchanged source render",
+  "floorCounts": "Owner-supplied main 58 / companions 43 and 53",
+  "output": "public/images/simana/context/three-towers-side.webp"
+}

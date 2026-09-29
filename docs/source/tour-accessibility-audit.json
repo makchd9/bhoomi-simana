@@ -1,0 +1,107 @@
+[
+  {
+    "size": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Overview",
+    "violations": [],
+    "visible": {
+      "id": "skyline",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "size": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "Ground floor",
+    "violations": [],
+    "visible": {
+      "id": "club-gym",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "size": {
+      "width": 1440,
+      "height": 900
+    },
+    "view": "First floor",
+    "violations": [],
+    "visible": {
+      "id": "club-staircase",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "view": "Overview",
+    "violations": [],
+    "visible": {
+      "id": "skyline",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "view": "Ground floor",
+    "violations": [],
+    "visible": {
+      "id": "club-gym",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "size": {
+      "width": 390,
+      "height": 844
+    },
+    "view": "First floor",
+    "violations": [],
+    "visible": {
+      "id": "club-staircase",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "size": {
+      "width": 320,
+      "height": 568
+    },
+    "view": "Overview",
+    "violations": [],
+    "visible": {
+      "id": "skyline",
+      "opacity": "1",
+      "copy": "1"
+    },
+    "overflow": false,
+    "errors": []
+  }
+]

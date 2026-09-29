@@ -1,0 +1,48 @@
+{
+  "source": "https://simanabhoomi.com/img/clubhouse.mp4",
+  "nativeSize": [
+    1920,
+    1080
+  ],
+  "nativeFps": 24,
+  "outputFps": 30,
+  "notes": "Continuous original camera shots only, trimmed after frame-difference auditing. No generated interiors or altered views. Original timing retained at 30-fps output; ground/first floor assignments supplied by the owner.",
+  "clips": [
+    {
+      "name": "club-reception",
+      "start": 11.7,
+      "end": 13.6,
+      "frames": 57
+    },
+    {
+      "name": "club-gym",
+      "start": 73.6,
+      "end": 76.2,
+      "frames": 78
+    },
+    {
+      "name": "club-squash",
+      "start": 57.2,
+      "end": 58.7,
+      "frames": 45
+    },
+    {
+      "name": "club-yoga",
+      "start": 30.4,
+      "end": 34.0,
+      "frames": 108
+    },
+    {
+      "name": "club-staircase",
+      "start": 87.2,
+      "end": 88.8,
+      "frames": 48
+    },
+    {
+      "name": "club-banquet",
+      "start": 120,
+      "end": 122.1,
+      "frames": 63
+    }
+  ]
+}

@@ -1,0 +1,25 @@
+.project-gallery-dialog { background:var(--color-deep); color:var(--color-ivory); width:96vw; }
+.project-gallery-dialog .media-dialog-top { background:var(--color-deep); border-color:var(--color-light-rule); }
+.project-gallery-dialog .media-dialog-content { padding:0 2rem 1.25rem; }
+.project-gallery-frame { height:calc(90dvh - 275px); min-height:200px; touch-action:pan-y; }
+.project-gallery-frame .editorial-image { height:100%; width:100%; background:var(--color-deep); }
+.project-gallery-frame .editorial-image-inner img { object-fit:contain !important; }
+.project-gallery-caption { display:flex; align-items:center; justify-content:space-between; gap:20px; padding:20px 0; border-bottom:1px solid var(--color-light-rule); }
+.project-gallery-caption h2 { font-size:clamp(24px,3vw,38px); margin:6px 0 0; line-height:1.15; }
+.project-gallery-caption .eyebrow { font-size:10px; }
+.project-gallery-controls { display:flex; gap:12px; flex-shrink:0; }
+.project-gallery-controls button { width:48px; height:48px; display:grid; place-items:center; border:1px solid var(--color-light-rule); }
+.project-gallery-controls button:hover { background:var(--color-ivory); color:var(--color-deep); }
+.project-gallery-footnote { display:flex; gap:20px; align-items:center; justify-content:space-between; padding-top:16px; font-size:11px; line-height:1.6; }
+.project-gallery-footnote label { display:flex; align-items:center; gap:15px; }
+.project-gallery-footnote select { font:inherit; color:var(--color-ivory); background:var(--color-deep); border:1px solid var(--color-light-rule); border-radius:0; min-height:44px; padding:0 12px; max-width:230px; }
+@media(max-width:767px) {
+ .project-gallery-dialog { width:100%; max-height:100dvh; }
+ .project-gallery-dialog .media-dialog-content { padding:0 18px 20px; }
+ .project-gallery-frame { height:auto; aspect-ratio:16 / 10; min-height:0; }
+ .project-gallery-footnote { align-items:flex-start; flex-direction:column; gap:12px; }
+ .project-gallery-footnote label { width:100%; justify-content:space-between; }
+ .project-gallery-footnote select { max-width:65%; }
+ .project-gallery-caption { padding:15px 0; }
+ .project-gallery-controls { gap:8px; }
+}

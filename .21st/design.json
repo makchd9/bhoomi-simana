@@ -1,0 +1,131 @@
+{
+  "version": 1,
+  "project": {
+    "name": "property-editorial",
+    "productType": null,
+    "stack": []
+  },
+  "sources": {
+    "tokens": [
+      "src/app/globals.css"
+    ],
+    "components": [
+      "src/components/ui"
+    ],
+    "assets": [
+      "public/images"
+    ],
+    "instructions": []
+  },
+  "design": {
+    "colorMode": "light",
+    "colors": {
+      "--color-ivory": {
+        "value": "#f5f5f0",
+        "source": "src/app/globals.css"
+      },
+      "--color-stone": {
+        "value": "#dce0dc",
+        "source": "src/app/globals.css"
+      },
+      "--color-charcoal": {
+        "value": "#171c1d",
+        "source": "src/app/globals.css"
+      },
+      "--color-muted": {
+        "value": "#505959",
+        "source": "src/app/globals.css"
+      },
+      "--color-rule": {
+        "value": "#b3baba",
+        "source": "src/app/globals.css"
+      }
+    },
+    "typography": {
+      "--font-serif": {
+        "value": "\"Iowan Old Style\", \"Baskerville\", \"Palatino Linotype\", \"Book Antiqua\", Georgia, serif",
+        "source": "src/app/globals.css"
+      },
+      "--font-sans": {
+        "value": "\"Helvetica Neue\", Helvetica, Arial, sans-serif",
+        "source": "src/app/globals.css"
+      }
+    },
+    "spacing": {
+      "--gutter": {
+        "value": "clamp(1.5rem, 4.8vw, 6rem)",
+        "source": "src/app/globals.css"
+      },
+      "--section-space": {
+        "value": "clamp(5rem, 10vw, 10rem)",
+        "source": "src/app/globals.css"
+      }
+    },
+    "radius": {},
+    "shadows": {},
+    "motion": {},
+    "density": "unknown"
+  },
+  "components": {
+    "installed": [
+      "action-link",
+      "media-frame",
+      "section"
+    ],
+    "preferredPrimitives": [],
+    "patterns": []
+  },
+  "constraints": {
+    "must": [],
+    "avoid": []
+  },
+  "decisions": [
+    {
+      "decision": "Use ivory surfaces and ivory-treated journey imagery with charcoal text. Omit tower storey counts from the opening screen.",
+      "source": "Explicit user request; retain confirmed heights in later project details."
+    },
+    {
+      "decision": "Revert the ivory colour revision to original dark journey surfaces, full-colour imagery and ivory text. Keep opening storey counts removed.",
+      "source": "Explicit user correction."
+    },
+    {
+      "decision": "After visual feedback, move to clean neutral charcoal/off-white surfaces, unobscured architecture, readable text panels and scroll-scrubbed official film frames. Keep all three wings and no opening storey counts.",
+      "source": "User requested closer reference motion, improved text legibility and colour direction."
+    },
+    {
+      "decision": "One 58-floor tower; full-screen owner-supplied architectural film with restrained overlays and five reversible scroll chapters. Remove the opaque sidebar, old wing registrations and unconfirmed residence inventory. No floor count on the opening.",
+      "source": "Explicit user scope change and repeated reference-led visual feedback, 28 September 2026."
+    },
+    {
+      "decision": "Preserve full-screen film narrative but replace low-resolution image scrubbing with seek-friendly HD video, eased chapter navigation and a deferred gallery of all 11 owner-supplied renders. Gallery images retain their full composition; mobile gets native portrait video crops.",
+      "source": "User supplied local 4K master and asked for sharper imagery, completed Drive integration and more intuitive, smoother interactions."
+    },
+    {
+      "decision": "Replace the separate project-spaces gallery with tracked building hotspots and an in-scene architectural explorer. Retain the tower as spatial context, reveal owner renders from the selected point, and preserve the camera position on return. Use a touch-first immersive view on mobile; no invented floor assignments.",
+      "source": "Explicit user feedback: amenities must be integrated into the live building experience, following the reference interaction pattern."
+    },
+    {
+      "decision": "Keep the original 58-floor hero tower, add lighter concept companions representing 43 and 53 storeys behind it, with no highlights. Remove building hotspots and the modal explorer. Amenities becomes the second full-screen scroll chapter immediately after the tower, reusing all eleven supplied renders.",
+      "source": "Explicit user revision after approving the main tower render."
+    },
+    {
+      "decision": "Replace triangular background towers with a labelled source-guided side-view composition of three towers in a straight line on a visible podium. Retain original main-tower HD footage; add original Aikyam clubhouse footage with ground-floor gym, double-height squash and yoga, then first-floor banquet. Keep six navigation groups with room subnavigation, preserve wide clubhouse framing on mobile, and let scene transitions finish independently of scroll.",
+      "source": "Explicit owner request and attached Purnata brochure, 29 September 2026."
+    }
+  ],
+  "evidence": [
+    {
+      "fact": "components.installed",
+      "source": "src/components/ui"
+    },
+    {
+      "fact": "design.colorMode:light",
+      "source": "src/app/globals.css"
+    },
+    {
+      "fact": "design.tokens",
+      "source": "src/app/globals.css"
+    }
+  ],
+  "generatedAt": "2026-09-23T16:18:36.751Z"
+}

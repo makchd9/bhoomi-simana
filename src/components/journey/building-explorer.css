@@ -1,0 +1,98 @@
+/* Architectural interaction layer: every entry stays attached to the film. */
+.building-portals { position:absolute; inset:0; z-index:4; pointer-events:none; }
+.building-hit-area { position:absolute; width:100%; height:100%; overflow:visible; }
+.building-hit-area polygon { pointer-events:all; cursor:pointer; fill:transparent; stroke:transparent; stroke-width:1; transition:fill .4s,stroke .4s; }
+.building-portals-tower:has(.building-hotspot:hover) polygon,.building-hit-area polygon:hover { fill:#f5e8c312; stroke:#fffae98c; }
+.building-hotspot { position:absolute; left:54%; top:40%; display:flex; align-items:center; color:#fffaf2; pointer-events:auto; transform:translate(-22px,-22px); text-align:left; isolation:isolate; }
+.hotspot-target { width:44px; height:44px; display:grid; place-items:center; border:1px solid #fffaf2cc; border-radius:50%; background:#171e21a6; box-shadow:0 0 0 7px #ffffff0c; transition:background .3s,box-shadow .3s; flex-shrink:0; }
+.building-hotspot:hover .hotspot-target,.building-hotspot:focus-visible .hotspot-target { background:#fffaf2; color:#202623; box-shadow:0 0 0 12px #ffffff12; }
+.hotspot-label { display:flex; flex-direction:column; gap:6px; margin-left:38px; position:relative; padding:12px 15px; background:#101b20d9; border-left:1px solid #fffaf288; min-width:190px; }
+.hotspot-label::before { content:""; position:absolute; right:100%; top:50%; width:38px; height:1px; background:#fffaf299; }
+.hotspot-label small { font-size:9px; letter-spacing:.1em; text-transform:uppercase; color:#e5e1d9; }
+.hotspot-label > span { display:flex; gap:24px; justify-content:space-between; font-size:12px; letter-spacing:.02em; }
+.journey-picture { transition:transform .85s cubic-bezier(.22,1,.36,1); }
+.tower-journey[data-exploring] .journey-picture { transform:translateX(-28vw); }
+.tower-journey[data-exploring] :is(.journey-copy,.journey-chapters,.journey-bottom,.scene-concept,.building-portals) { visibility:hidden; }
+.building-explorer { position:fixed; inset:0; width:100%; height:100dvh; max-width:none; max-height:none; margin:0; padding:0; border:0; background:transparent; color:#fffaf2; overflow:hidden; overscroll-behavior:contain; }
+.building-explorer::backdrop { background:rgba(8,16,20,.63); }
+.explorer-top { position:absolute; top:0; left:0; right:0; height:104px; padding:0 var(--gutter); display:flex; align-items:center; justify-content:space-between; z-index:5; background:linear-gradient(#0c161c99,transparent); }
+.explorer-return { display:flex; align-items:center; gap:16px; min-height:44px; font-size:11px; letter-spacing:.06em; }
+.explorer-breadcrumb { font-size:10px; letter-spacing:.16em; text-transform:uppercase; }
+.explorer-breadcrumb span { margin:0 20px; opacity:.5; }
+.explorer-close { width:44px; height:44px; display:grid; place-items:center; }
+.explorer-context { position:absolute; left:var(--gutter); top:155px; bottom:195px; display:flex; flex-direction:column; justify-content:flex-end; pointer-events:none; }
+.explorer-context > .eyebrow { position:absolute; top:0; font-size:10px; }
+.explorer-context-line { width:42px; height:1px; background:#fffaf299; margin-bottom:24px; }
+.explorer-context-title { font-family:var(--font-serif); font-size:clamp(42px,5vw,76px); line-height:1; letter-spacing:-.035em; }
+.explorer-context-location { margin-top:22px; font-size:10px; letter-spacing:.08em; }
+.explorer-image-stage { position:absolute; top:104px; left:32%; right:var(--gutter); bottom:190px; background:#111d23; overflow:hidden; touch-action:pan-y; }
+.explorer-image { object-fit:cover; }
+.explorer-image-incoming { opacity:0; clip-path:inset(0 0 0 8%); transform:scale(1.035); transition:opacity .65s ease,clip-path .85s cubic-bezier(.22,1,.36,1),transform 1.2s cubic-bezier(.22,1,.36,1); }
+.explorer-image-incoming[data-ready="true"] { opacity:1; clip-path:inset(0); transform:scale(1); }
+.explorer-image-shade { position:absolute; inset:0; background:linear-gradient(transparent 48%,#081216b3); pointer-events:none; }
+.explorer-caption { position:absolute; bottom:34px; left:36px; right:170px; }
+.explorer-caption .eyebrow { font-size:10px; letter-spacing:.12em; }
+.explorer-caption h2 { font-size:clamp(32px,4vw,60px); line-height:1.1; letter-spacing:-.03em; margin-top:10px; }
+.explorer-arrows { position:absolute; bottom:34px; right:26px; display:flex; gap:12px; align-items:center; }
+.explorer-arrows button { width:44px; height:44px; display:grid; place-items:center; border:1px solid #fffaf266; transition:background .2s; }
+.explorer-arrows button:hover { background:#ffffff24; }
+.explorer-arrows > span { font-size:10px; font-variant-numeric:tabular-nums; }
+.explorer-arrows i { opacity:.7; font-style:normal; }
+.explorer-load { position:absolute; top:45%; left:0; right:0; padding:24px; text-align:center; font-size:12px; background:#111d23; }
+.explorer-navigation { position:absolute; bottom:22px; left:var(--gutter); right:var(--gutter); }
+.explorer-groups { display:flex; border-top:1px solid #fffaf244; justify-content:space-between; }
+.explorer-groups button { display:flex; align-items:center; gap:12px; min-height:58px; position:relative; font-size:13px; color:#dddcd6; }
+.explorer-groups small { font-size:9px; }
+.explorer-group-dot { position:absolute; left:0; top:-4px; width:7px; height:7px; border:1px solid #dddcd6; border-radius:50%; background:#1a2427; transition:background .3s,box-shadow .3s; }
+.explorer-groups [aria-current] { color:#fffaf2; }
+.explorer-groups [aria-current] .explorer-group-dot { background:#fffaf2; box-shadow:0 0 0 5px #fffaf217; }
+.explorer-rooms { display:flex; gap:28px; min-height:44px; overflow-x:auto; scrollbar-width:thin; position:relative; }
+.explorer-rooms button { white-space:nowrap; flex-shrink:0; min-height:44px; font-size:11px; letter-spacing:.03em; color:#d5d7d5; border-bottom:1px solid transparent; }
+.explorer-rooms [aria-current] { color:#fffaf2; border-color:#fffaf2; }
+.explorer-footnote { margin-top:17px; display:flex; justify-content:space-between; font-size:10px; line-height:1.6; color:#c5cbca; }
+@media(max-width:767px) {
+ .hotspot-label { margin-left:18px; min-width:0; padding:10px; }
+ .hotspot-label::before { width:18px; }
+ .hotspot-label small { display:none; }
+ .hotspot-label > span { font-size:11px; gap:10px; }
+ .building-hotspot { flex-direction:column; }
+ .hotspot-label { margin:14px 0 0; transform:translateX(calc(-50% + 22px)); }
+ .hotspot-label::before { width:1px; height:14px; bottom:100%; top:auto; left:50%; }
+ .tower-journey[data-exploring] .journey-picture { transform:none; }
+ .explorer-top { height:82px; gap:8px; }
+ .explorer-return { font-size:10px; gap:10px; }
+ .explorer-breadcrumb { display:none; }
+ .explorer-context { display:none; }
+ .explorer-image-stage { top:90px; left:0; right:0; bottom:210px; }
+ .explorer-image { object-position:center; }
+ .explorer-caption { bottom:92px; left:var(--gutter); right:var(--gutter); }
+ .explorer-caption h2 { font-size:38px; }
+ .explorer-arrows { bottom:24px; left:var(--gutter); right:auto; }
+ .explorer-groups button { min-height:56px; font-size:11px; gap:5px; }
+ .explorer-groups small { display:none; }
+ .explorer-navigation { bottom:20px; }
+ .explorer-rooms { gap:24px; }
+ .explorer-footnote { display:block; font-size:9px; margin-top:18px; }
+ .explorer-footnote span { display:block; }
+}
+@media(max-height:620px) {
+ .explorer-image-stage { top:70px; bottom:145px; }
+ .explorer-top { height:65px; }
+ .explorer-context { top:90px; bottom:145px; }
+ .explorer-context-title { font-size:40px; }
+ .explorer-navigation { bottom:8px; }
+ .explorer-footnote { margin-top:4px; }
+ .explorer-caption { bottom:22px; }
+ .explorer-caption h2 { font-size:30px; }
+ .explorer-arrows { bottom:15px; right:15px; left:auto; }
+ .explorer-groups button { min-height:45px; }
+}
+@media(prefers-reduced-motion:reduce) {
+ .journey-picture,.explorer-image-incoming { transition:none; }
+ .explorer-image-incoming { transform:none; clip-path:none; }
+}
+.building-hotspot { width:44px; overflow:visible; }
+.hotspot-label { flex-shrink:0; white-space:nowrap; }
+.journey-copy { z-index:5; pointer-events:none; }
+.journey-copy a,.journey-copy button { pointer-events:auto; }
+body:has(.building-explorer[open]) .site-header { visibility:hidden; }

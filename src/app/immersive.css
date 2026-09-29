@@ -1,0 +1,51 @@
+/* Latest art direction: quiet UI over the architectural film. */
+:root { --color-ivory:#f2eee6; --color-charcoal:#242622; --color-deep:#191c19; }
+body { background:var(--color-ivory); }
+.site-header { min-height:94px; background:linear-gradient(#10181599,transparent); border:0; color:#fffaf2; }
+.site-header[data-theme="dark"] { background:var(--color-ivory); color:var(--color-charcoal); }
+.site-header .desktop-navigation { display:none; }
+.site-header .menu-trigger { display:flex; }
+.header-enquiry { margin-left:auto; margin-right:40px; font-size:10px; text-transform:uppercase; letter-spacing:.14em; min-height:44px; display:flex; align-items:center; gap:28px; }
+.site-header .wordmark > span { font-size:39px; }
+.site-header .wordmark > small { font-size:8px; letter-spacing:.21em; }
+.tower-overview { padding-block:110px 0; display:grid; grid-template-columns:1.3fr 1fr; gap:80px 12%; }
+.overview-intro h2 { font-size:clamp(38px,4.5vw,68px); line-height:1.08; letter-spacing:-.04em; margin:30px 0; }
+.overview-intro p { max-width:35em; font-size:15px; line-height:1.8; }
+.overview-facts { margin-top:60px; }
+.overview-facts > div { padding:22px 0; border-bottom:1px solid var(--color-rule); }
+.overview-facts dt { font-size:10px; letter-spacing:.12em; text-transform:uppercase; margin-bottom:12px; }
+.overview-facts dd { font-family:var(--font-serif); font-size:28px; }
+.residence-invitation { grid-column:1/-1; padding:65px 0 70px; border-block:1px solid var(--color-rule); display:grid; grid-template-columns:1fr 1fr; gap:25px 12%; }
+.residence-invitation > .eyebrow { grid-column:1/-1; }
+.residence-invitation h3 { grid-row:2/5; font-size:clamp(35px,4vw,60px); max-width:10em; line-height:1.07; letter-spacing:-.04em; }
+.residence-invitation p { font-size:15px; line-height:1.8; }
+.residence-invitation .action-link { justify-self:start; }
+.residence-invitation small { font-size:11px; line-height:1.7; }
+.location-section { padding-top:80px; }
+.location-section .location-panorama { display:none; }
+.location-map { padding-top:25px; }
+.location-map > div:first-child { display:none; }
+.location-map { grid-template-columns:1fr; }
+.map-frame { min-height:300px; }
+.enquiry-section { background:#232722; }
+.site-footer { background:#191c19; }
+.footer-main > div:last-child > a:first-child { display:none; }
+@media(max-width:767px) {
+ .site-header { min-height:82px; }
+ .site-header .wordmark > span { font-size:32px; }
+ .header-enquiry { display:none; }
+ .site-header .menu-trigger { margin-left:auto; }
+ .tower-overview { display:block; padding-top:65px; }
+ .overview-facts { margin:32px 0 60px; }
+ .residence-invitation { display:block; padding:45px 0; }
+ .residence-invitation h3 { margin:25px 0; }
+ .residence-invitation p { margin-bottom:15px; }
+ .residence-invitation small { display:block; margin-top:20px; }
+}
+
+.journey-actions { display:flex; align-items:center; gap:0 24px; flex-wrap:wrap; }
+.overview-intro > .action-link { margin-top:24px; scroll-margin-top:110px; }
+.journey-chapters button[aria-current]::before { transform:scaleX(var(--chapter-progress,0)); transition:none; }
+.journey-chapters button[data-complete="true"]::before { transform:scaleX(1); }
+.journey-chapters button[aria-current] span:last-child { font-weight:600; }
+@media(max-width:767px) { .journey-actions { gap:0 18px; } }

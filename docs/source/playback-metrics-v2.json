@@ -1,0 +1,9 @@
+{
+  "width": 3840,
+  "height": 2160,
+  "displayedFrames": 40,
+  "medianDisplayGapMs": 25,
+  "p95DisplayGapMs": 50.5,
+  "target": 82,
+  "presented": 82
+}
