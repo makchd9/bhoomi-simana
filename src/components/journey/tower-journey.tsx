@@ -54,10 +54,20 @@ export function TowerJourney() {
             { clipPath: "inset(1.5% 1.5% 1.5% 1.5%)" },
             { clipPath: "inset(0% 0% 0% 0%)", duration: 1.5, ease: "power2.out", clearProps: "clipPath" },
           );
+          // Pan without scaling/tilting the image texture; align translations to display pixels.
+          const alignPixel = (value: string) => String(Math.round(parseFloat(value) * window.devicePixelRatio) / window.devicePixelRatio) + "px";
+          const heroPan = gsap.fromTo(scenes[0].querySelector(".journey-image"),
+            { x: -6 },
+            { x: 6, modifiers: { x: alignPixel },
+              duration: 16, ease: "sine.inOut", repeat: -1, yoyo: true },
+          );
+          const syncHeroPan = () => heroPan.paused(document.hidden || Boolean(document.querySelector("dialog[open]")) || current !== 0);
+          document.addEventListener("visibilitychange", syncHeroPan);
+          window.addEventListener("navigation:toggle", syncHeroPan);
           const sequences = journey.map((scene, index) => {
             const video = scenes[index].querySelector<HTMLVideoElement>("video");
             return scene.sequence && video
-              ? createVideoSequence(video, scene.sequence.name, scene.sequence.count, !desktop && !scene.sequence.preserveView)
+              ? createVideoSequence(video, scene.sequence.name, scene.sequence.count, !desktop && window.innerWidth * window.devicePixelRatio <= 1080 && !scene.sequence.preserveView)
               : null;
           });
           warmScene.current = index => sequences[index]?.prepare();
@@ -69,7 +79,7 @@ export function TowerJourney() {
               id: "tower-journey",
               trigger: root.current,
               start: "top top",
-              end: () => `+=${window.innerHeight * journey.length * (desktop ? 1.25 : 1.1)}`,
+              end: () => `+=${journey.length * Math.min(desktop ? 420 : 360, Math.max(260, window.innerHeight * (desktop ? 0.42 : 0.38)))}`,
               pin: true,
               scrub: desktop ? 0.22 : 0.12,
               anticipatePin: 1,
@@ -100,6 +110,7 @@ export function TowerJourney() {
                     .fromTo(copy[next], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.08)
                     .set(scenes[previous], { autoAlpha: 0 }, 0.45);
                   current = next;
+                  syncHeroPan();
                   setActive(next);
                 }
                 const chapter = journeyChapters.findIndex(item => item.id === journey[next].chapter);
@@ -118,9 +129,7 @@ export function TowerJourney() {
             },
             0,
           );
-          if (desktop) timeline.to(scenes[0].querySelector(".journey-picture"), {
-            scale: 1.015, duration: 1, ease: "none",
-          }, 0);
+
           timeline.fromTo(
             ".journey-progress-fill",
             { scaleX: 0 },
@@ -129,6 +138,9 @@ export function TowerJourney() {
           );
           return () => {
             transition?.kill();
+            heroPan.kill();
+            document.removeEventListener("visibilitychange", syncHeroPan);
+            window.removeEventListener("navigation:toggle", syncHeroPan);
             warmScene.current = () => {};
             sequences.forEach((sequence) => sequence?.dispose());
             gsap.set(scenes, { clearProps: "opacity,visibility" });
@@ -144,6 +156,12 @@ export function TowerJourney() {
     },
     { scope: root },
   );
+
+  useEffect(() => {
+    const rail = root.current?.querySelector<HTMLElement>(".journey-rooms");
+    const selected = rail?.querySelector<HTMLElement>("[aria-current]");
+    if (rail && selected) rail.scrollTo({ left: selected.offsetLeft - (rail.clientWidth - selected.offsetWidth) / 2, behavior: "instant" });
+  }, [active]);
 
   useEffect(() => {
     function go(event: Event) {
@@ -204,6 +222,8 @@ export function TowerJourney() {
                 sizes={scene.framing === "complete" ? "100vw" : "(max-width: 767px) 180vh, 100vw"}
                 priority={index === 0}
                 quality={95}
+                original
+                deferred={enhanced && Math.abs(active - index) > 1}
                 className="journey-image"
               />
               {scene.sequence && (
@@ -260,7 +280,7 @@ export function TowerJourney() {
           <span>{project.location ?? "[Location]"}</span>
         </div>
         {enhanced && rooms.length > 1 && <nav className="journey-rooms" aria-label={`${journeyChapters[activeChapter].label} spaces`}>
-          <span className="journey-room-label">{currentChapter === "ground" ? "Ground floor" : currentChapter === "first" ? "First floor" : "Explore"}</span>
+          <span className="journey-room-label">Explore</span>
           {rooms.map(room => <button key={room.id} onClick={() => navigate(room.index)} aria-current={active === room.index ? "step" : undefined}>{room.label}</button>)}
         </nav>}
         <nav

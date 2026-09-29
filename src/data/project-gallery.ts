@@ -1,10 +1,12 @@
+import originals from "../../docs/source/owner-gallery-manifest.json";
 import type { ImageAsset } from "@/types/content";
 const space = (id: string, title: string, sourceId: string) => ({
   id, title,
   image: {
-    src: `/images/simana/spaces/${id}.webp`,
+    src: `/images/simana/spaces-native/${id}.webp`,
     alt: `Architectural visualisation of the Simāna ${title.toLowerCase()}`,
-    width: 2560, height: 1440, placeholder: false,
+    width: originals.find(item => item.slug === id)!.width,
+    height: originals.find(item => item.slug === id)!.height, placeholder: false,
     sourceUrl: `https://drive.google.com/file/d/${sourceId}/view`,
   } satisfies ImageAsset,
 });

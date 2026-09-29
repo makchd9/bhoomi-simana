@@ -1,0 +1,72 @@
+[
+  {
+    "file": "club-banquet.mp4",
+    "frames": 63,
+    "megabytes": 2.5
+  },
+  {
+    "file": "club-gym.mp4",
+    "frames": 78,
+    "megabytes": 4.8
+  },
+  {
+    "file": "club-reception.mp4",
+    "frames": 57,
+    "megabytes": 2.3
+  },
+  {
+    "file": "club-squash.mp4",
+    "frames": 45,
+    "megabytes": 1
+  },
+  {
+    "file": "club-staircase.mp4",
+    "frames": 48,
+    "megabytes": 2.3
+  },
+  {
+    "file": "club-yoga.mp4",
+    "frames": 108,
+    "megabytes": 3.9
+  },
+  {
+    "file": "interior-mobile.mp4",
+    "frames": 99,
+    "megabytes": 10
+  },
+  {
+    "file": "interior.mp4",
+    "frames": 99,
+    "megabytes": 32.2
+  },
+  {
+    "file": "threshold-mobile.mp4",
+    "frames": 108,
+    "megabytes": 9.6
+  },
+  {
+    "file": "threshold.mp4",
+    "frames": 108,
+    "megabytes": 29.3
+  },
+  {
+    "file": "tower-mobile.mp4",
+    "frames": 120,
+    "megabytes": 12.6
+  },
+  {
+    "file": "tower.mp4",
+    "frames": 120,
+    "megabytes": 37.9
+  },
+  {
+    "file": "water-mobile.mp4",
+    "frames": 90,
+    "megabytes": 26.8
+  },
+  {
+    "file": "water.mp4",
+    "frames": 90,
+    "megabytes": 72.1
+  }
+]

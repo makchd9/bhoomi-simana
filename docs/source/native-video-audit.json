@@ -1,0 +1,7 @@
+{
+  "sample": "Tower frame at 177s, source and both encodes decoded with the same FFmpeg build",
+  "psnrDb": {
+    "previous": 28.437104580554667,
+    "nativeV3": 46.68893201375318
+  }
+}

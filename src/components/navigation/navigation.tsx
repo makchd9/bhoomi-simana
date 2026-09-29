@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { X } from "lucide-react";
@@ -99,9 +100,8 @@ export function Navigation() {
   return (
     <>
       <header className="site-header page-gutter" data-theme={theme}>
-        <a className="wordmark" href="#home" aria-label="Project home">
-          <span>Simāna</span>
-          <small>The Urban Oasis</small>
+        <a className="header-brand header-brand-simana" href="#skyline" aria-label="Project home">
+          <Image src={`/images/branding/simana${theme === "dark" ? "" : "-light"}.svg`} width={267} height={301} alt="Simana — The Urban Oasis" priority unoptimized />
         </a>
         <a href="#contact" className="header-enquiry">Private presentation <span aria-hidden="true">↗</span></a>
         <nav className="desktop-navigation" aria-label="Main navigation">
@@ -126,6 +126,9 @@ export function Navigation() {
             <i />
           </span>
         </button>
+        <a className="header-brand header-brand-bhoomi" href="#project" aria-label="Bhoomi Properties — the developer">
+          <Image src={`/images/branding/bhoomi${theme === "dark" ? "" : "-light"}.svg`} width={256} height={427} alt="Bhoomi Properties" priority unoptimized />
+        </a>
       </header>
       <dialog
         ref={dialog}

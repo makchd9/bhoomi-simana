@@ -27,16 +27,14 @@
 .journey-scroll-cue,.journey-bottom a { display:flex; align-items:center; gap:10px; min-height:36px; }
 .journey-progress { position:absolute; bottom:-5px; left:calc(-1 * var(--gutter)); width:100vw; height:2px; background:#ffffff20; }
 .journey-progress-fill { width:100%; height:100%; background:#f3e6ce; transform-origin:left; }
-.journey-rooms { position:absolute; bottom:142px; left:var(--gutter); right:var(--gutter); display:flex; gap:28px; align-items:center; z-index:5; }
-.journey-room-label { font-size:9px; text-transform:uppercase; letter-spacing:.16em; color:#dedcd4; margin-right:12px; }
-.journey-rooms button { min-height:44px; font-size:12px; border-bottom:1px solid transparent; color:#fffaf2; }
+.journey-rooms { overflow-x:auto; overscroll-behavior-x:contain; scrollbar-width:thin; position:absolute; bottom:142px; left:var(--gutter); right:var(--gutter); display:flex; gap:28px; align-items:center; z-index:5; }
+.journey-room-label { flex-shrink:0; font-size:9px; text-transform:uppercase; letter-spacing:.16em; color:#dedcd4; margin-right:12px; }
+.journey-rooms button { flex-shrink:0; white-space:nowrap; min-height:44px; font-size:12px; border-bottom:1px solid transparent; color:#fffaf2; }
 .journey-rooms button[aria-current] { border-color:currentColor; }
 .journey-scene[data-chapter="overview"] { background:#8298a6; }
 .journey-scene[data-chapter="overview"] .journey-image img { object-fit:contain!important; }
 .journey-scene[data-chapter="overview"] .journey-copy { width:min(540px,42%); }
 .journey-scene[data-chapter="overview"] .journey-scrim { background:linear-gradient(180deg,#10181d55,transparent 25%,transparent 58%,#10181d),linear-gradient(90deg,#10181d99,transparent 62%); }
-.journey-scene[data-chapter="ground"] .journey-copy h2,
-.journey-scene[data-chapter="first"] .journey-copy h2,
 .journey-scene[data-chapter="clubhouse"] .journey-copy h2 { font-size:clamp(40px,4vw,64px); }
 @media(max-width:767px) {
  .journey-copy { bottom:202px; width:100%; padding-right:24px; }

@@ -60,3 +60,11 @@ See `docs/tower-clubhouse-rework.md`. This supersedes the background tower overl
 ## Playback quality refinement
 
 Preserve the chosen views and layout. Trim embedded hard cuts from each scroll clip, retain native 4K tower detail, independently encode frames, and pace seek updates on the display clock. The clubhouse uses the best available original website footage at its real 1080p resolution; no generated detail or artificial 4K claims. See `docs/source/walkthrough-quality-v2.md`.
+
+## Current navigation, motion and branding refinement
+
+Exactly four journey and expanded-menu heads: Overview, Tower, Podium and Clubhouse. Floor labels are removed; clubhouse rooms share one horizontal selector. Each camera shot occupies 260–420px of scroll (mobile maximum 360px), retaining all existing footage and the frame-paced decoder. The opening still has a 16-second alternating perspective pan, paused off-scene, in hidden tabs and with the menu open; reduced motion disables it. This is an orbit-like movement of the supplied composition, not a newly invented 3D model. Header marks are cropped vector artwork extracted from the owner-supplied PDF masters, with light lettering for dark scenes and original lettering for light backgrounds.
+
+## Native source fidelity — current media pipeline
+
+The native-v3 audit supersedes prior codec/export settings. Direct source-video encodes, lossless native-size stills, physical-pixel-aware mobile selection and a device-pixel-aligned hero pan remove avoidable quality losses. Read `docs/source/native-media-delivery.md` before changing media. The opening remains a source-limited 1672px illustration; do not claim 4K detail or use sharpening/upscaling to hide that limitation. All owner photo masters are retained at original dimensions; those stills and the separate compressed public clubhouse film are distinct sources.

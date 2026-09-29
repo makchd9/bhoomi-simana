@@ -6,7 +6,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1KmbEqvbE-ZOidR1M7Sb7LGFsu2oYI1M1/view",
-    "asset": "/images/simana/spaces/banquet.webp"
+    "asset": "/images/simana/spaces-native/banquet.webp"
   },
   {
     "id": "1XZWl3ZElxTr3jt8wL0MX2UZEHaGvNYYP",
@@ -15,7 +15,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1XZWl3ZElxTr3jt8wL0MX2UZEHaGvNYYP/view",
-    "asset": "/images/simana/spaces/cafe.webp"
+    "asset": "/images/simana/spaces-native/cafe.webp"
   },
   {
     "id": "1QgFBkBIVtKo-zXNcBfOGWL30YYwoct6l",
@@ -24,7 +24,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1QgFBkBIVtKo-zXNcBfOGWL30YYwoct6l/view",
-    "asset": "/images/simana/spaces/cards-room.webp"
+    "asset": "/images/simana/spaces-native/cards-room.webp"
   },
   {
     "id": "1T7ZKvg6zsP_R38bYBucEmyoyPUKRvAXn",
@@ -33,7 +33,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1T7ZKvg6zsP_R38bYBucEmyoyPUKRvAXn/view",
-    "asset": "/images/simana/spaces/creche.webp"
+    "asset": "/images/simana/spaces-native/creche.webp"
   },
   {
     "id": "1Us6eohLlKxFcMWFvsCmnl0vWDSRH71xw",
@@ -42,7 +42,7 @@
     "width": 7680,
     "height": 4320,
     "sourceUrl": "https://drive.google.com/file/d/1Us6eohLlKxFcMWFvsCmnl0vWDSRH71xw/view",
-    "asset": "/images/simana/spaces/indoor-games.webp"
+    "asset": "/images/simana/spaces-native/indoor-games.webp"
   },
   {
     "id": "1BBEGvOE2GuKoihGgx8BfgARvAwYXVSfY",
@@ -51,7 +51,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1BBEGvOE2GuKoihGgx8BfgARvAwYXVSfY/view",
-    "asset": "/images/simana/spaces/library.webp"
+    "asset": "/images/simana/spaces-native/library.webp"
   },
   {
     "id": "1BzweqB4Jdq8SO6EFEDlq7TasX5_IXHov",
@@ -60,7 +60,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1BzweqB4Jdq8SO6EFEDlq7TasX5_IXHov/view",
-    "asset": "/images/simana/spaces/lift-lobby.webp"
+    "asset": "/images/simana/spaces-native/lift-lobby.webp"
   },
   {
     "id": "1vI_9eYghwOvvDVZ7yUjFSNHWdOq4nwBp",
@@ -69,7 +69,7 @@
     "width": 3840,
     "height": 2160,
     "sourceUrl": "https://drive.google.com/file/d/1vI_9eYghwOvvDVZ7yUjFSNHWdOq4nwBp/view",
-    "asset": "/images/simana/spaces/meeting-room-tv.webp"
+    "asset": "/images/simana/spaces-native/meeting-room-tv.webp"
   },
   {
     "id": "1Ols6QYfw6mI7OV-PdSRPFevduEQ08lQ8",
@@ -78,7 +78,7 @@
     "width": 3840,
     "height": 2160,
     "sourceUrl": "https://drive.google.com/file/d/1Ols6QYfw6mI7OV-PdSRPFevduEQ08lQ8/view",
-    "asset": "/images/simana/spaces/meeting-room.webp"
+    "asset": "/images/simana/spaces-native/meeting-room.webp"
   },
   {
     "id": "1jwWNb0A5daeOJOG3zzz2mfw5DtAioU3i",
@@ -87,7 +87,7 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1jwWNb0A5daeOJOG3zzz2mfw5DtAioU3i/view",
-    "asset": "/images/simana/spaces/pool.webp"
+    "asset": "/images/simana/spaces-native/pool.webp"
   },
   {
     "id": "1E_pSAJZ05N8YblCjcNL0nqvTs_BIX96O",
@@ -96,6 +96,6 @@
     "width": 5760,
     "height": 3240,
     "sourceUrl": "https://drive.google.com/file/d/1E_pSAJZ05N8YblCjcNL0nqvTs_BIX96O/view",
-    "asset": "/images/simana/spaces/spa.webp"
+    "asset": "/images/simana/spaces-native/spa.webp"
   }
 ]

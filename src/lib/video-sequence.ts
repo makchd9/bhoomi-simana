@@ -1,4 +1,4 @@
-/** Independently decoded frames, paced on the display clock rather than wheel events. */
+/** Short-GOP video seeks, paced on the display clock rather than wheel events. */
 export function createVideoSequence(video: HTMLVideoElement, name: string, count: number, mobile: boolean) {
   let active = false, started = false, disposed = false, failed = false;
   let target = 0, cursor = 0, requested = -1, presented = -1;
@@ -58,7 +58,7 @@ export function createVideoSequence(video: HTMLVideoElement, name: string, count
   function prepare() {
     if (started || disposed || failed) return;
     started = true;
-    video.src = `/videos/simana/hd-v2/${name}${mobile ? "-mobile" : ""}.mp4`;
+    video.src = `/videos/simana/native-v3/${name}${mobile ? "-mobile" : ""}.mp4`;
     video.preload = "auto";
     video.load();
   }

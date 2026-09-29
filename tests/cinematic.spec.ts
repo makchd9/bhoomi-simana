@@ -7,14 +7,14 @@ test("scroll scrubs HD video frames forward and backward, then releases on reduc
   page.on("pageerror", (error) => errors.push(error.message));
   await page.setViewportSize({ width: 1440, height: 1000 });
   await page.goto("http://127.0.0.1:3001");
-  await page.getByRole("button", { name: /02 Main tower/ }).click();
+  await page.getByRole("button", { name: /02 Tower/ }).click();
   const video = page.locator("#main-tower video");
   await expect(video).toHaveAttribute("data-frame", /\d+/);
   expect(await video.evaluate((element: HTMLVideoElement) => element.videoWidth)).toBe(3840);
   await page.waitForTimeout(700);
   const first = Number(await video.getAttribute("data-frame"));
   const anchor = await page.evaluate(() => scrollY);
-  await page.evaluate(() => window.scrollBy(0, 280));
+  await page.evaluate(() => window.scrollBy(0, 120));
   await expect
     .poll(async () => Number(await video.getAttribute("data-frame")))
     .toBeGreaterThan(first + 5);
@@ -34,7 +34,7 @@ test("reduced-motion visitors do not download HD animation clips", async ({
   await page.emulateMedia({ reducedMotion: "reduce" });
   const frameRequests: string[] = [];
   page.on("request", (request) => {
-    if (new URL(request.url()).pathname.startsWith("/videos/simana/hd-v2/"))
+    if (new URL(request.url()).pathname.startsWith("/videos/simana/native-v3/"))
       frameRequests.push(request.url());
   });
   await page.goto("http://127.0.0.1:3001");
@@ -48,7 +48,7 @@ test("mobile journey text and controls fit their full-screen overlay", async ({
 }) => {
   await page.setViewportSize({ width: 320, height: 740 });
   await page.goto("http://127.0.0.1:3001");
-  for (const label of ["Overview", "Main tower", "Podium", "Clubhouse", "Ground floor", "First floor"]) {
+  for (const label of ["Overview", "Tower", "Podium", "Clubhouse"]) {
     await page
       .getByRole("navigation", { name: "Building journey chapters" })
       .getByRole("button", { name: new RegExp(label) })
@@ -70,8 +70,9 @@ test("stopping at a scene boundary leaves one readable room, including after res
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("http://127.0.0.1:3001");
   const nav = page.getByRole("navigation", { name: "Building journey chapters" });
-  await nav.getByRole("button", { name: /Ground floor/ }).click();
-  await expect(page.locator("#club-gym")).toHaveAttribute("aria-hidden", "false");
+  await nav.getByRole("button", { name: /Clubhouse/ }).click();
+  await page.getByRole("navigation", { name: "Clubhouse spaces" }).getByRole("button", { name: "Gym", exact: true }).click();
+    await expect(page.locator("#club-gym")).toHaveAttribute("aria-hidden", "false");
   await page.waitForTimeout(1200);
   // A breakpoint change can place the playhead inside an image transition.
   await page.setViewportSize({ width: 390, height: 844 });
@@ -91,7 +92,7 @@ test("stopping at a scene boundary leaves one readable room, including after res
 test("a burst of scrolling is presented in small frame steps and settles on target", async ({ page }) => {
   await page.setViewportSize({ width: 1440, height: 900 });
   await page.goto("http://127.0.0.1:3001");
-  await page.getByRole("button", { name: /02 Main tower/ }).click();
+  await page.getByRole("button", { name: /02 Tower/ }).click();
   const video = page.locator("#main-tower video");
   await expect(video).toHaveAttribute("data-frame", /\d+/);
   await page.waitForTimeout(1200);
@@ -103,13 +104,13 @@ test("a burst of scrolling is presented in small frame steps and settles on targ
       element.dataset.seekSteps = JSON.stringify(frames);
     });
   });
-  await page.mouse.wheel(0, 430);
+  await page.mouse.wheel(0, 150);
   await page.waitForTimeout(1500);
   await expect.poll(async () => Math.abs(Number(await video.getAttribute("data-frame")) - Number(await video.getAttribute("data-target-frame")))).toBeLessThanOrEqual(1);
   const frames: number[] = JSON.parse((await video.getAttribute("data-seek-steps"))!);
   expect(frames.length).toBeGreaterThan(10);
   expect(Math.max(...frames.slice(1).map((frame, i) => Math.abs(frame - frames[i])))).toBeLessThanOrEqual(2);
-  await page.mouse.wheel(0, -430);
+  await page.mouse.wheel(0, -150);
   await page.waitForTimeout(1500);
   await expect.poll(async () => Math.abs(Number(await video.getAttribute("data-frame")) - Number(await video.getAttribute("data-target-frame")))).toBeLessThanOrEqual(1);
 });

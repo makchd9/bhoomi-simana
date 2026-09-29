@@ -1,0 +1,68 @@
+[
+  {
+    "name": "banquet",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "cafe",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "cards-room",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "creche",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "indoor-games",
+    "width": 7680,
+    "height": 4320,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "library",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "lift-lobby",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "meeting-room-tv",
+    "width": 3840,
+    "height": 2160,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "meeting-room",
+    "width": 3840,
+    "height": 2160,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "pool",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  },
+  {
+    "name": "spa",
+    "width": 5760,
+    "height": 3240,
+    "identicalDecodedRGB": true
+  }
+]

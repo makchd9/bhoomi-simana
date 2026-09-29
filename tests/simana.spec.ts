@@ -83,5 +83,5 @@ test("single tower scope and supplied film posters without a master video downlo
     });
   }
   await expect(page.locator("#project")).toContainText("58 floors");
-  expect(requests.filter(url => /\.mp4/.test(url)).every(url => url.includes("/videos/simana/hd-v2/"))).toBe(true);
+  expect(requests.filter(url => /\.mp4/.test(url)).every(url => url.includes("/videos/simana/native-v3/"))).toBe(true);
 });

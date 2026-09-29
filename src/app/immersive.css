@@ -49,3 +49,13 @@ body { background:var(--color-ivory); }
 .journey-chapters button[data-complete="true"]::before { transform:scaleX(1); }
 .journey-chapters button[aria-current] span:last-child { font-weight:600; }
 @media(max-width:767px) { .journey-actions { gap:0 18px; } }
+
+/* Official marks share one optical height, with the developer anchored at right. */
+.site-header .header-brand { display:flex; align-items:center; flex:0 0 auto; }
+.site-header .header-brand img { height:66px; width:auto; object-fit:contain; }
+.site-header .header-brand-bhoomi { margin-left:10px; }
+@media(max-width:767px) {
+ .site-header .header-brand img { height:54px; }
+ .site-header .header-brand-bhoomi { margin-left:0; }
+ .site-header .menu-trigger { margin-inline:auto; }
+}

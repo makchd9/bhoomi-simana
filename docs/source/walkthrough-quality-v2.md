@@ -1,3 +1,5 @@
+> Superseded by [native media delivery](native-media-delivery.md), which removes intermediate recompression and audits decoded pixels.
+
 # Walkthrough quality and motion correction
 
 Owner requested smoother frame shifts and sharper imagery; confirmed using the best available website clubhouse film.

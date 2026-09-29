@@ -17,6 +17,8 @@ export function EditorialImage({
   sizes = "(max-width: 767px) 100vw, 45vw",
   priority = false,
   quality = 90,
+  original = false,
+  deferred = false,
   reveal = false,
   parallax = false,
   className = "",
@@ -27,12 +29,15 @@ export function EditorialImage({
   sizes?: string;
   priority?: boolean;
   quality?: 90 | 95;
+  original?: boolean;
+  deferred?: boolean;
   reveal?: boolean;
   parallax?: boolean;
   className?: string;
 }) {
   const root = useRef<HTMLElement>(null);
   const [failed, setFailed] = useState(false);
+  const [loaded, setLoaded] = useState(false);
   useGSAP(
     () => {
       const media = gsap.matchMedia();
@@ -79,21 +84,23 @@ export function EditorialImage({
       style={{ aspectRatio }}
     >
       <div className="editorial-image-inner">
-        {asset && !failed ? (
+        {asset && !failed ? (!deferred || loaded ? (
           <Image
             src={asset.src}
             alt={asset.alt}
             fill
             sizes={sizes}
             quality={quality}
+            unoptimized={original}
             priority={priority}
             onError={() => setFailed(true)}
+            onLoad={() => setLoaded(true)}
             style={{
               objectFit: "cover",
               objectPosition: asset.position ?? "center",
             }}
           />
-        ) : (
+        ) : null) : (
           <div
             className="empty-image"
             role="img"

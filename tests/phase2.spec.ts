@@ -66,11 +66,10 @@ for (const width of [320, 390, 768, 1024, 1920]) {
       await page.getByRole("button", { name: "Open navigation menu" }).click();
       await page
         .getByRole("navigation", { name: "Expanded navigation" })
-        .getByRole("link", { name: "Project", exact: true })
+        .getByRole("link", { name: "Tower", exact: true })
         .click();
       await expect(page.locator("#navigation-dialog")).not.toBeVisible();
-      await expect(page).toHaveURL(/#project$/);
-      await expect(page.locator("#project-title")).toBeFocused();
+      await expect(page.locator("#main-tower")).toHaveAttribute("aria-hidden", "false");
       await page.waitForTimeout(2000);
       if (width === 390)
         await page.screenshot({ path: "/private/tmp/phase2-mobile-intro.png" });
