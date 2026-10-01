@@ -14,7 +14,7 @@ test("desktop cinematic scroll and navigation states", async ({ page }) => {
     "light",
   );
   await page.screenshot({ path: "/private/tmp/phase2-desktop.png" });
-  await page.getByRole("link", { name: "Begin the journey" }).click();
+  await page.getByRole("link", { name: "Enter the experience" }).click();
   await expect(page.locator("#main-tower video")).toHaveAttribute("data-frame", /\d+/);
   await page.getByRole("link", { name: "Skip journey" }).click();
   await expect(page.locator(".site-header")).toHaveAttribute(
@@ -23,7 +23,7 @@ test("desktop cinematic scroll and navigation states", async ({ page }) => {
   );
   await page.waitForTimeout(1800);
   await page.screenshot({ path: "/private/tmp/phase2-intro.png" });
-  await page.getByRole("link", { name: "Private presentation", exact: false }).first().click();
+  await page.goto(url+"/contact");
   await expect(page.locator("#contact-title")).toBeInViewport();
   expect(errors).toEqual([]);
 });
@@ -66,10 +66,10 @@ for (const width of [320, 390, 768, 1024, 1920]) {
       await page.getByRole("button", { name: "Open navigation menu" }).click();
       await page
         .getByRole("navigation", { name: "Expanded navigation" })
-        .getByRole("link", { name: "Tower", exact: true })
+        .getByRole("link", { name: "Residences", exact: true })
         .click();
       await expect(page.locator("#navigation-dialog")).not.toBeVisible();
-      await expect(page.locator("#main-tower")).toHaveAttribute("aria-hidden", "false");
+      await expect(page.locator("#residences")).toBeVisible();
       await page.waitForTimeout(2000);
       if (width === 390)
         await page.screenshot({ path: "/private/tmp/phase2-mobile-intro.png" });
@@ -93,7 +93,7 @@ test("reduced motion keeps content static and menu can reopen", async ({
       .evaluate((e) => getComputedStyle(e).transform),
   ).toBe("none");
   await page.getByRole("link", { name: "Discover the project" }).click();
-  await expect(page).toHaveURL(/#project$/);
+  await expect(page).toHaveURL(/#why-simana$/);
   expect(
     await page
       .locator(".journey-scene-0 .journey-picture")
@@ -112,12 +112,12 @@ test("server content remains visible without JavaScript", async ({
   const page = await context.newPage();
   await page.goto(url);
   await expect(page.locator("h1")).toBeVisible();
-  await expect(page.locator("#project-title")).toBeVisible();
+  await expect(page.locator("#facts-title")).toBeVisible();
   await expect(page.getByText("To be announced", { exact: true })).toHaveCount(
     0,
   );
   await expect(
-    page.getByText("Purnata · 58 floors", { exact: true }),
+    page.getByText("Premium residential towers", { exact: true }),
   ).toBeVisible();
   await context.close();
 });

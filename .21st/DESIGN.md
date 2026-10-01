@@ -68,3 +68,7 @@ Exactly four journey and expanded-menu heads: Overview, Tower, Podium and Clubho
 ## Native source fidelity — current media pipeline
 
 The native-v3 audit supersedes prior codec/export settings. Direct source-video encodes, lossless native-size stills, physical-pixel-aware mobile selection and a device-pixel-aligned hero pan remove avoidable quality losses. Read `docs/source/native-media-delivery.md` before changing media. The opening remains a source-limited 1672px illustration; do not claim 4K detail or use sharpening/upscaling to hide that limitation. All owner photo masters are retained at original dimensions; those stills and the separate compressed public clubhouse film are distinct sources.
+
+## Master buyer-information upgrade — October 2026
+
+Preserve the native-v3 cinematic identity. Opening → immediate editorial facts → original building journey → buyer information. Full navigation now uses Simāna, Residences, Amenities, Aikyam, Location, Bhoomi and Journal; the cinematic control retains Overview / Tower / Podium / Clubhouse. Published project-wide plans are available again, explicitly distinguished from Purnata's current offering and live inventory. Reference `docs/source/upgrade-audit.md` for fact conflicts, approval gates and the real brochure. New information surfaces reuse the restrained serif/sans, ivory/charcoal, rules, whitespace and large imagery. No new card system or invented project facts.

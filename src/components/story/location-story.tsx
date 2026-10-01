@@ -1,6 +1,8 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { ArrowUpRight, MapPin } from "lucide-react";
+import { address, connectivity } from "@/data/buyer-content";
 import { location } from "@/data/location";
 import { media } from "@/data/source-media";
 import { EditorialImage } from "@/components/media/editorial-image";
@@ -15,7 +17,7 @@ export function LocationStory() {
     >
       <div className="page-gutter">
         <div className="section-line">
-          <span className="eyebrow">06 / The neighbourhood</span>
+          <span className="eyebrow">The neighbourhood</span>
           <span className="eyebrow">Lalbaug, Mumbai</span>
         </div>
         <div className="section-heading">
@@ -43,6 +45,21 @@ export function LocationStory() {
         parallax
         className="location-panorama"
       />
+      <div className="connectivity page-gutter">
+        <span className="eyebrow">Around the address</span>
+        <ul>
+          {connectivity.map((name) => (
+            <li key={name}>{name}</li>
+          ))}
+        </ul>
+        <p className="fine-print">
+          Destinations and connections referenced in project material; no travel
+          times or distances are implied. Routes and access conditions vary.
+        </p>
+        <Link href="/contact?type=Book%20Site%20Visit" className="action-link">
+          Book a site visit ↗
+        </Link>
+      </div>
       <div className="location-map page-gutter">
         <div>
           <span className="eyebrow">Find your way home</span>
@@ -51,9 +68,17 @@ export function LocationStory() {
             <br />
             <em>At the heart of it.</em>
           </h3>
-          <p>
-            A neighbourhood rooted in Mumbai, with a new perspective on living.
-          </p>
+          <address>
+            {address.name}
+            <br />
+            {address.street}
+            <br />
+            {address.locality}
+            <br />
+            {address.city}, {address.region} {address.postalCode}
+            <br />
+            {address.country}
+          </address>
           <a
             className="action-link"
             href={location.directions}

@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Image from "next/image";
 import { ArrowUpRight, Expand } from "lucide-react";
+import { PurnataIntroduction } from "@/components/buyer/sections";
 import { residences } from "@/data/residences";
 import { Modal } from "@/components/ui/modal";
 
@@ -17,7 +18,9 @@ export function ResidenceCollection() {
       aria-labelledby="residences-title"
     >
       <div className="section-line">
-        <span className="eyebrow">02 / The residences</span>
+        <span className="eyebrow">
+          The residences / Published plan collection
+        </span>
         <span className="eyebrow">2 — 5 BHK</span>
       </div>
       <div className="section-heading">
@@ -29,6 +32,12 @@ export function ResidenceCollection() {
           from the considered Premium to the expansive Supreme.
         </p>
       </div>
+      <PurnataIntroduction />
+      <p className="plan-context">
+        Project-wide reference layouts from the Simāna website. These are not a
+        live inventory of Purnata residences. Type A and Type B refer to the two
+        published 3 BHK plans.
+      </p>
       <div className="residence-tabs" aria-label="Choose a residence plan">
         {residences.map((item, index) => (
           <button
@@ -53,6 +62,7 @@ export function ResidenceCollection() {
             alt={`Published ${residence.configuration} ${residence.name} floor plan`}
             width={1536}
             height={1090}
+            unoptimized
             sizes="(max-width: 767px) 100vw, 60vw"
           />
           <span className="plan-enlarge">
@@ -80,9 +90,17 @@ export function ResidenceCollection() {
             Published layout for reference. Wing, floor, orientation and current
             availability are confirmed by the sales team.
           </p>
+          <div className="inline-actions plan-actions">
+            <button className="action-link" onClick={() => setExpanded(true)}>
+              View floor plan <Expand size={15} />
+            </button>
+            <a className="action-link" href={residence.plan} download>
+              Download floor plan ↓
+            </a>
+          </div>
           <a
             className="action-link"
-            href={`#contact`}
+            href={`/contact?configuration=${encodeURIComponent(residence.configuration)}&type=Request%20Floor%20Plan#enquiry-form`}
             onClick={() =>
               window.dispatchEvent(
                 new CustomEvent("residence:enquire", {
@@ -111,10 +129,19 @@ export function ResidenceCollection() {
               alt={`Enlarged ${residence.configuration} ${residence.name} plan`}
               width={1536}
               height={1090}
+              unoptimized
               sizes="95vw"
             />
             <a className="action-link" href={residence.plan} download>
               Download published plan <ArrowUpRight size={15} />
+            </a>
+            <a
+              className="action-link"
+              href={residence.plan}
+              target="_blank"
+              rel="noreferrer"
+            >
+              Open original in full screen ↗
             </a>
             <p className="fine-print">
               Pinch to zoom on a touch device. Download the original for a

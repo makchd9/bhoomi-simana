@@ -3,7 +3,7 @@ export const project = {
   developer: "Bhoomi Properties",
   location: "Lalbaug",
   architect: "Hafeez Contractor",
-  type: "A 58-floor residential tower",
+  type: "A three-tower residential development",
   floors: 58,
   // Owner-confirmed scope. Wing identity, inventory and registration await confirmation.
   towers: [] as { id: string; name: string; registration: string; qr: string }[],
@@ -32,14 +32,14 @@ export const project = {
       "Explore the architecture through the supplied Simāna walkthrough, then arrange a personal introduction to the residences.",
     imageNote: "Rendered image of actual elevation",
     factsNotice:
-      "Tower scope supplied by the project owner. Residence plans and availability will follow confirmation.",
+      "Project-wide published plans are reference layouts; current Purnata inventory must be confirmed.",
     chapterEnd: "Space to live differently",
     statement: "A considered approach to contemporary living.",
   },
   hallmarks: [
     { value: "80%", label: "Open space & landscaped greens" },
     { value: "54+", label: "Lifestyle amenities" },
-    { value: "11.8 ft", label: "Floor-to-floor height" },
+    { value: "3", label: "Residential towers" },
   ],
   details: [
     "Strategic bylane location",
@@ -47,12 +47,7 @@ export const project = {
     "5 dedicated entry & exit gates",
     "Aikyam signature clubhouse",
   ],
-  developerStats: [
-    ["1993", "The beginning"],
-    ["61+", "Completed projects"],
-    ["12.5m", "Sq ft delivered"],
-    ["17,000+", "Families housed"],
-  ],
+  developerStats: [["1993", "Established"]],
   disclaimer:
     "The plans, specifications, images, dimensions and other details are indicative and subject to approval from the concerned authorities. The Developer/Promoter reserves the right to amend, modify or revise them in the interest of the project without prior notice. This material does not constitute an offer, invitation to offer or contract. Transactions are governed solely by the Agreement for Sale. Sanctioned plans, specifications and approvals are available on the MahaRERA website.",
 };
@@ -66,22 +61,4 @@ export const socials = [
   ],
   ["YouTube", "https://www.youtube.com/@SIMANA-TheUrbanOasis"],
 ];
-export const associates = [
-  {
-    name: "Architect Hafeez Contractor",
-    role: "Architect",
-    logo: "aboutlogo1.png",
-  },
-  { name: "QHPL", role: "Construction partner", logo: "aboutlogo3.png" },
-  { name: "J+W", role: "Structural consultant", logo: "aboutlogo4.png" },
-  {
-    name: "Kaizen Design Solutions",
-    role: "Green building certification consultant",
-    logo: "aboutlogo5.png",
-  },
-  {
-    name: "Liaison partner logo",
-    role: "Liaison partner",
-    logo: "aboutlogo6.png",
-  },
-];
+export { verifiedAssociates as associates } from "./buyer-content";

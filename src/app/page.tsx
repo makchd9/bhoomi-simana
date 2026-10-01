@@ -1,12 +1,27 @@
-import { project } from "@/data/project";
 import { Navigation } from "@/components/navigation/navigation";
 import { Hero } from "@/components/hero/hero";
+import { TowerJourney } from "@/components/journey/tower-journey";
 import { SmoothScroll } from "@/components/animation/smooth-scroll";
-import { Footer } from "@/components/story/project-story";
-import { TowerOverview } from "@/components/story/tower-overview";
+import { Footer } from "@/components/buyer/footer";
 import { LocationStory } from "@/components/story/location-story";
 import { Enquiry } from "@/components/story/enquiry";
-
+import {
+  ProjectFacts,
+  WhySimana,
+  AikyamSection,
+  ViewSection,
+  DeveloperSection,
+  AssociatesSection,
+  JournalSection,
+  FAQSection,
+  PresentationSection,
+} from "@/components/buyer/sections";
+import { ResidenceCollection } from "@/components/residences/residence-collection";
+import { ResidenceGallery } from "@/components/buyer/residence-gallery";
+import { AmenitiesStory } from "@/components/story/amenities-story";
+import { MobileActions } from "@/components/buyer/mobile-actions";
+import { siteUrl, address } from "@/data/buyer-content";
+import { project } from "@/data/project";
 export default function Home() {
   return (
     <>
@@ -16,18 +31,20 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ApartmentComplex",
-            name: project.name,
-            url: project.source,
+            name: "Simāna by Bhoomi",
+            url: siteUrl,
             description:
-              "A 58-floor residential tower in Lalbaug, Mumbai, by Bhoomi Properties.",
+              "A three-tower residential development in Lalbaug, Parel, Mumbai, by Bhoomi, with Purnata residences and the Aikyam clubhouse.",
             address: {
               "@type": "PostalAddress",
-              addressLocality: "Lalbaug, Mumbai",
-              addressRegion: "Maharashtra",
+              streetAddress: address.street,
+              addressLocality: "Lalbaug, Parel, Mumbai",
+              addressRegion: address.region,
+              postalCode: address.postalCode,
               addressCountry: "IN",
             },
             telephone: project.contact.phone,
-            image: "https://simanabhoomi.com/images/simana/journey-hd/tower-000-poster.webp",
+            image: `${siteUrl}/images/simana/native-v3/tower.webp`,
           }).replace(/</g, "\\u003c"),
         }}
       />
@@ -35,11 +52,24 @@ export default function Home() {
       <Navigation />
       <main id="main">
         <Hero />
-        <TowerOverview />
+        <ProjectFacts />
+        <TowerJourney />
+        <WhySimana />
+        <ResidenceCollection />
+        <ResidenceGallery />
+        <AikyamSection />
+        <AmenitiesStory />
+        <ViewSection />
         <LocationStory />
-        <Enquiry />
+        <DeveloperSection />
+        <AssociatesSection />
+        <JournalSection />
+        <FAQSection />
+        <PresentationSection />
+        <Enquiry enabled={Boolean(process.env.LEAD_WEBHOOK_URL)} />
       </main>
       <Footer />
+      <MobileActions />
     </>
   );
 }

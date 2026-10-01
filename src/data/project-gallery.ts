@@ -7,6 +7,7 @@ const space = (id: string, title: string, sourceId: string) => ({
     alt: `Architectural visualisation of the Simāna ${title.toLowerCase()}`,
     width: originals.find(item => item.slug === id)!.width,
     height: originals.find(item => item.slug === id)!.height, placeholder: false,
+    kind: "Rendered Image", caption: "Artist’s impression / Rendered image",
     sourceUrl: `https://drive.google.com/file/d/${sourceId}/view`,
   } satisfies ImageAsset,
 });

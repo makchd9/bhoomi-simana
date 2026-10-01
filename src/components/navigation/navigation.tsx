@@ -1,29 +1,43 @@
 "use client";
+import Link from "next/link";
 import Image from "next/image";
+import { usePathname } from "next/navigation";
 import { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
 import { X } from "lucide-react";
+import { brochure } from "@/data/buyer-content";
 import { navigation } from "@/data/navigation";
 import { projectLabel, project } from "@/data/project";
 
-export function Navigation() {
-  const [theme, setTheme] = useState("light");
+export function Navigation({
+  initialTheme = "light",
+}: {
+  initialTheme?: "light" | "dark";
+}) {
+  const [theme, setTheme] = useState(initialTheme);
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const dialog = useRef<HTMLDialogElement>(null);
   const animation = useRef<gsap.core.Tween | null>(null);
   const opener = useRef<HTMLButtonElement>(null);
   useEffect(() => {
     let frame = 0;
-    const sections = [
-      ...document.querySelectorAll<HTMLElement>("[data-nav-theme]"),
-    ];
     const update = () => {
+      const sections = [
+        ...document.querySelectorAll<HTMLElement>("[data-nav-theme]"),
+      ];
       frame = 0;
       const section = sections.findLast((element) => {
         const bounds = element.getBoundingClientRect();
         return bounds.top <= 48 && bounds.bottom > 48;
       });
-      setTheme(section?.dataset.navTheme ?? "light");
+      setTheme(
+        section
+          ? section.dataset.navTheme === "dark"
+            ? "dark"
+            : "light"
+          : initialTheme,
+      );
     };
     const schedule = () => {
       if (!frame) frame = requestAnimationFrame(update);
@@ -36,7 +50,7 @@ export function Navigation() {
       window.removeEventListener("scroll", schedule);
       window.removeEventListener("resize", schedule);
     };
-  }, []);
+  }, [pathname, initialTheme]);
   useEffect(() => {
     if (!open) return;
     const previous = document.body.style.overflow;
@@ -76,14 +90,23 @@ export function Navigation() {
       dialog.current?.close();
       gsap.set(dialog.current, { clearProps: "all" });
       setOpen(false);
+      if (anchor && !anchor.startsWith("#")) {
+        window.location.assign(anchor);
+        return;
+      }
       if (anchor) {
         // Let React release the scroll lock before asking Lenis/native scrolling to navigate.
         requestAnimationFrame(() => {
           window.dispatchEvent(new Event("navigation:toggle"));
-          const navigate = new CustomEvent("journey:navigate", { detail: anchor, cancelable: true });
+          const navigate = new CustomEvent("journey:navigate", {
+            detail: anchor,
+            cancelable: true,
+          });
           window.dispatchEvent(navigate);
           if (!navigate.defaultPrevented) window.location.hash = anchor;
-          const target = document.querySelector<HTMLElement>(`${anchor} h2`) ?? document.getElementById(anchor.slice(1));
+          const target =
+            document.querySelector<HTMLElement>(`${anchor} h2`) ??
+            document.getElementById(anchor.slice(1));
           target?.focus({ preventScroll: true });
         });
       } else opener.current?.focus();
@@ -100,10 +123,26 @@ export function Navigation() {
   return (
     <>
       <header className="site-header page-gutter" data-theme={theme}>
-        <a className="header-brand header-brand-simana" href="#skyline" aria-label="Project home">
-          <Image src={`/images/branding/simana${theme === "dark" ? "" : "-light"}.svg`} width={267} height={301} alt="Simana — The Urban Oasis" priority unoptimized />
+        <Link
+          className="header-brand header-brand-simana"
+          href="/"
+          aria-label="Project home"
+        >
+          <Image
+            src={`/images/branding/simana${theme === "dark" ? "" : "-light"}.svg`}
+            width={267}
+            height={301}
+            alt="Simana — The Urban Oasis"
+            priority
+            unoptimized
+          />
+        </Link>
+        <a href={brochure.href} className="header-brochure" download>
+          Download brochure <span aria-hidden="true">↓</span>
         </a>
-        <a href="#contact" className="header-enquiry">Private presentation <span aria-hidden="true">↗</span></a>
+        <Link href="/contact#enquiry-form" className="header-enquiry">
+          Enquire <span aria-hidden="true">↗</span>
+        </Link>
         <nav className="desktop-navigation" aria-label="Main navigation">
           {navigation.map((item) => (
             <a key={item.label} href={item.href}>
@@ -126,9 +165,20 @@ export function Navigation() {
             <i />
           </span>
         </button>
-        <a className="header-brand header-brand-bhoomi" href="#project" aria-label="Bhoomi Properties — the developer">
-          <Image src={`/images/branding/bhoomi${theme === "dark" ? "" : "-light"}.svg`} width={256} height={427} alt="Bhoomi Properties" priority unoptimized />
-        </a>
+        <Link
+          className="header-brand header-brand-bhoomi"
+          href="/about-bhoomi"
+          aria-label="Bhoomi Properties — the developer"
+        >
+          <Image
+            src={`/images/branding/bhoomi${theme === "dark" ? "" : "-light"}.svg`}
+            width={256}
+            height={427}
+            alt="Bhoomi Properties"
+            priority
+            unoptimized
+          />
+        </Link>
       </header>
       <dialog
         ref={dialog}

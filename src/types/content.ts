@@ -1,5 +1,6 @@
 /** Null means not supplied. Never replace missing project facts with demo values. */
 export type ImageAsset = {
+  kind?: "Actual Image" | "Rendered Image" | "Illustration" | "Floor Plan";
   src: string;
   alt: string;
   width: number;

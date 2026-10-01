@@ -1,6 +1,9 @@
 export const navigation = [
-  { label: "Overview", href: "#skyline", description: "The urban oasis" },
-  { label: "Tower", href: "#main-tower", description: "Explore Purnata" },
-  { label: "Podium", href: "#spaces", description: "Pool and open spaces" },
-  { label: "Clubhouse", href: "#clubhouse", description: "Inside Aikyam" },
+  { label: "Simāna", href: "/#project", description: "The urban oasis" },
+  { label: "Residences", href: "/residences", description: "Plans & possibilities" },
+  { label: "Amenities", href: "/amenities", description: "Life in balance" },
+  { label: "Aikyam", href: "/aikyam", description: "The social heart" },
+  { label: "Location", href: "/location", description: "Lalbaug, Parel" },
+  { label: "Bhoomi", href: "/about-bhoomi", description: "A legacy since 1993" },
+  { label: "Journal", href: "/blog", description: "In the spotlight" },
 ] as const;

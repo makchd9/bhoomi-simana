@@ -7,12 +7,22 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { ArrowDown, ArrowUpRight } from "lucide-react";
 import { EditorialImage } from "@/components/media/editorial-image";
 import { project } from "@/data/project";
-import { journey, journeyChapters, chapterStarts, scenePositions, journeyAliases } from "@/data/journey";
+import {
+  journey as allScenes,
+  journeyChapters,
+  journeyAliases,
+} from "@/data/journey";
 import { scrollToPosition } from "@/lib/scroll-to";
 import { createVideoSequence } from "@/lib/video-sequence";
 import "./journey.css";
 
-
+const journey = allScenes.slice(1);
+const chapterStarts = journeyChapters.map((chapter) =>
+  journey.findIndex((scene) => scene.chapter === chapter.id),
+);
+const scenePositions = journey.map(
+  (_, index) => (index + 0.34) / journey.length,
+);
 gsap.registerPlugin(useGSAP, ScrollTrigger);
 
 export function TowerJourney() {
@@ -22,15 +32,20 @@ export function TowerJourney() {
   const [active, setActive] = useState(0);
   const [enhanced, setEnhanced] = useState(false);
   const currentChapter = journey[active].chapter;
-  const activeChapter = journeyChapters.findIndex(chapter => chapter.id === currentChapter);
-  const rooms = journey.map((scene, index) => ({ ...scene, index })).filter(scene => scene.chapter === currentChapter);
+  const activeChapter = journeyChapters.findIndex(
+    (chapter) => chapter.id === currentChapter,
+  );
+  const rooms = journey
+    .map((scene, index) => ({ ...scene, index }))
+    .filter((scene) => scene.chapter === currentChapter);
 
   useGSAP(
     () => {
       const media = gsap.matchMedia();
       media.add(
         {
-          motion: "(prefers-reduced-motion: no-preference) and (min-height: 680px)",
+          motion:
+            "(prefers-reduced-motion: no-preference) and (min-height: 680px)",
           desktop: "(min-width: 768px)",
         },
         (context) => {
@@ -47,30 +62,43 @@ export function TowerJourney() {
             root.current,
           );
           gsap.set(scenes.slice(1), { autoAlpha: 0 });
-          gsap.fromTo(copy[0], { opacity: 0, y: 18 }, {
-            opacity: 1, y: 0, duration: 1.1, delay: 0.15, ease: "power2.out", clearProps: "all",
-          });
-          gsap.fromTo(scenes[0].querySelector(".journey-picture"),
+          gsap.fromTo(
+            copy[0],
+            { opacity: 0, y: 18 },
+            {
+              opacity: 1,
+              y: 0,
+              duration: 1.1,
+              delay: 0.15,
+              ease: "power2.out",
+              clearProps: "all",
+            },
+          );
+          gsap.fromTo(
+            scenes[0].querySelector(".journey-picture"),
             { clipPath: "inset(1.5% 1.5% 1.5% 1.5%)" },
-            { clipPath: "inset(0% 0% 0% 0%)", duration: 1.5, ease: "power2.out", clearProps: "clipPath" },
+            {
+              clipPath: "inset(0% 0% 0% 0%)",
+              duration: 1.5,
+              ease: "power2.out",
+              clearProps: "clipPath",
+            },
           );
-          // Pan without scaling/tilting the image texture; align translations to display pixels.
-          const alignPixel = (value: string) => String(Math.round(parseFloat(value) * window.devicePixelRatio) / window.devicePixelRatio) + "px";
-          const heroPan = gsap.fromTo(scenes[0].querySelector(".journey-image"),
-            { x: -6 },
-            { x: 6, modifiers: { x: alignPixel },
-              duration: 16, ease: "sine.inOut", repeat: -1, yoyo: true },
-          );
-          const syncHeroPan = () => heroPan.paused(document.hidden || Boolean(document.querySelector("dialog[open]")) || current !== 0);
-          document.addEventListener("visibilitychange", syncHeroPan);
-          window.addEventListener("navigation:toggle", syncHeroPan);
           const sequences = journey.map((scene, index) => {
-            const video = scenes[index].querySelector<HTMLVideoElement>("video");
+            const video =
+              scenes[index].querySelector<HTMLVideoElement>("video");
             return scene.sequence && video
-              ? createVideoSequence(video, scene.sequence.name, scene.sequence.count, !desktop && window.innerWidth * window.devicePixelRatio <= 1080 && !scene.sequence.preserveView)
+              ? createVideoSequence(
+                  video,
+                  scene.sequence.name,
+                  scene.sequence.count,
+                  !desktop &&
+                    window.innerWidth * window.devicePixelRatio <= 1080 &&
+                    !scene.sequence.preserveView,
+                )
               : null;
           });
-          warmScene.current = index => sequences[index]?.prepare();
+          warmScene.current = (index) => sequences[index]?.prepare();
           const playhead = { position: 0 };
           let current = 0;
           let transition: gsap.core.Timeline | null = null;
@@ -79,7 +107,8 @@ export function TowerJourney() {
               id: "tower-journey",
               trigger: root.current,
               start: "top top",
-              end: () => `+=${journey.length * Math.min(desktop ? 420 : 360, Math.max(260, window.innerHeight * (desktop ? 0.42 : 0.38)))}`,
+              end: () =>
+                `+=${journey.length * Math.min(desktop ? 420 : 360, Math.max(260, window.innerHeight * (desktop ? 0.42 : 0.38)))}`,
               pin: true,
               scrub: desktop ? 0.22 : 0.12,
               anticipatePin: 1,
@@ -102,27 +131,57 @@ export function TowerJourney() {
                   // Scrubbing opacity leaves two rooms ghosted together on touch/resize.
                   transition?.kill();
                   const previous = current;
-                  gsap.set(scenes.filter((_, i) => i !== previous && i !== next), { autoAlpha: 0 });
+                  gsap.set(
+                    scenes.filter((_, i) => i !== previous && i !== next),
+                    { autoAlpha: 0 },
+                  );
                   gsap.set(scenes[previous], { autoAlpha: 1 });
-                  transition = gsap.timeline()
+                  transition = gsap
+                    .timeline()
                     .to(copy[previous], { opacity: 0, duration: 0.15 }, 0)
-                    .fromTo(scenes[next], { autoAlpha: 0 }, { autoAlpha: 1, duration: 0.45, ease: "power1.out" }, 0)
-                    .fromTo(copy[next], { opacity: 0, y: 12 }, { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" }, 0.08)
+                    .fromTo(
+                      scenes[next],
+                      { autoAlpha: 0 },
+                      { autoAlpha: 1, duration: 0.45, ease: "power1.out" },
+                      0,
+                    )
+                    .fromTo(
+                      copy[next],
+                      { opacity: 0, y: 12 },
+                      { opacity: 1, y: 0, duration: 0.5, ease: "power2.out" },
+                      0.08,
+                    )
                     .set(scenes[previous], { autoAlpha: 0 }, 0.45);
                   current = next;
-                  syncHeroPan();
                   setActive(next);
                 }
-                const chapter = journeyChapters.findIndex(item => item.id === journey[next].chapter);
+                const chapter = journeyChapters.findIndex(
+                  (item) => item.id === journey[next].chapter,
+                );
                 const chapterStart = chapterStarts[chapter];
                 const chapterEnd = chapterStarts[chapter + 1] ?? journey.length;
-                root.current?.style.setProperty("--chapter-progress", String(Math.min(1, (position - chapterStart) / (chapterEnd - chapterStart))));
+                root.current?.style.setProperty(
+                  "--chapter-progress",
+                  String(
+                    Math.min(
+                      1,
+                      (position - chapterStart) / (chapterEnd - chapterStart),
+                    ),
+                  ),
+                );
                 // Warm the adjacent camera shot before the next scene becomes visible.
                 if (position - next > 0.62) sequences[next + 1]?.prepare();
                 const sequence = journey[next].sequence;
                 if (sequence)
                   sequences[next]?.render(
-                    Math.min(1, Math.max(0, (position - next - (next === 0 ? 0 : 0.24)) / (next === 0 ? 0.92 : 0.7))) *
+                    Math.min(
+                      1,
+                      Math.max(
+                        0,
+                        (position - next - (next === 0 ? 0 : 0.24)) /
+                          (next === 0 ? 0.92 : 0.7),
+                      ),
+                    ) *
                       (sequence.count - 1),
                   );
               },
@@ -138,9 +197,6 @@ export function TowerJourney() {
           );
           return () => {
             transition?.kill();
-            heroPan.kill();
-            document.removeEventListener("visibilitychange", syncHeroPan);
-            window.removeEventListener("navigation:toggle", syncHeroPan);
             warmScene.current = () => {};
             sequences.forEach((sequence) => sequence?.dispose());
             gsap.set(scenes, { clearProps: "opacity,visibility" });
@@ -160,43 +216,71 @@ export function TowerJourney() {
   useEffect(() => {
     const rail = root.current?.querySelector<HTMLElement>(".journey-rooms");
     const selected = rail?.querySelector<HTMLElement>("[aria-current]");
-    if (rail && selected) rail.scrollTo({ left: selected.offsetLeft - (rail.clientWidth - selected.offsetWidth) / 2, behavior: "instant" });
+    if (rail && selected)
+      rail.scrollTo({
+        left:
+          selected.offsetLeft - (rail.clientWidth - selected.offsetWidth) / 2,
+        behavior: "instant",
+      });
   }, [active]);
 
   useEffect(() => {
     function go(event: Event) {
       if (event.defaultPrevented) return;
-      const href = event instanceof CustomEvent
-        ? String(event.detail)
-        : (event.target as Element).closest<HTMLAnchorElement>("a[href^='#']")?.getAttribute("href");
-      const target = href?.slice(1);
-      const resolved = target ? journeyAliases[target] ?? target : "";
+      if (event instanceof MouseEvent && (event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0)) return;
+      const href =
+        event instanceof CustomEvent
+          ? String(event.detail)
+          : (event.target as Element)
+              .closest<HTMLAnchorElement>("a[href]")
+              ?.getAttribute("href");
+      if (!href) return;
+      const url = new URL(href, window.location.href);
+      if (url.origin !== location.origin || url.pathname !== location.pathname) return;
+      const target = url.hash.slice(1);
+      const resolved = target ? (journeyAliases[target] ?? target) : "";
       const index = journey.findIndex((scene) => scene.id === resolved);
       const trigger = driver.current;
       if (index < 0 || !trigger) return;
       event.preventDefault();
       warmScene.current(index);
-      scrollToPosition(trigger.start + (trigger.end - trigger.start) * scenePositions[index]);
+      scrollToPosition(
+        trigger.start + (trigger.end - trigger.start) * scenePositions[index],
+      );
     }
+    const fromHash = () => go(new CustomEvent("journey:navigate", { detail: window.location.hash, cancelable: true }));
+    const initial = requestAnimationFrame(fromHash);
+    window.addEventListener("hashchange", fromHash);
     document.addEventListener("click", go);
     window.addEventListener("journey:navigate", go);
-    return () => { document.removeEventListener("click", go); window.removeEventListener("journey:navigate", go); };
+    return () => {
+      cancelAnimationFrame(initial);
+      window.removeEventListener("hashchange", fromHash);
+      document.removeEventListener("click", go);
+      window.removeEventListener("journey:navigate", go);
+    };
   }, []);
 
   function navigate(index: number) {
+    if (index < 0) {
+      scrollToPosition(0);
+      return;
+    }
     const trigger = driver.current;
     if (!trigger) {
       document.getElementById(journey[index].id)?.scrollIntoView();
       return;
     }
     warmScene.current(index);
-    scrollToPosition(trigger.start + (trigger.end - trigger.start) * scenePositions[index]);
+    scrollToPosition(
+      trigger.start + (trigger.end - trigger.start) * scenePositions[index],
+    );
   }
 
   return (
     <section
       ref={root}
-      id="home"
+      id="journey"
       className="tower-journey"
       data-nav-theme="light"
       aria-label="A scroll journey through Simāna"
@@ -213,63 +297,67 @@ export function TowerJourney() {
             aria-hidden={enhanced && active !== index}
             inert={enhanced && active !== index}
           >
-            
             <div className="journey-picture">
               <EditorialImage
                 asset={scene.image}
                 label={scene.label}
                 aspectRatio="auto"
-                sizes={scene.framing === "complete" ? "100vw" : "(max-width: 767px) 180vh, 100vw"}
-                priority={index === 0}
+                sizes={
+                  scene.framing === "complete"
+                    ? "100vw"
+                    : "(max-width: 767px) 180vh, 100vw"
+                }
+                priority={false}
                 quality={95}
                 original
                 deferred={enhanced && Math.abs(active - index) > 1}
                 className="journey-image"
               />
               {scene.sequence && (
-                <video className="journey-video" muted playsInline preload="none" aria-hidden="true" tabIndex={-1} disablePictureInPicture />
+                <video
+                  className="journey-video"
+                  muted
+                  playsInline
+                  preload="none"
+                  aria-hidden="true"
+                  tabIndex={-1}
+                  disablePictureInPicture
+                />
               )}
             </div>
             <div className="journey-scrim" aria-hidden="true" />
             <div className="journey-copy page-gutter">
-              <p className="eyebrow">
-                {scene.eyebrow}
-              </p>
-              {index === 0 ? (
-                <h1 id={`${scene.id}-title`}>
-                  {scene.title[0]}
-                  <em>{scene.title[1]}</em>
-                </h1>
-              ) : (
-                <h2 id={`${scene.id}-title`}>
-                  {scene.title[0]}
-                  <em>{scene.title[1]}</em>
-                </h2>
-              )}
+              <p className="eyebrow">{scene.eyebrow}</p>
+              <h2 id={`${scene.id}-title`}>
+                {scene.title[0]} <em>{scene.title[1]}</em>
+              </h2>
               <p className="journey-description">{scene.description}</p>
               <div className="journey-actions">
-              <a
-                href={index === journey.length - 1 ? "#project" : `#${journey[index + 1].id}`}
-                className="journey-next"
-                onClick={(event) => {
-                  if (index !== journey.length - 1 && enhanced) {
-                    event.preventDefault();
-                    navigate(index + 1);
+                <a
+                  href={
+                    index === journey.length - 1
+                      ? "#why-simana"
+                      : `#${journey[index + 1].id}`
                   }
-                }}
-              >
-                {index === 0
-                  ? "Begin the journey"
-                  : index === journey.length - 1
-                    ? "Discover the project"
-                    : "Continue the journey"}
-                {index === journey.length - 1 ? (
-                  <ArrowUpRight size={15} aria-hidden="true" />
-                ) : (
-                  <ArrowDown size={15} aria-hidden="true" />
-                )}
-              </a>
-
+                  className="journey-next"
+                  onClick={(event) => {
+                    if (index !== journey.length - 1 && enhanced) {
+                      event.preventDefault();
+                      navigate(index + 1);
+                    }
+                  }}
+                >
+                  {index === 0
+                    ? "Continue the journey"
+                    : index === journey.length - 1
+                      ? "Discover the project"
+                      : "Continue the journey"}
+                  {index === journey.length - 1 ? (
+                    <ArrowUpRight size={15} aria-hidden="true" />
+                  ) : (
+                    <ArrowDown size={15} aria-hidden="true" />
+                  )}
+                </a>
               </div>
             </div>
             <span className="scene-concept">{scene.image.caption}</span>
@@ -279,21 +367,50 @@ export function TowerJourney() {
           <span>The Simāna experience</span>
           <span>{project.location ?? "[Location]"}</span>
         </div>
-        {enhanced && rooms.length > 1 && <nav className="journey-rooms" aria-label={`${journeyChapters[activeChapter].label} spaces`}>
-          <span className="journey-room-label">Explore</span>
-          {rooms.map(room => <button key={room.id} onClick={() => navigate(room.index)} aria-current={active === room.index ? "step" : undefined}>{room.label}</button>)}
-        </nav>}
+        {enhanced && rooms.length > 1 && (
+          <nav
+            className="journey-rooms"
+            aria-label={`${journeyChapters[activeChapter].label} spaces`}
+          >
+            <span className="journey-room-label">Explore</span>
+            {rooms.map((room) => (
+              <button
+                key={room.id}
+                onClick={() => navigate(room.index)}
+                aria-current={active === room.index ? "step" : undefined}
+              >
+                {room.label}
+              </button>
+            ))}
+          </nav>
+        )}
         <nav
           className="journey-chapters"
           aria-label="Building journey chapters"
-          onKeyDown={event => {
-            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key)) return;
+          onKeyDown={(event) => {
+            if (!["ArrowLeft", "ArrowRight", "Home", "End"].includes(event.key))
+              return;
             event.preventDefault();
-            const buttons = Array.from(event.currentTarget.querySelectorAll("button"));
-            const focused = buttons.indexOf(document.activeElement as HTMLButtonElement);
-            const index = event.key === "Home" ? 0 : event.key === "End" ? journeyChapters.length - 1
-              : Math.max(0, Math.min(journeyChapters.length - 1, focused + (event.key === "ArrowRight" ? 1 : -1)));
-            buttons[index].focus(); navigate(chapterStarts[index]);
+            const buttons = Array.from(
+              event.currentTarget.querySelectorAll("button"),
+            );
+            const focused = buttons.indexOf(
+              document.activeElement as HTMLButtonElement,
+            );
+            const index =
+              event.key === "Home"
+                ? 0
+                : event.key === "End"
+                  ? journeyChapters.length - 1
+                  : Math.max(
+                      0,
+                      Math.min(
+                        journeyChapters.length - 1,
+                        focused + (event.key === "ArrowRight" ? 1 : -1),
+                      ),
+                    );
+            buttons[index].focus();
+            navigate(chapterStarts[index]);
           }}
         >
           {journeyChapters.map((scene, index) => (
@@ -313,8 +430,10 @@ export function TowerJourney() {
             <ArrowDown size={13} aria-hidden="true" />
             Scroll to move through
           </span>
-          <span className="journey-step-count">0{activeChapter + 1} / 0{journeyChapters.length}</span>
-          <a href="#project">
+          <span className="journey-step-count">
+            0{activeChapter + 1} / 0{journeyChapters.length}
+          </span>
+          <a href="#why-simana">
             Skip journey <ArrowUpRight size={13} aria-hidden="true" />
           </a>
           <div className="journey-progress" aria-hidden="true">

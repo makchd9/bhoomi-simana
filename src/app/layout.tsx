@@ -3,20 +3,28 @@ import "./globals.css";
 import "@/components/story/story.css";
 import "./refinement.css";
 import "./immersive.css";
-import { projectLabel, project } from "@/data/project";
+import "./buyer.css";
+import { siteUrl } from "@/data/buyer-content";
 export const metadata: Metadata = {
-  title: `${projectLabel} — ${project.copy.statement}`,
-  description: `${projectLabel} in ${project.location}, by ${project.developer}. Explore a 58-floor residential tower through a cinematic architectural journey.`,
-  metadataBase: new URL("https://simanabhoomi.com"),
+  title: {
+    default: "Simāna by Bhoomi | Residences in Lalbaug, Parel, Mumbai",
+    template: "%s | Simāna by Bhoomi",
+  },
+  description:
+    "Explore Simāna by Bhoomi in Lalbaug, Parel: Purnata residences, published floor plans, Aikyam clubhouse, lifestyle amenities and private presentations.",
+  metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Simana The Urban Oasis | Bhoomi Properties",
+    title: "Simāna by Bhoomi | The Urban Oasis",
     description:
-      "A considered approach to contemporary living in Lalbaug, Mumbai.",
+      "Discover Purnata residences and the Aikyam clubhouse at Simāna, Lalbaug, Mumbai.",
+    url: "/",
+    type: "website",
+    locale: "en_IN",
     images: [
       {
-        url: "/images/simana/journey-hd/tower-000-poster.webp",
-        alt: "Rendered image of Simāna elevation",
+        url: "/images/simana/native-v3/tower.webp",
+        alt: "Rendered image of Simāna architecture",
       },
     ],
   },

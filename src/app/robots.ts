@@ -1,4 +1,5 @@
 import type { MetadataRoute } from "next";
+import { siteUrl } from "@/data/buyer-content";
 export default function robots(): MetadataRoute.Robots {
   return {
     rules: {
@@ -7,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         ? { allow: "/" }
         : { disallow: "/" }),
     },
-    sitemap: "https://simanabhoomi.com/sitemap.xml",
+    sitemap: `${siteUrl}/sitemap.xml`,
   };
 }

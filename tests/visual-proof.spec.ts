@@ -1,0 +1,20 @@
+import {test,expect} from '@playwright/test';
+test('save the finished desktop and mobile buyer experience',async({page})=>{
+ await page.setViewportSize({width:1440,height:1000});
+ await page.goto('http://127.0.0.1:3001/');
+ await page.getByRole('link',{name:'Explore Simāna',exact:true}).click();
+ await expect(page.locator('.site-header')).toHaveAttribute('data-theme','dark');
+ await page.waitForTimeout(1200);
+ await page.screenshot({path:'.21st/previews/buyer-overview-desktop.png'});
+ await page.goto('http://127.0.0.1:3001/residences');
+ await page.getByRole('button',{name:'3 BHK Grand',exact:true}).click();
+ await page.locator('.residence-tabs').scrollIntoViewIfNeeded();
+ await page.screenshot({path:'.21st/previews/buyer-residences-desktop.png'});
+ await page.setViewportSize({width:390,height:844});
+ await page.goto('http://127.0.0.1:3001/');
+ await page.getByRole('link',{name:'Explore Simāna',exact:true}).click();
+ await expect(page.locator('.site-header')).toHaveAttribute('data-theme','dark');
+ await page.waitForTimeout(1200);
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.screenshot({path:'.21st/previews/buyer-overview-mobile.png'});
+});

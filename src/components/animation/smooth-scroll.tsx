@@ -45,15 +45,33 @@ export function SmoothScroll() {
         });
       };
       const anchor = (event: MouseEvent) => {
-        if (event.defaultPrevented || event.metaKey || event.ctrlKey || event.shiftKey || event.button !== 0) return;
-        const link = (event.target as Element).closest<HTMLAnchorElement>('a[href^="#"]');
+        if (
+          event.defaultPrevented ||
+          event.metaKey ||
+          event.ctrlKey ||
+          event.shiftKey ||
+          event.button !== 0
+        )
+          return;
+        const link = (event.target as Element).closest<HTMLAnchorElement>(
+          'a[href^="#"]',
+        );
         const href = link?.getAttribute("href");
         if (!href || href === "#") return;
         const target = document.getElementById(href.slice(1));
         if (!target) return;
         event.preventDefault();
         window.history.pushState(null, "", href);
-        lenis.scrollTo(target, { duration: 1.05, offset: target.matches("button") ? -110 : 0 });
+        // Numeric targets avoid applying document scroll-padding twice. Sections
+        // already carry generous top spacing; retain a small header overlap.
+        const clearance = target.matches("section") ? 24 : 110;
+        lenis.scrollTo(
+          Math.max(
+            0,
+            target.getBoundingClientRect().top + window.scrollY - clearance,
+          ),
+          { duration: 1.05 },
+        );
       };
       window.addEventListener("click", anchor);
       window.addEventListener("scroll:to", navigate);

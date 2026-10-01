@@ -12,7 +12,6 @@ test("scroll drives a pinned, reversible four-chapter journey", async ({
     name: "Building journey chapters",
   });
   for (const [index, label] of [
-    "Overview",
     "Tower",
     "Podium",
     "Clubhouse",
@@ -22,11 +21,11 @@ test("scroll drives a pinned, reversible four-chapter journey", async ({
       chapters.getByRole("button", { name: new RegExp(label) }),
     ).toHaveAttribute("aria-current", "step");
     await page.waitForTimeout(1300);
-    await expect(page.locator(".journey-copy").nth([0, 1, 4, 5][index])).toHaveCSS(
+    await expect(page.locator(".journey-copy").nth([1, 4, 5][index])).toHaveCSS(
       "opacity",
       "1",
     );
-    await expect(page.locator(".journey-scene").nth([0, 1, 4, 5][index])).toHaveAttribute(
+    await expect(page.locator(".journey-scene").nth([1, 4, 5][index])).toHaveAttribute(
       "aria-hidden",
       "false",
     );
@@ -43,7 +42,7 @@ test("scroll drives a pinned, reversible four-chapter journey", async ({
     "data-theme",
     "dark",
   );
-  await expect(page.locator("#project-title")).toBeInViewport();
+  await expect(page.locator("#why-simana h2")).toBeInViewport();
 });
 
 test("touch-sized journey advances and motion preference removes pinning", async ({
@@ -51,7 +50,7 @@ test("touch-sized journey advances and motion preference removes pinning", async
 }) => {
   await page.setViewportSize({ width: 390, height: 844 });
   await page.goto(url);
-  await page.getByRole("link", { name: "Begin the journey" }).click();
+  await page.getByRole("link", { name: "Enter the experience" }).click();
   await expect(page.locator("#main-tower")).toHaveAttribute(
     "aria-hidden",
     "false",
@@ -66,7 +65,7 @@ test("touch-sized journey advances and motion preference removes pinning", async
     "true",
   );
   await expect(page.locator(".pin-spacer")).toHaveCount(0);
-  for (const id of ["skyline", "main-tower", "spaces", "arrival", "inside", "clubhouse", "club-reception", "club-gym", "club-squash", "club-yoga", "club-staircase", "club-banquet"])
+  for (const id of ["main-tower", "spaces", "arrival", "inside", "clubhouse", "club-reception", "club-gym", "club-squash", "club-yoga", "club-staircase", "club-banquet"])
     await expect(page.locator("#" + id)).toHaveAttribute(
       "aria-hidden",
       "false",
@@ -87,14 +86,16 @@ test("one natural scroll advances a scene and the hero pan respects reduced moti
   await expect.poll(() => picture.evaluate(el => getComputedStyle(el).transform), { timeout: 6000 }).not.toBe(initial);
   const chapters = page.getByRole("navigation", { name: "Building journey chapters" });
   await expect(chapters.getByRole("button")).toHaveCount(4);
-  await page.mouse.wheel(0, 430);
-  await expect(page.locator("#main-tower")).toHaveAttribute("aria-hidden", "false");
-  await page.waitForTimeout(500);
-  const paused = await picture.evaluate(el => getComputedStyle(el).transform);
+  await page.getByRole("link",{name:"Enter the experience"}).click();
+  await expect(page.locator("#main-tower")).toHaveAttribute("aria-hidden","false");
+  await page.waitForTimeout(1000);
+  await page.mouse.wheel(0,430);
+  await expect(page.locator("#arrival")).toHaveAttribute("aria-hidden","false");
+  const paused = await picture.evaluate(el=>getComputedStyle(el).transform);
   await page.waitForTimeout(300);
-  expect(await picture.evaluate(el => getComputedStyle(el).transform)).toBe(paused);
-  await page.mouse.wheel(0, -430);
-  await expect(page.locator("#skyline")).toHaveAttribute("aria-hidden", "false");
+  expect(await picture.evaluate(el=>getComputedStyle(el).transform)).toBe(paused);
+  await chapters.getByRole("button",{name:/Overview/}).click();
+  await expect(page.locator("#skyline-title")).toBeInViewport();
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(picture).toHaveCSS("transform", "none");
 });

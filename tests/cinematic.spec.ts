@@ -11,7 +11,8 @@ test("scroll scrubs HD video frames forward and backward, then releases on reduc
   const video = page.locator("#main-tower video");
   await expect(video).toHaveAttribute("data-frame", /\d+/);
   expect(await video.evaluate((element: HTMLVideoElement) => element.videoWidth)).toBe(3840);
-  await page.waitForTimeout(700);
+  await page.waitForTimeout(1300);
+  await expect.poll(async () => Math.abs(Number(await video.getAttribute("data-frame")) - Number(await video.getAttribute("data-target-frame")))).toBeLessThanOrEqual(1);
   const first = Number(await video.getAttribute("data-frame"));
   const anchor = await page.evaluate(() => scrollY);
   await page.evaluate(() => window.scrollBy(0, 120));
@@ -48,7 +49,7 @@ test("mobile journey text and controls fit their full-screen overlay", async ({
 }) => {
   await page.setViewportSize({ width: 320, height: 740 });
   await page.goto("http://127.0.0.1:3001");
-  for (const label of ["Overview", "Tower", "Podium", "Clubhouse"]) {
+  for (const label of ["Tower", "Podium", "Clubhouse"]) {
     await page
       .getByRole("navigation", { name: "Building journey chapters" })
       .getByRole("button", { name: new RegExp(label) })
@@ -80,7 +81,7 @@ test("stopping at a scene boundary leaves one readable room, including after res
   const active = page.locator('.journey-scene[aria-hidden="false"]');
   await expect(active).toHaveCSS("opacity", "1");
   await expect(active.locator(".journey-copy")).toHaveCSS("opacity", "1");
-  expect(await page.locator(".journey-scene").evaluateAll(scenes => scenes.filter(scene => getComputedStyle(scene).visibility === "visible").length)).toBe(1);
+  expect(await page.locator(".tower-journey .journey-scene").evaluateAll(scenes => scenes.filter(scene => getComputedStyle(scene).visibility === "visible").length)).toBe(1);
   await page.emulateMedia({ reducedMotion: "reduce" });
   await expect(page.locator(".pin-spacer")).toHaveCount(0);
   for (const scene of await page.locator(".journey-scene").all()) {

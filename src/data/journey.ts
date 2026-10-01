@@ -15,11 +15,13 @@ type Scene = {
   sequence: { name: string; count: number; preserveView?: boolean } | null;
 };
 const filmStill = (name: string, alt: string): ImageAsset => ({
+  kind: "Rendered Image",
   src: `/images/simana/native-v3/${name}.webp`,
   width: 3840, height: 2160, alt,
   caption: "Simāna project film · Artist’s visualisation", placeholder: false,
 });
 const clubhouseStill = (name: string, alt: string): ImageAsset => ({
+  kind: "Rendered Image",
   src: `/images/simana/native-v3/club-${name}.webp`, width: 1920, height: 1080, alt,
   caption: "Aikyam · Original clubhouse film", placeholder: false,
   sourceUrl: "https://simanabhoomi.com/img/clubhouse.mp4",
@@ -32,7 +34,7 @@ export const journey: Scene[] = [
   { id: "skyline", chapter: "overview", label: "The ensemble",
     eyebrow: "Lalbaug, Mumbai / Bhoomi Properties", title: ["Life,", "elevated."],
     description: "Simāna. Three towers, one urban oasis. Pool, clubhouse and open spaces at the podium.",
-    image: { src: "/images/simana/context/three-towers-side.webp", width: 1672, height: 941,
+    image: { kind: "Illustration", src: "/images/simana/context/three-towers-side.webp", width: 1672, height: 941,
       alt: "Illustrative side-view composition of three Simāna towers in a straight line, with the pool and Aikyam clubhouse on the podium",
       caption: "Illustrative composition from project renders · Not a surveyed site view", placeholder: false },
     framing: "complete", sequence: null },
@@ -59,7 +61,7 @@ export const journey: Scene[] = [
   { id: "clubhouse", chapter: "clubhouse", label: "Aikyam",
     eyebrow: "Aikyam / The club at Simāna", title: ["A place", "to come together."],
     description: "Enter the clubhouse. A different rhythm awaits.",
-    image: { src: "/images/simana/native-v3/clubhouse-exterior.webp", width: 3397, height: 2700,
+    image: { kind: "Actual Image", src: "/images/simana/native-v3/clubhouse-exterior.webp", width: 3397, height: 2700,
       alt: "Aikyam’s two-level stone and glass facade with planting, reproduced from the Purnata brochure",
       caption: "Purnata brochure · Actual image with representative elements", placeholder: false },
     framing: "complete", sequence: null },

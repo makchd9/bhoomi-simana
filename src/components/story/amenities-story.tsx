@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { amenityGroups } from "@/data/amenities";
+import { amenityGroups, amenityDescriptions } from "@/data/amenities";
 import { EditorialImage } from "@/components/media/editorial-image";
 
 export function AmenitiesStory() {
@@ -15,7 +15,7 @@ export function AmenitiesStory() {
     >
       <div className="page-gutter">
         <div className="section-line">
-          <span className="eyebrow">05 / Wellness, leisure & community</span>
+          <span className="eyebrow">Wellness, leisure & community</span>
           <span className="eyebrow">54+ amenities</span>
         </div>
         <div className="section-heading">
@@ -54,7 +54,14 @@ export function AmenitiesStory() {
         </div>
       </div>
       <div className="page-gutter amenity-directory">
-        <span className="eyebrow">Explore the collection</span>
+        <div>
+          <span className="eyebrow">Explore the collection</span>
+          <p className="fine-print">
+            30 distinct facilities named in the available project material,
+            within the published 54+ amenity offering. Specifications, access
+            and delivery are subject to project confirmation.
+          </p>
+        </div>
         <div>
           {amenityGroups.map((item) => (
             <details key={item.name} open={item.name === group.name}>
@@ -64,7 +71,10 @@ export function AmenitiesStory() {
               </summary>
               <ul>
                 {item.items.map((name) => (
-                  <li key={name}>{name}</li>
+                  <li key={name}>
+                    <strong>{name}</strong>
+                    <span>{amenityDescriptions[name]}</span>
+                  </li>
                 ))}
               </ul>
             </details>
