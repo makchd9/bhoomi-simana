@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   facts,
+  brochureFeatures,
   differentiators,
   brochure,
   developer,
@@ -35,7 +36,7 @@ export function ProjectFacts() {
           The city outside. <em>A world within.</em>
         </h2>
         <p>
-          Three residential towers by Bhoomi, brought together by landscape and
+          Three residential towers by Bhoomi Group, brought together by landscape and
           shared spaces. Discover Purnata, the residential offering, and Aikyam,
           the social heart of Simāna.
         </p>
@@ -53,11 +54,15 @@ export function ProjectFacts() {
         <span>Aikyam signature clubhouse</span>
         <span>German Formliner Technology</span>
         <span>5 entry & exit gates</span>
+        {brochureFeatures.map((feature) => (
+          <span key={feature.label} title={feature.detail}>{feature.label}</span>
+        ))}
       </div>
       <div className="section-tail">
         <p className="fine-print">
-          Published project highlights. City views vary by tower, floor and
-          orientation.
+          Published project and brochure highlights. City and sea views vary by
+          tower, floor and orientation. Parking allocation is subject to the
+          applicable sale documents.
         </p>
         <a href="#main-tower" className="action-link">
           Enter the experience <span aria-hidden="true">↓</span>
@@ -260,6 +265,16 @@ export function DeveloperSection({ detailed = false }: { detailed?: boolean }) {
           </Link>
         </div>
       </div>
+      {developer.statistics.approved && (
+        <div className="legacy-proof">
+          <dl className="buyer-statistics">
+            {developer.statistics.items.map((stat) => (
+              <div key={stat.label}><dd>{stat.value}</dd><dt>{stat.label}</dt></div>
+            ))}
+          </dl>
+          <p className="eyebrow">{developer.statistics.locations}</p>
+        </div>
+      )}
       <div className="legacy-projects">
         <span className="eyebrow">Selected Bhoomi projects</span>
         <div>
@@ -272,7 +287,6 @@ export function DeveloperSection({ detailed = false }: { detailed?: boolean }) {
             >
               <h3>{p.name}</h3>
               <span>{p.location}</span>
-              <span aria-hidden="true">↗</span>
             </a>
           ))}
         </div>
@@ -428,11 +442,12 @@ export function ReraSection() {
       <div className="rera-list">
         {registrations.map((r) => (
           <div key={r.number}>
+            <span className="eyebrow">{r.wing}</span>
             <Image
               src={r.qr}
               width={160}
               height={160}
-              alt={`Original project QR code associated with registration ${r.number}`}
+              alt={`Original ${r.wing} MahaRERA QR code for registration ${r.number}`}
               unoptimized
             />
             <h3>{r.number}</h3>
@@ -442,15 +457,14 @@ export function ReraSection() {
               rel="noreferrer"
               className="action-link"
             >
-              Open official record ↗
+              View on MahaRERA
             </a>
           </div>
         ))}
       </div>
       <p className="fine-print">
-        Original QR codes and registration numbers reproduced from the project
-        website. No wing assignment is asserted here while the source
-        discrepancy remains unresolved.
+        Scan a QR code to view MahaRERA details, or follow the corresponding
+        official record link.
       </p>
       <a
         href={mahareraUrl}

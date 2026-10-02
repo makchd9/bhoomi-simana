@@ -36,7 +36,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: page.description,
     alternates: { canonical: `/${section}` },
     openGraph: {
-      title: `${page.title} | Simāna by Bhoomi`,
+      title: `${page.title} | Simāna by Bhoomi Group`,
       description: page.description,
       url: `/${section}`,
       images: [
@@ -58,7 +58,7 @@ export default async function InformationPage({ params }: Props) {
       <main id="main" className="information-page">
         <header className="page-introduction page-gutter" data-nav-theme="dark">
           <Link className="eyebrow" href="/">
-            Simāna by Bhoomi / {page.title}
+            Simāna by Bhoomi Group / {page.title}
           </Link>
           <h1>{page.headline}</h1>
           <p>{page.description}</p>

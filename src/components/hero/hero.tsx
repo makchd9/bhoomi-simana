@@ -74,7 +74,7 @@ export function Hero() {
       </div>
       <div className="journey-scrim" aria-hidden="true" />
       <div className="journey-copy page-gutter">
-        <p className="eyebrow">Lalbaug · Parel · Mumbai / By Bhoomi</p>
+        <p className="eyebrow">Lalbaug · Parel · Mumbai / By Bhoomi Group</p>
         <h1 id="skyline-title">
           Simāna. <em>The Urban Oasis.</em>
         </h1>

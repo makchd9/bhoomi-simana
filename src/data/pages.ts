@@ -9,7 +9,7 @@ export const pages = {
     title: "Purnata at Simāna",
     headline: "Your place above it all.",
     description:
-      "Discover Purnata, the residential offering within Simāna by Bhoomi in Lalbaug, Parel.",
+      "Discover Purnata, the residential offering within Simāna by Bhoomi Group in Lalbaug, Parel.",
   },
   amenities: {
     title: "Lifestyle Amenities",
@@ -33,13 +33,13 @@ export const pages = {
     title: "Bhoomi Group",
     headline: "A legacy behind your home.",
     description:
-      "Meet Bhoomi, the developer behind Simāna, and the architecture, construction and engineering team.",
+      "Meet Bhoomi Group, the developer behind Simāna, and the architecture, construction and engineering team.",
   },
   blog: {
     title: "Journal & Media",
     headline: "Another perspective.",
     description:
-      "Architecture, home and urban living. Discover the GoodHomes feature on Simāna by Bhoomi.",
+      "Architecture, home and urban living. Discover the GoodHomes feature on Simāna by Bhoomi Group.",
   },
   contact: {
     title: "Contact & Private Presentations",
@@ -51,7 +51,7 @@ export const pages = {
     title: "MahaRERA Registrations",
     headline: "Details that matter.",
     description:
-      "View Simāna’s published MahaRERA registration numbers, original project QR codes and the wing-mapping clarification.",
+      "View Simāna’s A, B and C Wing MahaRERA registration numbers, original project QR codes and official record links.",
   },
   privacy: {
     title: "Privacy Policy",

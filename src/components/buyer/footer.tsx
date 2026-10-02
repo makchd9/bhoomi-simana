@@ -19,12 +19,12 @@ export function Footer() {
         <p>
           An urban oasis.
           <br />
-          <em>A Bhoomi address.</em>
+          <em>A Bhoomi Group address.</em>
         </p>
         <Link href="/about-bhoomi" aria-label="Bhoomi Group">
           <Image
             src="/images/branding/bhoomi-light.svg"
-            alt="Bhoomi Properties"
+            alt="Bhoomi Group"
             width={54}
             height={90}
             unoptimized
@@ -66,13 +66,12 @@ export function Footer() {
       <div className="footer-registrations">
         <span className="eyebrow">MahaRERA</span>
         {registrations.map((r) => (
-          <Link key={r.number} href="/rera">
-            {r.number}
-          </Link>
+          <a key={r.number} href={r.href} target="_blank" rel="noreferrer">
+            {r.wing} — {r.number}
+          </a>
         ))}
         <small>
-          Wing mapping requires confirmation.{" "}
-          <Link href="/rera">View records and original QR codes ↗</Link>
+          <Link href="/rera">View MahaRERA records</Link>
         </small>
       </div>
       <p className="footer-disclaimer">
@@ -81,7 +80,7 @@ export function Footer() {
         not confirm current availability.
       </p>
       <div className="footer-legal">
-        <span>Simāna by Bhoomi · Lalbaug, Mumbai</span>
+        <span>Simāna by Bhoomi Group · Lalbaug, Mumbai</span>
         <Link href="/privacy">Privacy policy</Link>
         <Link href="/disclaimer">Disclaimer & terms</Link>
       </div>

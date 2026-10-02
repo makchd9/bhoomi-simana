@@ -67,11 +67,11 @@ test("brochure is real, original QR records are available, and unapproved claims
     await expect(page.locator(".rera-list")).toContainText(id);
   await expect(page.locator(".rera-list img")).toHaveCount(3);
   await expect(page.locator(".rera-section")).toContainText(
-    "differ on the A/B wing mapping",
+    "A Wing",
   );
   await page.goto(base);
   await expect(page.locator("main")).not.toContainText(
-    /11\.8|11\.5|61\+|17,000|Amit Mehta|Neha Patel/,
+    /11\.8|11\.5|Amit Mehta|Neha Patel/,
   );
   await expect(page.locator(".buyer-footer")).toContainText("P51900033361");
   await expect(page.locator("#main-tower-title")).toHaveText(

@@ -11,7 +11,7 @@ export function TowerOverview() {
     <dl className="overview-facts">
       <div><dt>The address</dt><dd>Lalbaug, Mumbai</dd></div>
       <div><dt>The main tower</dt><dd>Purnata · 58 floors</dd></div>
-      <div><dt>The developer</dt><dd>Bhoomi Properties</dd></div>
+      <div><dt>The developer</dt><dd>Bhoomi Group</dd></div>
     </dl>
     <div id="residences" className="residence-invitation">
       <span className="eyebrow">Your residence</span>

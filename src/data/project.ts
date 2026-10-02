@@ -1,6 +1,6 @@
 export const project = {
   name: "Simana The Urban Oasis",
-  developer: "Bhoomi Properties",
+  developer: "Bhoomi Group",
   location: "Lalbaug",
   architect: "Hafeez Contractor",
   type: "A three-tower residential development",
@@ -27,7 +27,7 @@ export const project = {
     introEyebrow: "An urban oasis / Lalbaug, Mumbai",
     introductionLines: ["A quieter rhythm.", "A fuller life."],
     introductionBody:
-      "Purnata, the main tower at Simāna. Fifty-eight floors above Lalbaug, with life unfolding around the podium and the Aikyam clubhouse. By Bhoomi Properties.",
+      "Purnata, the main tower at Simāna. Fifty-eight floors above Lalbaug, with life unfolding around the podium and the Aikyam clubhouse. By Bhoomi Group.",
     contentNotice:
       "Explore the architecture through the supplied Simāna walkthrough, then arrange a personal introduction to the residences.",
     imageNote: "Rendered image of actual elevation",

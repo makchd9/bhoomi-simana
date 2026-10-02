@@ -7,3 +7,21 @@ export const location = {
   directions:
     "https://www.google.com/maps/search/?api=1&query=SIMANA+The+Urban+Oasis+by+Bhoomi+Lalbaug+Mumbai",
 };
+
+/** Named destinations transcribed from the owner-supplied Purnata brochure,
+ * 29 September 2025, page 5. No live route distances or times are inferred. */
+export const nearbyCategories = [
+  { name: "Business & commercial", places: ["Lower Parel", "Worli"] },
+  { name: "Healthcare", places: ["KEM Hospital", "Tata Memorial Hospital", "Wadia Hospital"] },
+  { name: "Education", places: ["JBCN", "Christ Church School", "Aditya Birla World Academy"] },
+  { name: "Retail & leisure", places: ["Phoenix Mall", "Palladium Mall", "Mahalaxmi Racecourse"] },
+] as const;
+
+export const illustratedMap = {
+  src: "/images/simana/location-brochure.webp",
+  width: 2592,
+  height: 2592,
+  kind: "Illustration",
+  alt: "Simāna location illustration showing the project at Lalbaug, surrounding Mumbai neighbourhoods, rail connections and landmarks",
+  caption: "Project location illustration · Purnata brochure, September 2025 · Not to scale. Proposed connections shown are not a statement of current operation.",
+};

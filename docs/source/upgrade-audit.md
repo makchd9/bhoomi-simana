@@ -44,3 +44,20 @@ The official detail pages were inaccessible to the research browser. Do not trea
 ## Lead integration
 
 No external CRM submission was performed. No credentials were copied from the old site's Salesforce form. `POST /api/enquiry` accepts same-origin, size-limited validated JSON and forwards only when a server-side HTTPS webhook is explicitly configured. Frontend shows an honest disabled state otherwise; direct telephone, email, WhatsApp and official booking remain active. See `docs/BUYER-UPGRADE.md` for integration and launch requirements.
+
+## Owner-approved final refinement — 1 October 2026
+
+This update supersedes the earlier pending developer-total and wing-mapping decisions above. The owner explicitly approved the old Simāna figures and A/B mapping in this chat on 1 October 2026:
+
+- 61+ landmark projects completed, 12.5M+ sq. ft. delivered, 17,000+ families housed; Mumbai, Thane, Pune; since 1993.
+- A Wing: P51900033361; B Wing: P51900033360; C Wing: PR1170002500564.
+
+Rechecked `https://simanabhoomi.com/about.html` and `/contact.html`: these match the approved data. The conflicting Purnata/corporate values remain recorded in the internal data audit, with the owner's resolution. The original QR assets and their decoded direct record URLs remain unchanged. The official record endpoints could not be read by the web tool during this pass; the wing mapping is owner-confirmed, not independently revalidated against the registry. Public development notes have been replaced with the approved labels and links.
+
+The supplied brochure, pages 5 and 7, was visually rendered and inspected against the two new screenshots. The map is rendered directly from page 5's right-hand panel at 2592 × 2592, saved losslessly as `public/images/simana/location-brochure.webp` (about 407 KB). No labels, route geometry or pins were generated. The illustration is dated, not to scale, and may depict proposed connections. The live Google Maps interaction remains separate and opt-in. Nearby names are transcribed into four compact categories; distances/times are not asserted.
+
+Page 7 supports the non-MCGM parking statement and Jain temple with a 5,000 sq. ft. Upashraya. These are incorporated in the existing facts area; parking allocation remains subject to sale documents. Lobby, clubhouse, gym/yoga/banquet/kids facilities and qualified city/sea views were already represented. The brochure's “50+” amenity headline is a lower-bound description consistent with the project's published 54+ figure, not a separate numeric total.
+
+Corporate brand references now use Bhoomi Group. Existing external URLs and original image captions identifying photography shot at a Bhoomi property are source attribution, not corporate naming errors, and remain intact. Logos and source PDFs are unchanged.
+
+The local repository has an enquiry API and server webhook integration but no configured delivery endpoint. No credentials or third-party recipient have been invented. The compact form retains honest disabled delivery, adds inline validation, supports Indian mobile prefixes, distinguishes the two 3 BHK plan preferences and protects against repeat submission. The optional callback field has been removed from the UI; the API remains backwards compatible.

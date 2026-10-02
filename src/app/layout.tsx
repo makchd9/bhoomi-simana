@@ -7,15 +7,15 @@ import "./buyer.css";
 import { siteUrl } from "@/data/buyer-content";
 export const metadata: Metadata = {
   title: {
-    default: "Simāna by Bhoomi | Residences in Lalbaug, Parel, Mumbai",
-    template: "%s | Simāna by Bhoomi",
+    default: "Simāna by Bhoomi Group | Luxury Residences in Parel, Lalbaug, South Mumbai",
+    template: "%s | Simāna by Bhoomi Group",
   },
   description:
-    "Explore Simāna by Bhoomi in Lalbaug, Parel: Purnata residences, published floor plans, Aikyam clubhouse, lifestyle amenities and private presentations.",
+    "Explore Simāna by Bhoomi Group in Lalbaug, Parel: Purnata residences, published floor plans, Aikyam clubhouse, lifestyle amenities and private presentations.",
   metadataBase: new URL(siteUrl),
   alternates: { canonical: "/" },
   openGraph: {
-    title: "Simāna by Bhoomi | The Urban Oasis",
+    title: "Simāna by Bhoomi Group | The Urban Oasis",
     description:
       "Discover Purnata residences and the Aikyam clubhouse at Simāna, Lalbaug, Mumbai.",
     url: "/",

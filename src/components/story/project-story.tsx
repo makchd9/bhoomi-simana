@@ -147,7 +147,7 @@ export function DeveloperStory() {
     >
       <div className="section-line">
         <span className="eyebrow">07 / The people behind the place</span>
-        <span className="eyebrow">Bhoomi Properties</span>
+        <span className="eyebrow">Bhoomi Group</span>
       </div>
       <div className="section-heading">
         <h2 id="developer-title">
@@ -251,7 +251,7 @@ export function Footer() {
           Simāna<span>The Urban Oasis</span>
         </a>
         <div>
-          <span className="eyebrow">Bhoomi Properties</span>
+          <span className="eyebrow">Bhoomi Group</span>
           <p>Lalbaug, Mumbai</p>
           <a href={project.contact.phoneHref}>{project.contact.phone}</a>
           <a href={project.contact.salesPhoneHref}>
@@ -296,7 +296,7 @@ export function Footer() {
         <p>{project.disclaimer}</p>
       </details>
       <div className="footer-bottom">
-        <span>© {new Date().getFullYear()} Simāna by Bhoomi</span>
+        <span>© {new Date().getFullYear()} Simāna by Bhoomi Group</span>
         <a href={project.source} target="_blank" rel="noreferrer">
           Official project website ↗
         </a>

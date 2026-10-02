@@ -168,13 +168,13 @@ export function Navigation({
         <Link
           className="header-brand header-brand-bhoomi"
           href="/about-bhoomi"
-          aria-label="Bhoomi Properties — the developer"
+          aria-label="Bhoomi Group — the developer"
         >
           <Image
             src={`/images/branding/bhoomi${theme === "dark" ? "" : "-light"}.svg`}
             width={256}
             height={427}
-            alt="Bhoomi Properties"
+            alt="Bhoomi Group"
             priority
             unoptimized
           />

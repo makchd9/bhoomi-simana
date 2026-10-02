@@ -88,7 +88,7 @@ export function ProjectFilm() {
             <a href={assets.heroVideo}>Open the project film</a>
           </video>
           <p className="fine-print">
-            Official project film from Simāna by Bhoomi. Rendered visualisations
+            Official project film from Simāna by Bhoomi Group. Rendered visualisations
             are indicative.
           </p>
         </Modal>

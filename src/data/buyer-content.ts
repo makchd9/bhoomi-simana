@@ -18,7 +18,7 @@ export const brochure = {
   label: "Purnata brochure · PDF · 37 MB",
 };
 export const address = {
-  name: "Simāna by Bhoomi",
+  name: "Simāna by Bhoomi Group",
   street: "Western India Spinning and Weaving Mills Compound, GD Ambekar Marg",
   locality: "Lalbaug, Parel",
   city: "Mumbai",
@@ -32,6 +32,11 @@ export const facts = [
   { value: "03", label: "Premium residential towers" },
   { value: "80%", label: "Open space & landscaped greens" },
   { value: "54+", label: "Lifestyle amenities" },
+];
+/** Owner-supplied brochure page 7, repeated in the October 1 annotated brief. */
+export const brochureFeatures = [
+  { label: "Zero MCGM parking", detail: "The brochure describes non-MCGM-owned parking. Parking allocation and terms are governed by the applicable sale documents." },
+  { label: "Jain temple & 5,000 sq. ft. Upashraya", detail: "A Jain temple with a 5,000 sq. ft. Upashraya is described within the premises." },
 ];
 export const differentiators = [
   {
@@ -101,8 +106,19 @@ export const developer = {
   name: "Bhoomi Group",
   since: "1993",
   source: sources.developer,
+  statistics: {
+    approved: true,
+    approvedOn: "2026-10-01",
+    source: "https://simanabhoomi.com/about.html",
+    items: [
+      { value: "61+", label: "Landmark projects completed" },
+      { value: "12.5M+", label: "Sq. ft. delivered" },
+      { value: "17,000+", label: "Families housed" },
+    ],
+    locations: "Mumbai · Thane · Pune",
+  },
   description:
-    "Since 1993, Bhoomi has developed homes across Mumbai, Thane and Pune. Its approach brings architecture, engineering and thoughtful planning together, with Simāna continuing that work in Lalbaug.",
+    "Since 1993, Bhoomi Group has developed homes across Mumbai, Thane and Pune. Its approach brings architecture, engineering and thoughtful planning together, with Simāna continuing that work in Lalbaug.",
   principles: [
     "Architecture & considered design",
     "Engineering & construction",
@@ -137,23 +153,26 @@ export const verifiedAssociates = [
 ];
 export const registrations = [
   {
+    wing: "A Wing",
     number: "P51900033361",
     qr: "/images/simana/wing1.jpg",
     href: "https://maharerait.maharashtra.gov.in/public/project/view/36185",
   },
   {
+    wing: "B Wing",
     number: "P51900033360",
     qr: "/images/simana/wing2.jpg",
     href: "https://maharerait.maharashtra.gov.in/public/project/view/36183",
   },
   {
+    wing: "C Wing",
     number: "PR1170002500564",
     qr: "/images/simana/wingc.png",
     href: "https://maharerait.maharashtra.gov.in/project/view/57453",
   },
 ];
 export const registrationNotice =
-  "The official project websites publish these registrations but differ on the A/B wing mapping. Confirm the registration applicable to your selected residence with the sales team and MahaRERA before booking.";
+  "Review the registration, sanctioned plans and approvals for your selected wing on MahaRERA. Original project QR codes and direct record links are provided below.";
 export const mahareraUrl = "https://maharera.maharashtra.gov.in/";
 export const journal = {
   title: "A Breath Between Towers",
@@ -177,7 +196,7 @@ export const faqs = [
   ],
   [
     "What is Purnata?",
-    "Purnata is the residential offering within the wider Simāna development by Bhoomi. It is presented as the main tower in this experience.",
+    "Purnata is the residential offering within the wider Simāna development by Bhoomi Group. It is presented as the main tower in this experience.",
   ],
   [
     "Which configurations can I explore?",
@@ -205,7 +224,7 @@ export const faqs = [
   ],
   [
     "What are the MahaRERA registrations?",
-    `${registrations.map((r) => r.number).join(", ")}. ${registrationNotice}`,
+    `${registrations.map((r) => `${r.wing} — ${r.number}`).join("; ")}. View the original QR codes and official records on our MahaRERA page.`,
   ],
   [
     "How can I view or download a floor plan?",
@@ -221,7 +240,7 @@ export const faqs = [
   ],
   [
     "What is the current project status?",
-    "Bhoomi’s corporate project page lists Simāna as an ongoing residential development. For construction progress and the status of a specific tower, request a dated update from the project team.",
+    "Bhoomi Group’s corporate project page lists Simāna as an ongoing residential development. For construction progress and the status of a specific tower, request a dated update from the project team.",
   ],
   [
     "What is the possession timeline?",
@@ -241,13 +260,15 @@ export const pendingVerification = {
     sources: [sources.residences, sources.purnata],
   },
   developerStatistics: {
-    verified: false,
+    verified: true,
+    resolution: "Owner approved the old Simāna figures as canonical on 2026-10-01; see developer.statistics.",
     simana: ["61+", "12.5 million sq ft", "17,000+"],
     purnata: ["45+ / 50+", "10 million sq ft", "16,000"],
     sources: [sources.project, sources.purnata],
   },
   wingMapping: {
-    verified: false,
+    verified: true,
+    resolution: "Owner confirmed the old Simāna A/B mapping on 2026-10-01. Original QR URLs retained. This records owner approval, not an independent registry audit.",
     simana: { A: "P51900033361", B: "P51900033360" },
     corporate: { A: "P51900033360", B: "P51900033361" },
     sources: [sources.project, sources.corporateProject],

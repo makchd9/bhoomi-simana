@@ -1,10 +1,10 @@
 "use client";
 import Link from "next/link";
-import { Suspense, useState, type FormEvent } from "react";
+import { Suspense, useRef, useState, type FormEvent } from "react";
 import { useSearchParams } from "next/navigation";
 import { project } from "@/data/project";
 import { enquiryTypes } from "@/data/buyer-content";
-import { validateLead } from "@/lib/enquiry";
+import { getLeadErrors, validateLead, type LeadErrors } from "@/lib/enquiry";
 export function Enquiry({ enabled = false }: { enabled?: boolean }) {
   return (
     <Suspense
@@ -33,21 +33,32 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
       "idle",
     ),
     [error, setError] = useState("");
+  const [fieldErrors, setFieldErrors] = useState<LeadErrors>({});
+  const sending = useRef(false);
+  function fieldError(name: keyof LeadErrors) {
+    return fieldErrors[name] ? <span id={`enquiry-${name}-error`} className="field-error">{fieldErrors[name]}</span> : null;
+  }
   async function submit(event: FormEvent<HTMLFormElement>) {
     event.preventDefault();
-    if (!enabled || state === "sending") return;
+    if (sending.current || state === "success") return;
     const form = event.currentTarget,
       data = new FormData(form);
     const raw = {
       ...Object.fromEntries(data),
       consent: data.get("consent") === "on",
     };
+    const errors = getLeadErrors(raw);
+    setFieldErrors(errors);
     const lead = validateLead(raw);
     if (!lead) {
-      setError("Please check your name, mobile number, email and consent.");
+      setError("Please check the highlighted fields.");
+      const invalid = Object.keys(errors)[0];
+      if (invalid) (form.elements.namedItem(invalid) as HTMLElement | null)?.focus();
       setState("error");
       return;
     }
+    if (!enabled) return;
+    sending.current = true;
     setState("sending");
     setError("");
     try {
@@ -62,13 +73,13 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
       setState("success");
       form.reset();
       setConfiguration("");
-    } catch (e) {
+    } catch {
       setState("error");
       setError(
-        e instanceof Error
-          ? e.message
-          : "We could not confirm your enquiry. Please contact sales directly.",
+        "Something went wrong. Please try again or contact us directly.",
       );
+    } finally {
+      sending.current = false;
     }
   }
   return (
@@ -109,7 +120,13 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
             </a>
           </div>
         </div>
-        <form id="enquiry-form" onSubmit={submit}>
+        <form id="enquiry-form" onSubmit={submit} noValidate onBlur={(event) => {
+          const field = event.target;
+          if (!(field instanceof HTMLInputElement || field instanceof HTMLSelectElement || field instanceof HTMLTextAreaElement)) return;
+          const data = new FormData(event.currentTarget);
+          const errors = getLeadErrors({ ...Object.fromEntries(data), consent: data.get("consent") === "on" });
+          if (field.name) setFieldErrors((previous) => ({ ...previous, [field.name]: errors[field.name as keyof LeadErrors] }));
+        }}>
           <span className="eyebrow">Request residence details</span>
           {!enabled && (
             <p className="form-service-note">
@@ -123,33 +140,41 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
               Full name*
               <input
                 name="name"
+                aria-invalid={Boolean(fieldErrors.name)}
+                aria-describedby={fieldErrors.name ? "enquiry-name-error" : undefined}
                 autoComplete="name"
                 required
                 minLength={2}
                 maxLength={100}
               />
+              {fieldError("name")}
             </label>
             <label>
               Mobile number*
               <input
                 name="phone"
+                inputMode="tel"
+                aria-invalid={Boolean(fieldErrors.phone)}
+                aria-describedby={fieldErrors.phone ? "enquiry-phone-error" : undefined}
                 type="tel"
                 autoComplete="tel"
                 required
-                pattern="[+0-9 ()\-]{7,22}"
-                title="Enter a mobile number with at least 7 digits."
                 maxLength={22}
               />
+              {fieldError("phone")}
             </label>
             <label>
-              Email*
+              Email address*
               <input
                 name="email"
+                aria-invalid={Boolean(fieldErrors.email)}
+                aria-describedby={fieldErrors.email ? "enquiry-email-error" : undefined}
                 type="email"
                 autoComplete="email"
                 required
                 maxLength={150}
               />
+              {fieldError("email")}
             </label>
             <label>
               Configuration
@@ -159,8 +184,8 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
                 value={configuration}
                 onChange={(e) => setConfiguration(e.target.value)}
               >
-                <option value="">Please advise</option>
-                {["2 BHK", "3 BHK", "4 BHK", "5 BHK", "Jodi option"].map(
+                <option value="">Not sure</option>
+                {["2 BHK", "3 BHK", "3 BHK Smart", "3 BHK Grand", "4 BHK", "5 BHK", "Jodi option"].map(
                   (v) => (
                     <option key={v}>{v}</option>
                   ),
@@ -179,16 +204,8 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
                 ))}
               </select>
             </label>
-            <label>
-              Preferred callback time
-              <input
-                name="callback"
-                placeholder="Optional · include your time zone"
-                maxLength={100}
-              />
-            </label>
             <label className="message-field">
-              Message
+              Message (optional)
               <textarea name="message" rows={3} maxLength={1200} />
             </label>
             <label className="form-honeypot" aria-hidden="true">
@@ -201,12 +218,13 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
             availability.
           </p>
           <label className="consent-label">
-            <input type="checkbox" name="consent" required />
+            <input type="checkbox" name="consent" required aria-invalid={Boolean(fieldErrors.consent)} aria-describedby={fieldErrors.consent ? "enquiry-consent-error" : undefined} />
             <span>
               I agree to be contacted about this enquiry and have read the{" "}
               <Link href="/privacy">privacy policy</Link>.
             </span>
           </label>
+          {fieldError("consent")}
           <button
             className="action-link"
             type="submit"
@@ -215,10 +233,10 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
             {!enabled
               ? "Online enquiries coming soon"
               : state === "sending"
-                ? "Sending enquiry…"
+                ? "Submitting…"
                 : state === "success"
                   ? "Enquiry received"
-                  : "Send my enquiry ↗"}
+                  : "Submit Enquiry"}
           </button>
           <div aria-live="polite">
             {state === "success" && (
@@ -229,7 +247,9 @@ function EnquiryForm({ enabled }: { enabled: boolean }) {
             )}
             {state === "error" && (
               <p className="enquiry-ready" role="alert">
-                {error}
+                {error}{" "}
+                <a href={project.contact.phoneHref}>Call the team</a>{" or "}
+                <a href={project.contact.whatsapp} target="_blank" rel="noreferrer">WhatsApp us</a>.
               </p>
             )}
           </div>

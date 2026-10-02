@@ -1,9 +1,10 @@
 "use client";
 import Link from "next/link";
+import Image from "next/image";
 import { useState } from "react";
 import { ArrowUpRight, MapPin } from "lucide-react";
 import { address, connectivity } from "@/data/buyer-content";
-import { location } from "@/data/location";
+import { location, nearbyCategories, illustratedMap } from "@/data/location";
 import { media } from "@/data/source-media";
 import { EditorialImage } from "@/components/media/editorial-image";
 export function LocationStory() {
@@ -52,12 +53,23 @@ export function LocationStory() {
             <li key={name}>{name}</li>
           ))}
         </ul>
+        <div className="nearby-context">
+          <h3>The city around you</h3>
+          <div className="nearby-categories">
+            {nearbyCategories.map((category) => (
+              <div key={category.name}>
+                <h4 className="eyebrow">{category.name}</h4>
+                <ul>{category.places.map((place) => <li key={place}>{place}</li>)}</ul>
+              </div>
+            ))}
+          </div>
+        </div>
         <p className="fine-print">
           Destinations and connections referenced in project material; no travel
           times or distances are implied. Routes and access conditions vary.
         </p>
         <Link href="/contact?type=Book%20Site%20Visit" className="action-link">
-          Book a site visit ↗
+          Book a site visit
         </Link>
       </div>
       <div className="location-map page-gutter">
@@ -88,10 +100,17 @@ export function LocationStory() {
             Open in Google Maps <ArrowUpRight size={15} />
           </a>
         </div>
-        <div className="map-frame">
+        <div className="location-maps">
+          <figure className="illustrated-map">
+            <a href={illustratedMap.src} target="_blank" rel="noreferrer" aria-label="Open the original location illustration in full screen">
+              <Image src={illustratedMap.src} width={illustratedMap.width} height={illustratedMap.height} alt={illustratedMap.alt} sizes="(max-width: 767px) 100vw, 55vw" unoptimized />
+            </a>
+            <figcaption>{illustratedMap.caption}</figcaption>
+          </figure>
+          <div className={`map-frame${showMap ? "" : " map-frame-collapsed"}`}>
           {showMap ? (
             <iframe
-              title="Simāna by Bhoomi location on Google Maps"
+              title="Simāna by Bhoomi Group location on Google Maps"
               src={location.mapEmbed}
               loading="lazy"
               allowFullScreen
@@ -107,6 +126,7 @@ export function LocationStory() {
               <small>Loads Google Maps when selected.</small>
             </button>
           )}
+          </div>
         </div>
       </div>
     </section>

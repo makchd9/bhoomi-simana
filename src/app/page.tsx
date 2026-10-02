@@ -31,10 +31,10 @@ export default function Home() {
           __html: JSON.stringify({
             "@context": "https://schema.org",
             "@type": "ApartmentComplex",
-            name: "Simāna by Bhoomi",
+            name: "Simāna by Bhoomi Group",
             url: siteUrl,
             description:
-              "A three-tower residential development in Lalbaug, Parel, Mumbai, by Bhoomi, with Purnata residences and the Aikyam clubhouse.",
+              "A three-tower residential development in Lalbaug, Parel, Mumbai, by Bhoomi Group, with Purnata residences and the Aikyam clubhouse.",
             address: {
               "@type": "PostalAddress",
               streetAddress: address.street,

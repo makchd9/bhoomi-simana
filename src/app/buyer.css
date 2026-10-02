@@ -1058,3 +1058,36 @@ details[open] > summary > .detail-plus {
 body:has(.information-page) .site-header[data-theme="light"] {
   background: var(--color-deep);
 }
+
+/* Final refinements reuse the existing editorial layout and palette. */
+.facts-notes { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.nearby-context { margin-block: 32px; }
+.nearby-context h3 { font-size: clamp(26px, 3vw, 36px); margin-bottom: 24px; }
+.nearby-categories { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 28px; }
+.nearby-categories h4 { font-weight: 500; margin-bottom: 16px; }
+.nearby-categories ul { padding: 0; margin: 0; list-style: none; }
+.nearby-categories li { font-size: 14px; line-height: 1.8; }
+.illustrated-map { margin: 0; }
+.illustrated-map img { display: block; width: 100%; height: auto; }
+.illustrated-map a { display: block; }
+.illustrated-map figcaption { font-size: 11px; line-height: 1.7; color: var(--color-muted); margin-top: 12px; }
+.location-maps .map-frame { margin-top: 22px; }
+.location-maps .map-frame-collapsed { height: auto; background: transparent; }
+.map-frame-collapsed .map-load { background: transparent; padding: 16px 0; gap: 10px; align-items: flex-start; border-top: 1px solid var(--color-rule); }
+.map-frame-collapsed .map-load > svg, .map-frame-collapsed .map-load > span:first-of-type { display: none; }
+.legacy-proof { margin-top: 40px; }
+.legacy-proof .buyer-statistics { border-color: var(--color-light-rule); padding-block: 28px; }
+.legacy-proof .buyer-statistics dd { font-size: clamp(36px, 5vw, 66px); }
+.legacy-proof .buyer-statistics dt { font-size: 10px; line-height: 1.7; }
+.legacy-proof > p { margin-top: 20px; }
+.rera-list > div > .eyebrow { display: block; margin-bottom: 20px; }
+.field-error { color: #f3b7a7; font-size: 12px; line-height: 1.5; letter-spacing: 0; text-transform: none; }
+.form-fields [aria-invalid="true"] { border-bottom-color: #f3b7a7; }
+.enquiry-ready a { text-decoration: underline; text-underline-offset: 4px; }
+@media (max-width: 767px) {
+  .facts-notes, .nearby-categories { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .nearby-categories { gap: 28px 20px; }
+  .nearby-categories li { font-size: 13px; }
+  .legacy-proof .buyer-statistics { gap: 16px; }
+  .legacy-proof .buyer-statistics dd { font-size: clamp(28px, 7vw, 46px); }
+}
